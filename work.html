@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Our Work | Northstar Digital</title>
+
+  <meta name="description"
+        content="Explore website concepts created by Northstar Digital for home services, windows and glass, and apparel businesses.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0a1120;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1180px;
+      margin: auto;
+    }
+
+    /* NAVIGATION */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(10,17,32,0.96);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      backdrop-filter: blur(14px);
+    }
+
+    .nav-inner {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: #65a9ff;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .nav-links a {
+      color: #b9c4d4;
+      font-size: 14px;
+      transition: 0.25s;
+    }
+
+    .nav-links a:hover {
+      color: #ffffff;
+    }
+
+    .nav-links .active {
+      color: #65a9ff;
+    }
+
+    .nav-button {
+      background: #65a9ff;
+      color: #07101f !important;
+      padding: 11px 18px;
+      border-radius: 7px;
+      font-weight: 700;
+    }
+
+    /* HERO */
+
+    .page-hero {
+      padding: 120px 0 90px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-hero::before {
+      content: "";
+      position: absolute;
+      width: 520px;
+      height: 520px;
+      background: #1d4ed8;
+      filter: blur(190px);
+      opacity: 0.2;
+      right: -220px;
+      top: -170px;
+    }
+
+    .hero-content {
+      max-width: 800px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .eyebrow {
+      color: #65a9ff;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(46px, 7vw, 76px);
+      line-height: 1.03;
+      letter-spacing: -3px;
+      margin-bottom: 24px;
+    }
+
+    .hero-content h1 span {
+      color: #65a9ff;
+    }
+
+    .hero-content p {
+      color: #aeb9c9;
+      font-size: 19px;
+      max-width: 700px;
+    }
+
+    /* PROJECTS */
+
+    .work-section {
+      background: #0f1828;
+      padding: 100px 0;
+    }
+
+    .project {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      min-height: 380px;
+      margin-bottom: 30px;
+      border: 1px solid #273448;
+      border-radius: 15px;
+      overflow: hidden;
+      background: #111c2d;
+    }
+
+    .project:last-child {
+      margin-bottom: 0;
+    }
+
+    .project-visual {
+      min-height: 380px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+      font-size: 32px;
+      font-weight: 800;
+      letter-spacing: 2px;
+    }
+
+    .plumbing {
+      background: linear-gradient(135deg,#173d64,#0e78b8);
+    }
+
+    .windows {
+      background: linear-gradient(135deg,#7d8782,#d5d9d4);
+      color: #1d2522;
+    }
+
+    .apparel {
+      background: linear-gradient(135deg,#292929,#777);
+    }
+
+    .project-info {
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .project-type {
+      color: #65a9ff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 11px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .project-info h2 {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    .project-info > p {
+      color: #aeb9c9;
+      margin-bottom: 25px;
+      max-width: 550px;
+    }
+
+    .focus {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-bottom: 28px;
+    }
+
+    .focus span {
+      border: 1px solid #344258;
+      padding: 7px 11px;
+      border-radius: 5px;
+      color: #c5ceda;
+      font-size: 12px;
+    }
+
+    .project-link {
+      display: inline-block;
+      width: fit-content;
+      background: #65a9ff;
+      color: #07101f;
+      padding: 13px 19px;
+      border-radius: 7px;
+      font-weight: 700;
+      transition: 0.25s;
+    }
+
+    .project-link:hover {
+      transform: translateY(-3px);
+    }
+
+    /* NOTE */
+
+    .portfolio-note {
+      padding: 70px 0;
+      text-align: center;
+    }
+
+    .portfolio-note h2 {
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    .portfolio-note p {
+      color: #9eabba;
+      max-width: 650px;
+      margin: auto;
+    }
+
+    /* CTA */
+
+    .cta {
+      text-align: center;
+      padding: 100px 20px;
+      background: linear-gradient(135deg,#122544,#0b1220);
+    }
+
+    .cta h2 {
+      font-size: 48px;
+      line-height: 1.1;
+      margin-bottom: 18px;
+    }
+
+    .cta p {
+      max-width: 650px;
+      margin: 0 auto 30px;
+      color: #aeb9c9;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 15px 24px;
+      border-radius: 7px;
+      font-weight: 700;
+      background: #65a9ff;
+      color: #07101f;
+      transition: 0.25s;
+    }
+
+    .button:hover {
+      transform: translateY(-3px);
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 35px 0;
+      border-top: 1px solid #273448;
+      color: #788598;
+      font-size: 14px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-links a:hover {
+      color: #ffffff;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 850px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      .project {
+        grid-template-columns: 1fr;
+      }
+
+      .project-visual {
+        min-height: 240px;
+      }
+
+      .project-info {
+        padding: 32px;
+      }
+
+      .project-info h2 {
+        font-size: 30px;
+      }
+
+      .cta h2 {
+        font-size: 38px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+  <div class="container nav-inner">
+
+    <a href="index.html" class="logo">
+      NORTHSTAR<span> DIGITAL</span>
+    </a>
+
+    <div class="nav-links">
+
+      <a href="index.html">
+        Home
+      </a>
+
+      <a href="services.html">
+        Services
+      </a>
+
+      <a href="work.html" class="active">
+        Our Work
+      </a>
+
+      <a href="contact.html" class="nav-button">
+        Let's Talk
+      </a>
+
+    </div>
+
+  </div>
+</nav>
+
+
+<!-- HERO -->
+
+<section class="page-hero">
+
+  <div class="container">
+
+    <div class="hero-content">
+
+      <div class="eyebrow">
+        Selected Work
+      </div>
+
+      <h1>
+        Websites designed for
+        <span>different businesses.</span>
+      </h1>
+
+      <p>
+        Explore examples of how Northstar Digital approaches
+        different industries, audiences and business goals.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- PROJECTS -->
+
+<section class="work-section">
+
+  <div class="container">
+
+
+    <!-- CLEARFLOW -->
+
+    <div class="project">
+
+      <div class="project-visual plumbing">
+        CLEARFLOW
+      </div>
+
+      <div class="project-info">
+
+        <div class="project-type">
+          Home Services
+        </div>
+
+        <h2>
+          ClearFlow Plumbing
+        </h2>
+
+        <p>
+          A conversion-focused website concept created for a
+          plumbing business. The design prioritizes fast access
+          to services, emergency calls and customer trust.
+        </p>
+
+        <div class="focus">
+          <span>Service Information</span>
+          <span>Emergency Calls</span>
+          <span>Mobile Design</span>
+          <span>Customer Trust</span>
+        </div>
+
+        <a
+          href="https://northstardigitalstudio.github.io/northstardigital.github.io/plumbing/"
+          class="project-link">
+          View Live Website →
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- NORTHLINE -->
+
+    <div class="project">
+
+      <div class="project-visual windows">
+        NORTHLINE
+      </div>
+
+      <div class="project-info">
+
+        <div class="project-type">
+          Windows & Glass
+        </div>
+
+        <h2>
+          Northline Glass
+        </h2>
+
+        <p>
+          A premium website concept for a windows and glass company,
+          designed around craftsmanship, visual presentation and
+          consultation requests.
+        </p>
+
+        <div class="focus">
+          <span>Premium Design</span>
+          <span>Services</span>
+          <span>Project Showcase</span>
+          <span>Consultations</span>
+        </div>
+
+        <a
+          href="https://northstardigitalstudio.github.io/northstardigital.github.io/windows-glass/"
+          class="project-link">
+          View Live Website →
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- VANTA -->
+
+    <div class="project">
+
+      <div class="project-visual apparel">
+        VANTA
+      </div>
+
+      <div class="project-info">
+
+        <div class="project-type">
+          Apparel
+        </div>
+
+        <h2>
+          VANTA Apparel
+        </h2>
+
+        <p>
+          A modern fashion storefront concept focused on visual
+          storytelling, product presentation and creating a
+          clean shopping experience.
+        </p>
+
+        <div class="focus">
+          <span>Product Presentation</span>
+          <span>Collections</span>
+          <span>Brand Storytelling</span>
+          <span>Mobile Design</span>
+        </div>
+
+        <a
+          href="https://northstardigitalstudio.github.io/northstardigital.github.io/apparel/"
+          class="project-link">
+          View Live Website →
+        </a>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- PORTFOLIO NOTE -->
+
+<section class="portfolio-note">
+
+  <div class="container">
+
+    <div class="eyebrow">
+      Built With Purpose
+    </div>
+
+    <h2>
+      Your business deserves a website built around it.
+    </h2>
+
+    <p>
+      These examples demonstrate different approaches to
+      website structure, visual identity, customer journeys
+      and calls-to-action. Your website would be designed
+      specifically around your business.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+  <div class="container">
+
+    <div class="eyebrow">
+      Start Your Project
+    </div>
+
+    <h2>
+      Ready to build your website?
+    </h2>
+
+    <p>
+      Tell us about your business and what you're looking to
+      accomplish online.
+    </p>
+
+    <a href="contact.html" class="button">
+      Request a Quote →
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="container footer-inner">
+
+    <div>
+      © 2026 Northstar Digital
+    </div>
+
+    <div class="footer-links">
+
+      <a href="index.html">
+        Home
+      </a>
+
+      <a href="services.html">
+        Services
+      </a>
+
+      <a href="work.html">
+        Our Work
+      </a>
+
+      <a href="contact.html">
+        Contact
+      </a>
+
+    </div>
+
+  </div>
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>VANTA | Modern Essentials</title>
+
+  <meta name="description"
+    content="VANTA creates modern essentials designed for everyday movement. Explore the latest collection.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f2ee;
+      color: #171717;
+      line-height: 1.5;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    /* ANNOUNCEMENT */
+
+    .announcement {
+      background: #171717;
+      color: white;
+      text-align: center;
+      padding: 9px;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    /* NAVIGATION */
+
+    nav {
+      background: #f4f2ee;
+      border-bottom: 1px solid #d9d6d0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-inner {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 27px;
+      font-weight: 900;
+      letter-spacing: 5px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .nav-links a:hover {
+      opacity: .55;
+    }
+
+    .nav-icons {
+      display: flex;
+      gap: 18px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 680px;
+      display: flex;
+      align-items: flex-end;
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.05), rgba(0,0,0,.72)),
+        linear-gradient(120deg, #b4aea5, #403e3b);
+      color: white;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 430px;
+      height: 620px;
+      right: 14%;
+      top: 30px;
+      background: rgba(255,255,255,.07);
+      transform: skewX(-8deg);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding-bottom: 75px;
+      max-width: 720px;
+    }
+
+    .hero small {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    .hero h1 {
+      font-size: clamp(55px, 9vw, 105px);
+      line-height: .9;
+      letter-spacing: -5px;
+      margin: 18px 0 25px;
+    }
+
+    .hero p {
+      max-width: 500px;
+      color: #e2e0dc;
+      font-size: 17px;
+      margin-bottom: 28px;
+    }
+
+    .button {
+      display: inline-block;
+      background: white;
+      color: #171717;
+      padding: 15px 25px;
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: .25s;
+    }
+
+    .button:hover {
+      transform: translateY(-3px);
+    }
+
+    /* MARQUEE */
+
+    .marquee {
+      background: #171717;
+      color: white;
+      padding: 17px 0;
+      overflow: hidden;
+      white-space: nowrap;
+      text-align: center;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    /* SECTIONS */
+
+    section {
+      padding: 95px 0;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 45px;
+      gap: 30px;
+    }
+
+    .section-header h2 {
+      font-size: 47px;
+      line-height: 1;
+      letter-spacing: -2px;
+    }
+
+    .section-header p {
+      max-width: 430px;
+      color: #6b6863;
+      font-size: 15px;
+    }
+
+    /* PRODUCTS */
+
+    .products {
+      background: #f4f2ee;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .product {
+      position: relative;
+    }
+
+    .product-image {
+      height: 440px;
+      display: flex;
+      align-items: flex-end;
+      padding: 20px;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .product:nth-child(1) .product-image {
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.03), rgba(0,0,0,.7)),
+        linear-gradient(135deg, #8c8983, #2c2c2b);
+    }
+
+    .product:nth-child(2) .product-image {
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.03), rgba(0,0,0,.7)),
+        linear-gradient(135deg, #d0cbc2, #77736c);
+    }
+
+    .product:nth-child(3) .product-image {
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.03), rgba(0,0,0,.72)),
+        linear-gradient(135deg, #555653, #161717);
+    }
+
+    .product-image::after {
+      content: "";
+      position: absolute;
+      width: 190px;
+      height: 300px;
+      left: 50%;
+      top: 45px;
+      transform: translateX(-50%);
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 90px 90px 15px 15px;
+    }
+
+    .product-label {
+      position: relative;
+      z-index: 2;
+    }
+
+    .product-label small {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 10px;
+    }
+
+    .product-label h3 {
+      font-size: 26px;
+      margin-top: 5px;
+    }
+
+    .product-info {
+      padding: 15px 2px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .product-info span {
+      color: #77736c;
+    }
+
+    /* STORY */
+
+    .story {
+      background: #20201f;
+      color: white;
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 500px;
+      align-items: center;
+      gap: 80px;
+    }
+
+    .story h2 {
+      font-size: 65px;
+      line-height: .95;
+      letter-spacing: -3px;
+      margin-bottom: 25px;
+    }
+
+    .story p {
+      color: #bcbab5;
+      max-width: 520px;
+      font-size: 16px;
+    }
+
+    .story-visual {
+      height: 500px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.02), rgba(0,0,0,.45)),
+        linear-gradient(135deg, #77756e, #252524);
+      position: relative;
+    }
+
+    .story-visual::before {
+      content: "VANTA";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 72px;
+      font-weight: 900;
+      letter-spacing: 10px;
+      color: rgba(255,255,255,.09);
+    }
+
+    /* VALUES */
+
+    .values {
+      background: #e7e3dc;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: #c7c2ba;
+      border: 1px solid #c7c2ba;
+    }
+
+    .value {
+      background: #e7e3dc;
+      padding: 35px;
+    }
+
+    .value-number {
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: #77736c;
+      font-weight: 900;
+      margin-bottom: 25px;
+    }
+
+    .value h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .value p {
+      color: #69655f;
+      font-size: 14px;
+    }
+
+    /* NEWSLETTER */
+
+    .newsletter {
+      background: #f4f2ee;
+      text-align: center;
+    }
+
+    .newsletter h2 {
+      font-size: 48px;
+      letter-spacing: -2px;
+      margin-bottom: 12px;
+    }
+
+    .newsletter p {
+      color: #706c65;
+      margin-bottom: 25px;
+    }
+
+    .email-box {
+      display: flex;
+      max-width: 500px;
+      margin: auto;
+      border-bottom: 1px solid #252525;
+    }
+
+    .email-box input {
+      flex: 1;
+      border: none;
+      background: transparent;
+      padding: 15px 5px;
+      outline: none;
+      font-size: 14px;
+    }
+
+    .email-box button {
+      border: none;
+      background: transparent;
+      font-weight: 900;
+      cursor: pointer;
+      letter-spacing: 1px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #171717;
+      color: #aaa7a1;
+      padding: 55px 0 25px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 35px;
+      margin-bottom: 50px;
+    }
+
+    footer h3 {
+      color: white;
+      font-size: 13px;
+      letter-spacing: 1px;
+      margin-bottom: 17px;
+    }
+
+    footer p,
+    footer a {
+      font-size: 13px;
+      line-height: 2;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
+    .footer-brand {
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: 5px;
+      color: white;
+      margin-bottom: 15px;
+    }
+
+    .copyright {
+      border-top: 1px solid #333;
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 11px;
+    }
+
+    .northstar {
+      color: #d0ccc5;
+    }
+
+    /* MOBILE */
+
+    @media(max-width: 850px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      .nav-icons {
+        display: none;
+      }
+
+      .hero {
+        min-height: 600px;
+      }
+
+      .hero h1 {
+        font-size: 62px;
+      }
+
+      .section-header {
+        display: block;
+      }
+
+      .section-header p {
+        margin-top: 18px;
+      }
+
+      .product-grid,
+      .story-grid,
+      .values-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .story h2 {
+        font-size: 48px;
+      }
+
+      .newsletter h2 {
+        font-size: 38px;
+      }
+
+      .copyright {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ANNOUNCEMENT -->
+
+<div class="announcement">
+  Free shipping on orders over $100
+</div>
+
+
+<!-- NAVIGATION -->
+
+<nav>
+
+  <div class="container nav-inner">
+
+    <div class="logo">
+      VANTA
+    </div>
+
+    <div class="nav-links">
+      <a href="#shop">Shop</a>
+      <a href="#story">Our Story</a>
+      <a href="#values">Values</a>
+      <a href="#newsletter">Journal</a>
+    </div>
+
+    <div class="nav-icons">
+      <span>Search</span>
+      <span>Bag (0)</span>
+    </div>
+
+  </div>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="container">
+
+    <div class="hero-content">
+
+      <small>
+        Fall / Winter 2026
+      </small>
+
+      <h1>
+        Move<br>
+        Different.
+      </h1>
+
+      <p>
+        Modern essentials designed for everyday movement.
+        Clean silhouettes, considered materials and no unnecessary noise.
+      </p>
+
+      <a href="#shop" class="button">
+        Shop Collection
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- MARQUEE -->
+
+<div class="marquee">
+  Modern essentials • Designed to move • Built for everyday • Modern essentials • Designed to move
+</div>
+
+
+<!-- SHOP -->
+
+<section class="products" id="shop">
+
+  <div class="container">
+
+    <div class="section-header">
+
+      <div>
+
+        <div style="font-size:11px; letter-spacing:2px; margin-bottom:12px;">
+          THE COLLECTION
+        </div>
+
+        <h2>
+          New arrivals.
+        </h2>
+
+      </div>
+
+      <p>
+        A focused collection of everyday pieces designed with
+        simplicity, comfort and versatility in mind.
+      </p>
+
+    </div>
+
+
+    <div class="product-grid">
+
+      <div class="product">
+
+        <div class="product-image">
+
+          <div class="product-label">
+
+            <small>
+              Essential
+            </small>
+
+            <h3>
+              Heavyweight Tee
+            </h3>
+
+          </div>
+
+        </div>
+
+        <div class="product-info">
+
+          <div>
+            Heavyweight Tee
+          </div>
+
+          <span>
+            $48
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <div class="product">
+
+        <div class="product-image">
+
+          <div class="product-label">
+
+            <small>
+              Outerwear
+            </small>
+
+            <h3>
+              Everyday Jacket
+            </h3>
+
+          </div>
+
+        </div>
+
+        <div class="product-info">
+
+          <div>
+            Everyday Jacket
+          </div>
+
+          <span>
+            $128
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <div class="product">
+
+        <div class="product-image">
+
+          <div class="product-label">
+
+            <small>
+              Core Collection
+            </small>
+
+            <h3>
+              Relaxed Hoodie
+            </h3>
+
+          </div>
+
+        </div>
+
+        <div class="product-info">
+
+          <div>
+            Relaxed Hoodie
+          </div>
+
+          <span>
+            $88
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- STORY -->
+
+<section class="story" id="story">
+
+  <div class="container">
+
+    <div class="story-grid">
+
+      <div>
+
+        <div style="
+          font-size:11px;
+          letter-spacing:3px;
+          color:#aaa7a1;
+          margin-bottom:18px;
+        ">
+          THE VANTA APPROACH
+        </div>
+
+        <h2>
+          Less noise.<br>
+          More purpose.
+        </h2>
+
+        <p>
+          VANTA was created around the idea that everyday clothing
+          should feel effortless. We focus on considered details,
+          versatile silhouettes and pieces that earn a permanent
+          place in your wardrobe.
+        </p>
+
+      </div>
+
+
+      <div class="story-visual"></div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- VALUES -->
+
+<section class="values" id="values">
+
+  <div class="container">
+
+    <div class="section-header">
+
+      <div>
+
+        <div style="
+          font-size:11px;
+          letter-spacing:2px;
+          margin-bottom:12px;
+        ">
+          WHAT WE BELIEVE
+        </div>
+
+        <h2>
+          Built with intention.
+        </h2>
+
+      </div>
+
+    </div>
+
+
+    <div class="values-grid">
+
+      <div class="value">
+
+        <div class="value-number">
+          01 / DESIGN
+        </div>
+
+        <h3>
+          Simplicity wins.
+        </h3>
+
+        <p>
+          We remove unnecessary details and focus on what makes
+          a piece useful, comfortable and timeless.
+        </p>
+
+      </div>
+
+
+      <div class="value">
+
+        <div class="value-number">
+          02 / QUALITY
+        </div>
+
+        <h3>
+          Make it last.
+        </h3>
+
+        <p>
+          We prioritize materials and construction that are
+          designed to withstand everyday wear.
+        </p>
+
+      </div>
+
+
+      <div class="value">
+
+        <div class="value-number">
+          03 / MOVEMENT
+        </div>
+
+        <h3>
+          Built for real life.
+        </h3>
+
+        <p>
+          Every piece is designed to move between work, travel,
+          weekends and everything in between.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- NEWSLETTER -->
+
+<section class="newsletter" id="newsletter">
+
+  <div class="container">
+
+    <h2>
+      Stay in the loop.
+    </h2>
+
+    <p>
+      New releases, stories and occasional updates from VANTA.
+    </p>
+
+    <div class="email-box">
+
+      <input
+        type="email"
+        placeholder="Your email address"
+      >
+
+      <button type="button">
+        JOIN
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div>
+
+        <div class="footer-brand">
+          VANTA
+        </div>
+
+        <p>
+          Modern essentials designed for everyday movement.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h3>
+          SHOP
+        </h3>
+
+        <p>
+          <a href="#shop">New Arrivals</a><br>
+          <a href="#shop">Essentials</a><br>
+          <a href="#shop">Outerwear</a>
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h3>
+          COMPANY
+        </h3>
+
+        <p>
+          <a href="#story">Our Story</a><br>
+          <a href="#values">Our Values</a><br>
+          <a href="#newsletter">Journal</a>
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h3>
+          HELP
+        </h3>
+
+        <p>
+          Shipping<br>
+          Returns<br>
+          Contact
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+      <div>
+        © 2026 VANTA. Demo website.
+      </div>
+
+      <div class="northstar">
+        Website concept by Northstar Digital
+      </div>
+
+    </div>
+
+  </div>
+
+</footer>
+
+</body>
+</html>

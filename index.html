@@ -553,8 +553,46 @@
     }
 
     .footer-links a:hover {
-      color: #ffffff;
-    }
+  color: #ffffff;
+}
+
+/* MOBILE MENU BUTTON */
+
+.mobile-menu-button {
+  display: none;
+  background: transparent;
+  border: 1px solid #344258;
+  color: white;
+  font-size: 22px;
+  width: 44px;
+  height: 44px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+    
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 75px;
+  left: 0;
+  right: 0;
+  background: #0b1220;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  padding: 15px 5%;
+  z-index: 999;
+}
+
+.mobile-menu a {
+  display: block;
+  padding: 14px 0;
+  color: #c8d1df;
+  font-size: 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.mobile-menu a:hover {
+  color: white;
+}
 
     /* MOBILE */
 
@@ -563,7 +601,9 @@
       .nav-links {
         display: none;
       }
-
+.mobile-menu-button {
+  display: block;
+}
       .hero {
         min-height: 75vh;
       }
@@ -626,9 +666,20 @@
 
 </div>
 
-  </div>
-</nav>
+<button class="mobile-menu-button" onclick="toggleMenu()" aria-label="Open navigation menu">
+  ☰
+</button>
+<div class="mobile-menu" id="mobileMenu">
 
+  <a href="index.html">Home</a>
+
+  <a href="services.html">Services</a>
+
+  <a href="work.html">Our Work</a>
+
+  <a href="contact.html">Let's Talk</a>
+
+</div>
 
 <!-- HERO -->
 
@@ -1304,7 +1355,18 @@
   </div>
 
 </footer>
+    
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("mobileMenu");
 
+    if (menu.style.display === "block") {
+      menu.style.display = "none";
+    } else {
+      menu.style.display = "block";
+    }
+  }
+</script>
 
 </body>
 </html>

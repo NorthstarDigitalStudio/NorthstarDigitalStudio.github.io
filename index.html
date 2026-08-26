@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Northstar Digital | Websites That Help Businesses Grow</title>
+
+  <meta name="description"
+        content="Northstar Digital creates modern, professional websites for small businesses. Website design, redesign, maintenance and digital solutions.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0b1220;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    /* NAVIGATION */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(11, 18, 32, 0.95);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav-inner {
+      height: 75px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 23px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .logo span {
+      color: #65a9ff;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: #c8d1df;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: white;
+    }
+
+    .nav-button {
+      background: #65a9ff;
+      color: #07101f !important;
+      padding: 11px 18px;
+      border-radius: 7px;
+      font-weight: 700;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      background: #1d4ed8;
+      filter: blur(180px);
+      opacity: 0.25;
+      right: -250px;
+      top: -200px;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+    }
+
+    .eyebrow {
+      color: #65a9ff;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(48px, 7vw, 82px);
+      line-height: 1.02;
+      margin-bottom: 25px;
+      letter-spacing: -3px;
+    }
+
+    .hero h1 span {
+      color: #65a9ff;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #aeb9c9;
+      max-width: 700px;
+      margin-bottom: 35px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 15px 24px;
+      border-radius: 7px;
+      font-weight: 700;
+      transition: 0.3s;
+    }
+
+    .primary {
+      background: #65a9ff;
+      color: #07101f;
+    }
+
+    .primary:hover {
+      transform: translateY(-3px);
+    }
+
+    .secondary {
+      border: 1px solid #536174;
+      color: white;
+    }
+
+    .secondary:hover {
+      background: rgba(255,255,255,0.05);
+    }
+
+    /* STATS */
+
+    .stats {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding: 35px 0;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      text-align: center;
+    }
+
+    .stat h3 {
+      font-size: 30px;
+    }
+
+    .stat p {
+      color: #8e9bad;
+      font-size: 14px;
+    }
+
+    /* GENERAL SECTIONS */
+
+    section {
+      padding: 100px 0;
+    }
+
+    .section-title {
+      max-width: 700px;
+      margin-bottom: 55px;
+    }
+
+    .section-title h2 {
+      font-size: 46px;
+      line-height: 1.1;
+      margin-bottom: 15px;
+    }
+
+    .section-title p {
+      color: #9eabba;
+      font-size: 17px;
+    }
+
+    /* SERVICES */
+
+    .services {
+      background: #0f1828;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .service {
+      padding: 35px;
+      border: 1px solid #273448;
+      background: #111c2d;
+      border-radius: 12px;
+      transition: 0.3s;
+    }
+
+    .service:hover {
+      transform: translateY(-5px);
+      border-color: #65a9ff;
+    }
+
+    .service-number {
+      color: #65a9ff;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .service h3 {
+      font-size: 23px;
+      margin-bottom: 10px;
+    }
+
+    .service p {
+      color: #9eabba;
+    }
+
+    /* PROJECTS */
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .project {
+      background: #111c2d;
+      border: 1px solid #273448;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: 0.3s;
+    }
+
+    .project:hover {
+      transform: translateY(-6px);
+    }
+
+    .project-image {
+      height: 230px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 24px;
+      letter-spacing: 1px;
+    }
+
+    .plumbing {
+      background: linear-gradient(135deg,#173d64,#0e78b8);
+    }
+
+    .windows {
+      background: linear-gradient(135deg,#7d8782,#d5d9d4);
+      color: #1d2522;
+    }
+
+    .apparel {
+      background: linear-gradient(135deg,#292929,#777);
+    }
+
+    .project-content {
+      padding: 25px;
+    }
+
+    .project-content small {
+      color: #65a9ff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .project-content h3 {
+      margin: 8px 0;
+      font-size: 24px;
+    }
+
+    .project-content p {
+      color: #9eabba;
+      margin-bottom: 20px;
+    }
+
+    .project-link {
+      color: #65a9ff;
+      font-weight: 700;
+    }
+
+    /* ABOUT */
+
+    .about {
+      background: #f4f6f8;
+      color: #111827;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .about h2 {
+      font-size: 48px;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      color: #5b6470;
+      margin-bottom: 20px;
+    }
+
+    .about-box {
+      background: white;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    }
+
+    .about-box h3 {
+      margin-bottom: 15px;
+    }
+
+    .about-box ul {
+      list-style: none;
+    }
+
+    .about-box li {
+      padding: 10px 0;
+      border-bottom: 1px solid #e5e7eb;
+      color: #4b5563;
+    }
+
+    /* CTA */
+
+    .cta-section {
+      text-align: center;
+      background: linear-gradient(135deg,#122544,#0b1220);
+    }
+
+    .cta-section h2 {
+      font-size: 55px;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .cta-section p {
+      max-width: 650px;
+      margin: 0 auto 30px;
+      color: #aeb9c9;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 35px 0;
+      border-top: 1px solid #273448;
+      color: #788598;
+      font-size: 14px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 850px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        min-height: 75vh;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .service-grid,
+      .projects-grid,
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-title h2,
+      .about h2 {
+        font-size: 38px;
+      }
+
+      .cta-section h2 {
+        font-size: 42px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+  <div class="container nav-inner">
+
+    <div class="logo">
+      NORTHSTAR<span> DIGITAL</span>
+    </div>
+
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#work">Our Work</a>
+      <a href="#about">About</a>
+      <a href="#contact" class="nav-button">Let's Talk</a>
+    </div>
+
+  </div>
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="container">
+
+    <div class="hero-content">
+
+      <div class="eyebrow">
+        Web Design • Digital Solutions
+      </div>
+
+      <h1>
+        Websites that make your business
+        <span>stand out.</span>
+      </h1>
+
+      <p>
+        Northstar Digital creates modern, professional websites
+        designed to help small businesses look credible, connect
+        with customers and generate more opportunities.
+      </p>
+
+      <div class="buttons">
+
+        <a href="#work" class="button primary">
+          View Our Work
+        </a>
+
+        <a href="#contact" class="button secondary">
+          Start a Project
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- STATS -->
+
+<div class="stats">
+
+  <div class="container">
+
+    <div class="stats-grid">
+
+      <div class="stat">
+        <h3>Responsive</h3>
+        <p>Built for phones, tablets and desktops</p>
+      </div>
+
+      <div class="stat">
+        <h3>Modern</h3>
+        <p>Clean designs built around your brand</p>
+      </div>
+
+      <div class="stat">
+        <h3>Ongoing</h3>
+        <p>Website updates and maintenance available</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- SERVICES -->
+
+<section class="services" id="services">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <div class="eyebrow">
+        What We Do
+      </div>
+
+      <h2>
+        More than just a website.
+      </h2>
+
+      <p>
+        We build digital experiences around what your business
+        actually needs.
+      </p>
+
+    </div>
+
+
+    <div class="service-grid">
+
+      <div class="service">
+        <div class="service-number">01</div>
+        <h3>Website Design</h3>
+        <p>
+          Professional websites designed specifically around your
+          business, customers and goals.
+        </p>
+      </div>
+
+      <div class="service">
+        <div class="service-number">02</div>
+        <h3>Website Redesign</h3>
+        <p>
+          Modernize an outdated website and create a better experience
+          for customers on every device.
+        </p>
+      </div>
+
+      <div class="service">
+        <div class="service-number">03</div>
+        <h3>Website Maintenance</h3>
+        <p>
+          Keep your website current with content updates, promotions,
+          new pages, images and ongoing improvements.
+        </p>
+      </div>
+
+      <div class="service">
+        <div class="service-number">04</div>
+        <h3>Basic SEO</h3>
+        <p>
+          Improve your site's structure and content so customers can
+          more easily discover your business online.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- PROJECTS -->
+
+<section id="work">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <div class="eyebrow">
+        Selected Work
+      </div>
+
+      <h2>
+        Designed for different businesses.
+      </h2>
+
+      <p>
+        A few website concepts demonstrating how Northstar Digital
+        approaches different industries and audiences.
+      </p>
+
+    </div>
+
+
+    <div class="projects-grid">
+
+
+      <!-- PROJECT 1 -->
+
+      <div class="project">
+
+        <div class="project-image plumbing">
+          CLEARFLOW
+        </div>
+
+        <div class="project-content">
+
+          <small>
+            Home Services
+          </small>
+
+          <h3>
+            ClearFlow Plumbing
+          </h3>
+
+          <p>
+            A conversion-focused website concept designed around
+            emergency calls, service requests and customer trust.
+          </p>
+
+          <a href="#" class="project-link">
+            View Project →
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- PROJECT 2 -->
+
+      <div class="project">
+
+        <div class="project-image windows">
+          NORTHLINE
+        </div>
+
+        <div class="project-content">
+
+          <small>
+            Windows & Glass
+          </small>
+
+          <h3>
+            Northline Glass
+          </h3>
+
+          <p>
+            A premium website concept focused on craftsmanship,
+            architectural design and consultation requests.
+          </p>
+
+          <a href="#" class="project-link">
+            View Project →
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- PROJECT 3 -->
+
+      <div class="project">
+
+        <div class="project-image apparel">
+          VANTA
+        </div>
+
+        <div class="project-content">
+
+          <small>
+            Apparel
+          </small>
+
+          <h3>
+            VANTA Apparel
+          </h3>
+
+          <p>
+            A modern fashion storefront concept focused on products,
+            collections and brand storytelling.
+          </p>
+
+          <a href="#" class="project-link">
+            View Project →
+          </a>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+  <div class="container">
+
+    <div class="about-grid">
+
+      <div>
+
+        <div class="eyebrow">
+          About Northstar
+        </div>
+
+        <h2>
+          Your business deserves a better digital presence.
+        </h2>
+
+        <p>
+          Northstar Digital helps small businesses create professional
+          online experiences without the complexity of working with
+          a large agency.
+        </p>
+
+        <p>
+          From the first design to ongoing updates, we can help keep
+          your website looking professional and working for your
+          business.
+        </p>
+
+      </div>
+
+
+      <div class="about-box">
+
+        <h3>
+          What you can expect
+        </h3>
+
+        <ul>
+
+          <li>✓ Mobile-friendly design</li>
+          <li>✓ Professional visual identity</li>
+          <li>✓ Clear calls-to-action</li>
+          <li>✓ Fast, simple user experience</li>
+          <li>✓ Ongoing website support</li>
+          <li>✓ Basic SEO optimization</li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="cta-section" id="contact">
+
+  <div class="container">
+
+    <div class="eyebrow">
+      Let's Work Together
+    </div>
+
+    <h2>
+      Ready for a better website?
+    </h2>
+
+    <p>
+      Whether you need a new website, a redesign or someone to
+      keep your existing site updated, Northstar Digital can help.
+    </p>
+
+    <a
+      href="mailto:northstardigitalstudio@gmail.com"
+      class="button primary">
+      Get in Touch
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="container footer-inner">
+
+    <div>
+      © 2026 Northstar Digital
+    </div>
+
+    <div>
+      Website Design • Maintenance • Digital Solutions
+    </div>
+
+  </div>
+
+</footer>
+
+
+</body>
+</html>

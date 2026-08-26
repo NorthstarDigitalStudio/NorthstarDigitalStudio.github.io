@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Northline Glass & Windows | Modern Glass & Window Solutions</title>
+
+  <meta name="description"
+    content="Northline Glass & Windows provides premium residential and commercial window and glass solutions, installations and custom projects.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #1b242b;
+      background: #f7f8f7;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1180px;
+      margin: auto;
+    }
+
+    /* TOP BAR */
+
+    .topbar {
+      background: #1c2529;
+      color: #dce2df;
+      padding: 9px 0;
+      font-size: 13px;
+    }
+
+    .topbar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* NAVIGATION */
+
+    nav {
+      background: #f7f8f7;
+      border-bottom: 1px solid #dfe4e2;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-inner {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 23px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      color: #1c2529;
+    }
+
+    .logo span {
+      color: #687a76;
+      font-weight: 500;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #53615e;
+    }
+
+    .nav-links a:hover {
+      color: #1c2529;
+    }
+
+    .nav-cta {
+      border: 1px solid #273438;
+      padding: 11px 18px;
+      border-radius: 3px;
+      color: #1c2529 !important;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 690px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(90deg, rgba(21,30,34,.91), rgba(21,30,34,.58)),
+        linear-gradient(135deg, #697a77, #c8cfcc);
+      color: white;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 430px;
+      height: 650px;
+      right: 13%;
+      top: 0;
+      border-left: 1px solid rgba(255,255,255,.18);
+      border-right: 1px solid rgba(255,255,255,.18);
+      transform: skewX(-12deg);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 260px;
+      height: 500px;
+      right: 27%;
+      top: 70px;
+      border-left: 1px solid rgba(255,255,255,.12);
+      border-right: 1px solid rgba(255,255,255,.12);
+      transform: skewX(-12deg);
+    }
+
+    .hero-content {
+      max-width: 760px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 12px;
+      font-weight: 800;
+      color: #c4d1ce;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(48px, 7vw, 78px);
+      line-height: 1;
+      letter-spacing: -3px;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 span {
+      color: #c8d2cf;
+    }
+
+    .hero p {
+      color: #dce4e1;
+      font-size: 18px;
+      max-width: 650px;
+      margin-bottom: 32px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 15px 24px;
+      border-radius: 3px;
+      font-weight: 800;
+      transition: .25s;
+    }
+
+    .button:hover {
+      transform: translateY(-3px);
+    }
+
+    .primary {
+      background: #f2f3ef;
+      color: #1c2529;
+    }
+
+    .secondary {
+      border: 1px solid rgba(255,255,255,.55);
+      color: white;
+    }
+
+    /* INTRO */
+
+    .intro {
+      padding: 85px 0;
+      background: #f7f8f7;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .intro h2 {
+      font-size: 45px;
+      line-height: 1.1;
+      letter-spacing: -1.5px;
+      color: #202b30;
+    }
+
+    .intro p {
+      color: #68736f;
+      font-size: 17px;
+    }
+
+    /* PROJECT TYPES */
+
+    section {
+      padding: 100px 0;
+    }
+
+    .section-header {
+      max-width: 680px;
+      margin-bottom: 50px;
+    }
+
+    .section-header h2 {
+      font-size: 45px;
+      line-height: 1.1;
+      color: #202b30;
+      margin-bottom: 15px;
+    }
+
+    .section-header p {
+      color: #68736f;
+      font-size: 17px;
+    }
+
+    .projects {
+      background: #e9edeb;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .project {
+      min-height: 360px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+      padding: 30px;
+      color: white;
+      border-radius: 2px;
+    }
+
+    .project:nth-child(1) {
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.05), rgba(0,0,0,.78)),
+        linear-gradient(135deg, #85938e, #334047);
+    }
+
+    .project:nth-child(2) {
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.04), rgba(0,0,0,.8)),
+        linear-gradient(135deg, #b8c0bd, #52605f);
+    }
+
+    .project:nth-child(3) {
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.05), rgba(0,0,0,.8)),
+        linear-gradient(135deg, #667572, #222c31);
+    }
+
+    .project-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .project small {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #d2dbd8;
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    .project h3 {
+      font-size: 26px;
+      margin: 7px 0;
+    }
+
+    .project p {
+      color: #d7dfdc;
+      font-size: 14px;
+    }
+
+    /* SERVICES */
+
+    .services {
+      background: #f7f8f7;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      background: #cfd6d3;
+      border: 1px solid #cfd6d3;
+    }
+
+    .service {
+      background: #f7f8f7;
+      padding: 38px;
+    }
+
+    .service-number {
+      color: #7c8a86;
+      font-size: 12px;
+      letter-spacing: 2px;
+      font-weight: 900;
+      margin-bottom: 18px;
+    }
+
+    .service h3 {
+      font-size: 23px;
+      margin-bottom: 10px;
+      color: #202b30;
+    }
+
+    .service p {
+      color: #69746f;
+      font-size: 15px;
+    }
+
+    /* PROCESS */
+
+    .process {
+      background: #202a2e;
+      color: white;
+    }
+
+    .process .section-header h2 {
+      color: white;
+    }
+
+    .process .section-header p {
+      color: #aebbb7;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 25px;
+    }
+
+    .process-step {
+      border-top: 1px solid #64716e;
+      padding-top: 22px;
+    }
+
+    .process-step span {
+      font-size: 13px;
+      color: #aebbb7;
+    }
+
+    .process-step h3 {
+      margin: 12px 0 8px;
+      font-size: 20px;
+    }
+
+    .process-step p {
+      color: #aebbb7;
+      font-size: 14px;
+    }
+
+    /* ABOUT */
+
+    .about {
+      background: #f7f8f7;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .about h2 {
+      font-size: 45px;
+      line-height: 1.1;
+      margin-bottom: 20px;
+      color: #202b30;
+    }
+
+    .about p {
+      color: #68736f;
+      margin-bottom: 18px;
+    }
+
+    .about-card {
+      padding: 40px;
+      border: 1px solid #d5dcda;
+      background: white;
+    }
+
+    .about-card h3 {
+      margin-bottom: 18px;
+    }
+
+    .about-card div {
+      padding: 13px 0;
+      border-bottom: 1px solid #e2e6e4;
+      color: #586560;
+    }
+
+    /* CTA */
+
+    .contact {
+      text-align: center;
+      background: #dfe5e2;
+    }
+
+    .contact h2 {
+      font-size: 52px;
+      line-height: 1.05;
+      color: #202b30;
+      margin-bottom: 18px;
+    }
+
+    .contact p {
+      max-width: 650px;
+      margin: 0 auto 30px;
+      color: #63706b;
+    }
+
+    .contact .button {
+      background: #202a2e;
+      color: white;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #171f22;
+      color: #9ba8a4;
+      padding: 45px 0 25px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 45px;
+      margin-bottom: 35px;
+    }
+
+    footer h3 {
+      color: white;
+      margin-bottom: 12px;
+    }
+
+    footer p {
+      font-size: 14px;
+    }
+
+    .copyright {
+      border-top: 1px solid rgba(255,255,255,.1);
+      padding-top: 22px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+    }
+
+    .northstar {
+      color: #c3ceca;
+    }
+
+    /* MOBILE */
+
+    @media(max-width: 850px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      .topbar-inner {
+        justify-content: center;
+      }
+
+      .intro-grid,
+      .about-grid,
+      .service-grid,
+      .project-grid,
+      .process-grid,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: 600px;
+      }
+
+      .hero h1 {
+        font-size: 50px;
+      }
+
+      .intro h2,
+      .about h2,
+      .section-header h2 {
+        font-size: 37px;
+      }
+
+      .contact h2 {
+        font-size: 40px;
+      }
+
+      .copyright {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+
+<div class="topbar">
+  <div class="container topbar-inner">
+    <div>Custom Glass & Window Solutions</div>
+    <div>Call: (555) 018-6392</div>
+  </div>
+</div>
+
+
+<!-- NAVIGATION -->
+
+<nav>
+  <div class="container nav-inner">
+
+    <div class="logo">
+      NORTHLINE <span>GLASS & WINDOWS</span>
+    </div>
+
+    <div class="nav-links">
+      <a href="#projects">Projects</a>
+      <a href="#services">Services</a>
+      <a href="#process">Our Process</a>
+      <a href="#about">About</a>
+      <a href="#contact" class="nav-cta">Start a Project</a>
+    </div>
+
+  </div>
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="container">
+
+    <div class="hero-content">
+
+      <div class="eyebrow">
+        Glass • Windows • Installation
+      </div>
+
+      <h1>
+        Designed to bring
+        <span>more light in.</span>
+      </h1>
+
+      <p>
+        Premium glass and window solutions for residential and
+        commercial spaces. Thoughtful design, quality materials
+        and professional installation.
+      </p>
+
+      <div class="buttons">
+
+        <a href="#contact" class="button primary">
+          Start a Project
+        </a>
+
+        <a href="#projects" class="button secondary">
+          Explore Our Work
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- INTRO -->
+
+<section class="intro">
+
+  <div class="container">
+
+    <div class="intro-grid">
+
+      <div>
+
+        <div class="eyebrow">
+          Built Around Your Space
+        </div>
+
+        <h2>
+          Glass isn't just functional. It changes how a space feels.
+        </h2>
+
+      </div>
+
+      <div>
+
+        <p>
+          Northline Glass & Windows works with homeowners,
+          architects, contractors and businesses to create
+          clean, functional and lasting glass solutions.
+        </p>
+
+        <br>
+
+        <p>
+          From replacement windows to custom architectural glass,
+          every project is approached with attention to detail.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- PROJECTS -->
+
+<section class="projects" id="projects">
+
+  <div class="container">
+
+    <div class="section-header">
+
+      <div class="eyebrow">
+        Featured Solutions
+      </div>
+
+      <h2>
+        Made for modern spaces.
+      </h2>
+
+      <p>
+        Explore some of the solutions Northline provides for
+        residential and commercial projects.
+      </p>
+
+    </div>
+
+
+    <div class="project-grid">
+
+      <div class="project">
+
+        <div class="project-content">
+
+          <small>
+            Residential
+          </small>
+
+          <h3>
+            Modern Windows
+          </h3>
+
+          <p>
+            Energy-conscious replacement and new-construction
+            windows designed for contemporary homes.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="project">
+
+        <div class="project-content">
+
+          <small>
+            Interior
+          </small>
+
+          <h3>
+            Custom Glass
+          </h3>
+
+          <p>
+            Frameless shower enclosures, partitions and custom
+            interior glass installations.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="project">
+
+        <div class="project-content">
+
+          <small>
+            Commercial
+          </small>
+
+          <h3>
+            Architectural Glass
+          </h3>
+
+          <p>
+            Glass storefronts, office partitions and architectural
+            solutions for commercial environments.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="services" id="services">
+
+  <div class="container">
+
+    <div class="section-header">
+
+      <div class="eyebrow">
+        What We Do
+      </div>
+
+      <h2>
+        From concept to installation.
+      </h2>
+
+      <p>
+        Complete glass and window services tailored to the needs
+        of your property.
+      </p>
+
+    </div>
+
+
+    <div class="service-grid">
+
+      <div class="service">
+
+        <div class="service-number">
+          01 / WINDOWS
+        </div>
+
+        <h3>
+          Window Replacement
+        </h3>
+
+        <p>
+          Upgrade outdated windows with modern options designed
+          for comfort, appearance and efficiency.
+        </p>
+
+      </div>
+
+
+      <div class="service">
+
+        <div class="service-number">
+          02 / GLASS
+        </div>
+
+        <h3>
+          Custom Glass
+        </h3>
+
+        <p>
+          Custom-cut glass solutions for showers, interiors,
+          partitions and specialty applications.
+        </p>
+
+      </div>
+
+
+      <div class="service">
+
+        <div class="service-number">
+          03 / COMMERCIAL
+        </div>
+
+        <h3>
+          Commercial Glass
+        </h3>
+
+        <p>
+          Storefronts, office glass, entry systems and other
+          commercial glass solutions.
+        </p>
+
+      </div>
+
+
+      <div class="service">
+
+        <div class="service-number">
+          04 / INSTALLATION
+        </div>
+
+        <h3>
+          Professional Installation
+        </h3>
+
+        <p>
+          Detailed installation with a focus on clean finishes,
+          proper fit and long-term performance.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- PROCESS -->
+
+<section class="process" id="process">
+
+  <div class="container">
+
+    <div class="section-header">
+
+      <div class="eyebrow">
+        Our Process
+      </div>
+
+      <h2>
+        A straightforward way to get started.
+      </h2>
+
+      <p>
+        We make the process simple from the first conversation
+        through final installation.
+      </p>
+
+    </div>
+
+
+    <div class="process-grid">
+
+      <div class="process-step">
+
+        <span>
+          STEP 01
+        </span>
+
+        <h3>
+          Consultation
+        </h3>
+
+        <p>
+          Tell us about your space, project and goals.
+        </p>
+
+      </div>
+
+
+      <div class="process-step">
+
+        <span>
+          STEP 02
+        </span>
+
+        <h3>
+          Site Assessment
+        </h3>
+
+        <p>
+          We review measurements, materials and installation needs.
+        </p>
+
+      </div>
+
+
+      <div class="process-step">
+
+        <span>
+          STEP 03
+        </span>
+
+        <h3>
+          Proposal
+        </h3>
+
+        <p>
+          Receive a clear project scope and estimate.
+        </p>
+
+      </div>
+
+
+      <div class="process-step">
+
+        <span>
+          STEP 04
+        </span>
+
+        <h3>
+          Installation
+        </h3>
+
+        <p>
+          Our team brings the project together with care and detail.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+  <div class="container">
+
+    <div class="about-grid">
+
+      <div>
+
+        <div class="eyebrow">
+          About Northline
+        </div>
+
+        <h2>
+          Craftsmanship you can see.
+        </h2>
+
+        <p>
+          Northline Glass & Windows was created for customers
+          looking for more than a basic installation.
+        </p>
+
+        <p>
+          We believe the right glass and window solution should
+          complement the architecture of a space while delivering
+          dependable everyday performance.
+        </p>
+
+      </div>
+
+
+      <div class="about-card">
+
+        <h3>
+          The Northline standard
+        </h3>
+
+        <div>✓ Thoughtful project planning</div>
+        <div>✓ Quality materials</div>
+        <div>✓ Precise measurements</div>
+        <div>✓ Professional installation</div>
+        <div>✓ Clean finished details</div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+  <div class="container">
+
+    <div class="eyebrow">
+      Start Your Project
+    </div>
+
+    <h2>
+      Have a space in mind?
+    </h2>
+
+    <p>
+      Tell us about your project and we'll help you determine
+      the right glass or window solution.
+    </p>
+
+    <a href="tel:15550186392" class="button">
+      Call (555) 018-6392
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div>
+
+        <h3>
+          NORTHLINE GLASS & WINDOWS
+        </h3>
+
+        <p>
+          Modern glass and window solutions for residential
+          and commercial spaces.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h3>
+          Services
+        </h3>
+
+        <p>
+          Window Replacement<br>
+          Custom Glass<br>
+          Commercial Glass<br>
+          Installation
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h3>
+          Contact
+        </h3>
+
+        <p>
+          (555) 018-6392<br>
+          hello@northlineglass.example
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+      <div>
+        © 2026 Northline Glass & Windows. Demo website.
+      </div>
+
+      <div class="northstar">
+        Website concept by Northstar Digital
+      </div>
+
+    </div>
+
+  </div>
+
+</footer>
+
+</body>
+</html>

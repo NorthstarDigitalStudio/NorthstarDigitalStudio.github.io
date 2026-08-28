@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -60,33 +59,34 @@
     }
 
     .nav-inner {
-      min-height: 76px;
+      min-height: 82px;
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
 
-    .logo {
+    .brand {
       display: flex;
       align-items: center;
-      gap: 12px;
-      font-size: 22px;
-      font-weight: 800;
-      letter-spacing: 1px;
+      gap: 13px;
     }
 
-    .logo img {
-      width: 42px;
-      height: 42px;
+    .brand-logo {
+      width: 58px;
+      height: 58px;
       object-fit: contain;
       display: block;
     }
 
-    .logo span {
+    .brand-name {
+      font-size: 25px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
       color: #ffffff;
+      line-height: 1;
     }
 
-    .logo span span {
+    .brand-name span {
       color: #65a9ff;
     }
 
@@ -342,11 +342,13 @@
       content: "";
       position: absolute;
       inset: 0;
+
       background: linear-gradient(
         180deg,
         rgba(0, 0, 0, 0.02) 20%,
         rgba(0, 0, 0, 0.72) 100%
       );
+
       z-index: 1;
     }
 
@@ -530,10 +532,6 @@
       margin-bottom: 15px;
     }
 
-    .support-box ul {
-      padding: 0;
-    }
-
     .support-box li {
       list-style: none;
       padding: 9px 0;
@@ -662,7 +660,7 @@
     .mobile-menu {
       display: none;
       position: absolute;
-      top: 75px;
+      top: 81px;
       left: 0;
       right: 0;
       background: #0b1220;
@@ -696,6 +694,15 @@
 
       .mobile-menu-button {
         display: block;
+      }
+
+      .brand-logo {
+        width: 52px;
+        height: 52px;
+      }
+
+      .brand-name {
+        font-size: 21px;
       }
 
       .hero {
@@ -733,7 +740,6 @@
     }
 
   </style>
-
 </head>
 
 
@@ -748,16 +754,17 @@
 
     <div class="container nav-inner">
 
-      <a href="#top" class="logo">
+      <a href="#top" class="brand">
 
         <img
           src="images/Northstar-logo.1.JPG"
           alt="Northstar Digital logo"
+          class="brand-logo"
         >
 
-        <span>
+        <div class="brand-name">
           NORTHSTAR<span> DIGITAL</span>
-        </span>
+        </div>
 
       </a>
 
@@ -1029,8 +1036,8 @@
           </h3>
 
           <p>
-            Keep your website current with content changes,
-            new images, promotions, pages and ongoing improvements.
+            Keep your website current with content changes, new
+            images, promotions, pages and ongoing improvements.
           </p>
 
         </div>
@@ -1075,7 +1082,10 @@
 
 
       <div
-        style="text-align: center; margin-top: 35px;"
+        style="
+          text-align: center;
+          margin-top: 35px;
+        "
       >
 
         <a
@@ -1127,10 +1137,13 @@
         <div class="project">
 
           <div class="project-image plumbing">
+
             <span>
               CLEARFLOW
             </span>
+
           </div>
+
 
           <div class="project-content">
 
@@ -1164,10 +1177,13 @@
         <div class="project">
 
           <div class="project-image windows">
+
             <span>
               NORTHLINE
             </span>
+
           </div>
+
 
           <div class="project-content">
 
@@ -1201,10 +1217,13 @@
         <div class="project">
 
           <div class="project-image apparel">
+
             <span>
               VANTA
             </span>
+
           </div>
+
 
           <div class="project-content">
 
@@ -1283,8 +1302,8 @@
           </h3>
 
           <p>
-            We learn about your business, customers, services
-            and what you want your website to accomplish.
+            We learn about your business, customers, services and
+            what you want your website to accomplish.
           </p>
 
         </div>
@@ -1301,8 +1320,8 @@
           </h3>
 
           <p>
-            We create the structure, messaging and visual
-            direction around your business.
+            We create the structure, messaging and visual direction
+            around your business.
           </p>
 
         </div>
@@ -1319,8 +1338,8 @@
           </h3>
 
           <p>
-            Your website is built to be responsive, clear
-            and easy for customers to navigate.
+            Your website is built to be responsive, clear and easy
+            for customers to navigate.
           </p>
 
         </div>
@@ -1337,11 +1356,12 @@
           </h3>
 
           <p>
-            Once your website is live, ongoing updates and
-            digital support are available when you need them.
+            Once your website is live, ongoing updates and digital
+            support are available when you need them.
           </p>
 
         </div>
+
 
       </div>
 
@@ -1501,14 +1521,17 @@
 
         </div>
 
+
       </div>
 
 
       <p class="pricing-note">
+
         Every business is different. Final pricing depends on
         project scope, number of pages, content requirements and
         functionality. Hosting, domain registration and ongoing
         support can be handled separately based on your preferences.
+
       </p>
 
     </div>
@@ -1588,11 +1611,15 @@
 
         </div>
 
+
       </div>
 
 
       <div
-        style="text-align: center; margin-top: 35px;"
+        style="
+          text-align: center;
+          margin-top: 35px;
+        "
       >
 
         <a
@@ -1640,9 +1667,9 @@
           </p>
 
           <p>
-            We focus on practical websites that communicate
-            clearly, look professional and make it easier for
-            customers to take the next step.
+            We focus on practical websites that communicate clearly,
+            look professional and make it easier for customers to
+            take the next step.
           </p>
 
         </div>
@@ -1684,11 +1711,15 @@
 
         </div>
 
+
       </div>
 
 
       <div
-        style="text-align: center; margin-top: 35px;"
+        style="
+          text-align: center;
+          margin-top: 35px;
+        "
       >
 
         <a
@@ -1725,9 +1756,9 @@
       </h2>
 
       <p>
-        Have an outdated website, need a new online presence
-        or simply want to talk through an idea? Tell us what
-        you're looking for and we'll take it from there.
+        Have an outdated website, need a new online presence or
+        simply want to talk through an idea? Tell us what you're
+        looking for and we'll take it from there.
       </p>
 
       <div

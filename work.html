@@ -10,6 +10,7 @@
         content="Explore website concepts created by Northstar Digital for home services, windows and glass, and apparel businesses.">
 
   <style>
+
     * {
       margin: 0;
       padding: 0;
@@ -37,6 +38,7 @@
       max-width: 1180px;
       margin: auto;
     }
+
 
     /* NAVIGATION */
 
@@ -94,6 +96,7 @@
       font-weight: 700;
     }
 
+
     /* HERO */
 
     .page-hero {
@@ -146,6 +149,7 @@
       max-width: 700px;
     }
 
+
     /* PROJECTS */
 
     .work-section {
@@ -168,51 +172,25 @@
       margin-bottom: 0;
     }
 
+
     /* PROJECT IMAGE */
 
     .project-visual {
-      min-height: 380px;
-      position: relative;
+      width: 100%;
+      height: 380px;
       overflow: hidden;
+      position: relative;
       background: #111c2d;
     }
 
     .project-visual img {
       width: 100%;
       height: 100%;
-      min-height: 380px;
       display: block;
       object-fit: cover;
       object-position: center;
-      transition: transform 0.5s ease;
     }
 
-    .project:hover .project-visual img {
-      transform: scale(1.04);
-    }
-
-    .image-overlay {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      align-items: flex-end;
-      padding: 25px;
-      background: linear-gradient(
-        to top,
-        rgba(0,0,0,0.55),
-        rgba(0,0,0,0.05) 60%,
-        transparent
-      );
-      pointer-events: none;
-    }
-
-    .image-label {
-      color: white;
-      font-size: 13px;
-      font-weight: 800;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
 
     /* PROJECT INFO */
 
@@ -273,7 +251,8 @@
       transform: translateY(-3px);
     }
 
-    /* NOTE */
+
+    /* PORTFOLIO NOTE */
 
     .portfolio-note {
       padding: 70px 0;
@@ -290,6 +269,7 @@
       max-width: 650px;
       margin: auto;
     }
+
 
     /* CTA */
 
@@ -325,6 +305,7 @@
       transform: translateY(-3px);
     }
 
+
     /* FOOTER */
 
     footer {
@@ -349,6 +330,7 @@
       color: #ffffff;
     }
 
+
     /* MOBILE */
 
     @media (max-width: 850px) {
@@ -362,11 +344,7 @@
       }
 
       .project-visual {
-        min-height: 280px;
-      }
-
-      .project-visual img {
-        min-height: 280px;
+        height: 280px;
       }
 
       .project-info {
@@ -384,332 +362,366 @@
       .footer-inner {
         flex-direction: column;
       }
+
     }
+
   </style>
 </head>
 
+
 <body>
 
-<!-- NAVIGATION -->
 
-<nav>
-  <div class="container nav-inner">
+  <!-- NAVIGATION -->
 
-    <a href="index.html" class="logo">
-      NORTHSTAR<span> DIGITAL</span>
-    </a>
+  <nav>
 
-    <div class="nav-links">
+    <div class="container nav-inner">
 
-      <a href="index.html">
-        Home
+      <a href="index.html" class="logo">
+        NORTHSTAR<span> DIGITAL</span>
       </a>
 
-      <a href="services.html">
-        Services
-      </a>
+      <div class="nav-links">
 
-      <a href="work.html" class="active">
-        Our Work
-      </a>
+        <a href="index.html">
+          Home
+        </a>
 
-      <a href="contact.html" class="nav-button">
-        Let's Talk
-      </a>
+        <a href="services.html">
+          Services
+        </a>
+
+        <a href="work.html" class="active">
+          Our Work
+        </a>
+
+        <a href="contact.html" class="nav-button">
+          Let's Talk
+        </a>
+
+      </div>
 
     </div>
 
-  </div>
-</nav>
+  </nav>
 
 
-<!-- HERO -->
+  <!-- HERO -->
 
-<section class="page-hero">
+  <section class="page-hero">
 
-  <div class="container">
+    <div class="container">
 
-    <div class="hero-content">
+      <div class="hero-content">
 
-      <div class="eyebrow">
-        Selected Work
+        <div class="eyebrow">
+          Selected Work
+        </div>
+
+        <h1>
+          Websites designed for
+          <span>different businesses.</span>
+        </h1>
+
+        <p>
+          Explore examples of how Northstar Digital approaches
+          different industries, audiences and business goals.
+        </p>
+
       </div>
 
-      <h1>
-        Websites designed for
-        <span>different businesses.</span>
-      </h1>
+    </div>
+
+  </section>
+
+
+  <!-- PROJECTS -->
+
+  <section class="work-section">
+
+    <div class="container">
+
+
+      <!-- CLEARFLOW -->
+
+      <div class="project">
+
+        <div class="project-visual">
+
+          <img
+            src="plumbing/images/clearflow-hero.jpg"
+            alt="ClearFlow Plumbing website"
+          >
+
+        </div>
+
+
+        <div class="project-info">
+
+          <div class="project-type">
+            Home Services
+          </div>
+
+          <h2>
+            ClearFlow Plumbing
+          </h2>
+
+          <p>
+            A conversion-focused website concept created for a
+            plumbing business. The design prioritizes fast access
+            to services, emergency calls and customer trust.
+          </p>
+
+          <div class="focus">
+
+            <span>
+              Service Information
+            </span>
+
+            <span>
+              Emergency Calls
+            </span>
+
+            <span>
+              Mobile Design
+            </span>
+
+            <span>
+              Customer Trust
+            </span>
+
+          </div>
+
+          <a
+            href="https://northstardigitalstudio.github.io/northstardigital.github.io/plumbing/"
+            class="project-link"
+          >
+            View Live Website →
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- NORTHLINE -->
+
+      <div class="project">
+
+        <div class="project-visual">
+
+          <img
+            src="windows-glass/images/northline-hero.jpg"
+            alt="Northline Glass website"
+          >
+
+        </div>
+
+
+        <div class="project-info">
+
+          <div class="project-type">
+            Windows & Glass
+          </div>
+
+          <h2>
+            Northline Glass
+          </h2>
+
+          <p>
+            A premium website concept for a windows and glass company,
+            designed around craftsmanship, visual presentation and
+            consultation requests.
+          </p>
+
+          <div class="focus">
+
+            <span>
+              Premium Design
+            </span>
+
+            <span>
+              Services
+            </span>
+
+            <span>
+              Project Showcase
+            </span>
+
+            <span>
+              Consultations
+            </span>
+
+          </div>
+
+          <a
+            href="https://northstardigitalstudio.github.io/northstardigital.github.io/windows-glass/"
+            class="project-link"
+          >
+            View Live Website →
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- VANTA -->
+
+      <div class="project">
+
+        <div class="project-visual">
+
+          <img
+            src="apparel/images/vanta-story.jpg.jpg"
+            alt="Vanta Apparel website"
+          >
+
+        </div>
+
+
+        <div class="project-info">
+
+          <div class="project-type">
+            Apparel
+          </div>
+
+          <h2>
+            VANTA Apparel
+          </h2>
+
+          <p>
+            A modern fashion storefront concept focused on visual
+            storytelling, product presentation and creating a
+            clean shopping experience.
+          </p>
+
+          <div class="focus">
+
+            <span>
+              Product Presentation
+            </span>
+
+            <span>
+              Collections
+            </span>
+
+            <span>
+              Brand Storytelling
+            </span>
+
+            <span>
+              Mobile Design
+            </span>
+
+          </div>
+
+          <a
+            href="https://northstardigitalstudio.github.io/northstardigital.github.io/apparel/"
+            class="project-link"
+          >
+            View Live Website →
+          </a>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- PORTFOLIO NOTE -->
+
+  <section class="portfolio-note">
+
+    <div class="container">
+
+      <div class="eyebrow">
+        Built With Purpose
+      </div>
+
+      <h2>
+        Your business deserves a website built around it.
+      </h2>
 
       <p>
-        Explore examples of how Northstar Digital approaches
-        different industries, audiences and business goals.
+        These examples demonstrate different approaches to
+        website structure, visual identity, customer journeys
+        and calls-to-action. Your website would be designed
+        specifically around your business.
       </p>
 
     </div>
 
-  </div>
-
-</section>
+  </section>
 
 
-<!-- PROJECTS -->
+  <!-- CTA -->
 
-<section class="work-section">
+  <section class="cta">
 
-  <div class="container">
+    <div class="container">
 
-
-    <!-- CLEARFLOW -->
-
-    <div class="project">
-
-      <div class="project-visual">
-
-        <img
-          src="plumbing/images/clearflow-hero.jpg"
-          alt="ClearFlow Plumbing website"
-          loading="lazy">
-
-        <div class="image-overlay">
-          <div class="image-label">
-            ClearFlow Plumbing
-          </div>
-        </div>
-
+      <div class="eyebrow">
+        Start Your Project
       </div>
 
-      <div class="project-info">
+      <h2>
+        Ready to build your website?
+      </h2>
 
-        <div class="project-type">
-          Home Services
-        </div>
+      <p>
+        Tell us about your business and what you're looking to
+        accomplish online.
+      </p>
 
-        <h2>
-          ClearFlow Plumbing
-        </h2>
+      <a href="contact.html" class="button">
+        Request a Quote →
+      </a>
 
-        <p>
-          A conversion-focused website concept created for a
-          plumbing business. The design prioritizes fast access
-          to services, emergency calls and customer trust.
-        </p>
+    </div>
 
-        <div class="focus">
-          <span>Service Information</span>
-          <span>Emergency Calls</span>
-          <span>Mobile Design</span>
-          <span>Customer Trust</span>
-        </div>
+  </section>
 
-        <a
-          href="https://northstardigitalstudio.github.io/northstardigital.github.io/plumbing/"
-          class="project-link">
-          View Live Website →
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="container footer-inner">
+
+      <div>
+        © 2026 Northstar Digital
+      </div>
+
+      <div class="footer-links">
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="services.html">
+          Services
+        </a>
+
+        <a href="work.html">
+          Our Work
+        </a>
+
+        <a href="contact.html">
+          Contact
         </a>
 
       </div>
 
     </div>
 
+  </footer>
 
-    <!-- NORTHLINE -->
-
-    <div class="project">
-
-      <div class="project-visual">
-
-        <img
-          src="windows-glass/images/northline-hero.jpg"
-          alt="Northline Glass website"
-          loading="lazy">
-
-        <div class="image-overlay">
-          <div class="image-label">
-            Northline Glass
-          </div>
-        </div>
-
-      </div>
-
-      <div class="project-info">
-
-        <div class="project-type">
-          Windows & Glass
-        </div>
-
-        <h2>
-          Northline Glass
-        </h2>
-
-        <p>
-          A premium website concept for a windows and glass company,
-          designed around craftsmanship, visual presentation and
-          consultation requests.
-        </p>
-
-        <div class="focus">
-          <span>Premium Design</span>
-          <span>Services</span>
-          <span>Project Showcase</span>
-          <span>Consultations</span>
-        </div>
-
-        <a
-          href="https://northstardigitalstudio.github.io/northstardigital.github.io/windows-glass/"
-          class="project-link">
-          View Live Website →
-        </a>
-
-      </div>
-
-    </div>
-
-
-    <!-- VANTA -->
-
-    <div class="project">
-
-      <div class="project-visual">
-
-        <img
-          src="apparel/images/vanta-hero.jpg"
-          alt="VANTA Apparel website"
-          loading="lazy">
-
-        <div class="image-overlay">
-          <div class="image-label">
-            VANTA Apparel
-          </div>
-        </div>
-
-      </div>
-
-      <div class="project-info">
-
-        <div class="project-type">
-          Apparel
-        </div>
-
-        <h2>
-          VANTA Apparel
-        </h2>
-
-        <p>
-          A modern fashion storefront concept focused on visual
-          storytelling, product presentation and creating a
-          clean shopping experience.
-        </p>
-
-        <div class="focus">
-          <span>Product Presentation</span>
-          <span>Collections</span>
-          <span>Brand Storytelling</span>
-          <span>Mobile Design</span>
-        </div>
-
-        <a
-          href="https://northstardigitalstudio.github.io/northstardigital.github.io/apparel/"
-          class="project-link">
-          View Live Website →
-        </a>
-
-      </div>
-
-    </div>
-
-
-  </div>
-
-</section>
-
-
-<!-- PORTFOLIO NOTE -->
-
-<section class="portfolio-note">
-
-  <div class="container">
-
-    <div class="eyebrow">
-      Built With Purpose
-    </div>
-
-    <h2>
-      Your business deserves a website built around it.
-    </h2>
-
-    <p>
-      These examples demonstrate different approaches to
-      website structure, visual identity, customer journeys
-      and calls-to-action. Your website would be designed
-      specifically around your business.
-    </p>
-
-  </div>
-
-</section>
-
-
-<!-- CTA -->
-
-<section class="cta">
-
-  <div class="container">
-
-    <div class="eyebrow">
-      Start Your Project
-    </div>
-
-    <h2>
-      Ready to build your website?
-    </h2>
-
-    <p>
-      Tell us about your business and what you're looking to
-      accomplish online.
-    </p>
-
-    <a href="contact.html" class="button">
-      Request a Quote →
-    </a>
-
-  </div>
-
-</section>
-
-
-<!-- FOOTER -->
-
-<footer>
-
-  <div class="container footer-inner">
-
-    <div>
-      © 2026 Northstar Digital
-    </div>
-
-    <div class="footer-links">
-
-      <a href="index.html">
-        Home
-      </a>
-
-      <a href="services.html">
-        Services
-      </a>
-
-      <a href="work.html">
-        Our Work
-      </a>
-
-      <a href="contact.html">
-        Contact
-      </a>
-
-    </div>
-
-  </div>
-
-</footer>
 
 </body>
 </html>

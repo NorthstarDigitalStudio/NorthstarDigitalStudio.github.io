@@ -287,27 +287,54 @@
       border-color: #65a9ff;
     }
 
+    /*
+      PROJECT IMAGES
+      These use the images already uploaded
+      inside each demo website folder.
+    */
+
     .project-image {
-      height: 230px;
+      height: 250px;
+      position: relative;
+      overflow: hidden;
       display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 800;
+      align-items: flex-end;
+      padding: 22px;
+      background-size: cover;
+      background-position: center;
+      color: white;
+    }
+
+    .project-image::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(0,0,0,0.02) 20%,
+        rgba(0,0,0,0.72) 100%
+      );
+      z-index: 1;
+    }
+
+    .project-image span {
+      position: relative;
+      z-index: 2;
       font-size: 24px;
+      font-weight: 800;
       letter-spacing: 1px;
     }
 
     .plumbing {
-      background: linear-gradient(135deg,#173d64,#0e78b8);
+      background-image: url("plumbing/images/clearflow-hero.jpg");
     }
 
     .windows {
-      background: linear-gradient(135deg,#7d8782,#d5d9d4);
-      color: #1d2522;
+      background-image: url("windows-glass/images/northline-hero.jpg");
     }
 
     .apparel {
-      background: linear-gradient(135deg,#292929,#777);
+      background-image: url("apparel/images/vanta-story.jpg.jpg");
     }
 
     .project-content {
@@ -553,46 +580,46 @@
     }
 
     .footer-links a:hover {
-  color: #ffffff;
-}
+      color: #ffffff;
+    }
 
-/* MOBILE MENU BUTTON */
+    /* MOBILE MENU BUTTON */
 
-.mobile-menu-button {
-  display: none;
-  background: transparent;
-  border: 1px solid #344258;
-  color: white;
-  font-size: 22px;
-  width: 44px;
-  height: 44px;
-  border-radius: 7px;
-  cursor: pointer;
-}
-    
-.mobile-menu {
-  display: none;
-  position: absolute;
-  top: 75px;
-  left: 0;
-  right: 0;
-  background: #0b1220;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-  padding: 15px 5%;
-  z-index: 999;
-}
+    .mobile-menu-button {
+      display: none;
+      background: transparent;
+      border: 1px solid #344258;
+      color: white;
+      font-size: 22px;
+      width: 44px;
+      height: 44px;
+      border-radius: 7px;
+      cursor: pointer;
+    }
 
-.mobile-menu a {
-  display: block;
-  padding: 14px 0;
-  color: #c8d1df;
-  font-size: 16px;
-  border-bottom: 1px solid rgba(255,255,255,0.06);
-}
+    .mobile-menu {
+      display: none;
+      position: absolute;
+      top: 75px;
+      left: 0;
+      right: 0;
+      background: #0b1220;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding: 15px 5%;
+      z-index: 999;
+    }
 
-.mobile-menu a:hover {
-  color: white;
-}
+    .mobile-menu a {
+      display: block;
+      padding: 14px 0;
+      color: #c8d1df;
+      font-size: 16px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .mobile-menu a:hover {
+      color: white;
+    }
 
     /* MOBILE */
 
@@ -601,9 +628,11 @@
       .nav-links {
         display: none;
       }
-.mobile-menu-button {
-  display: block;
-}
+
+      .mobile-menu-button {
+        display: block;
+      }
+
       .hero {
         min-height: 75vh;
       }
@@ -631,6 +660,10 @@
       .footer-inner {
         flex-direction: column;
       }
+
+      .project-image {
+        height: 280px;
+      }
     }
   </style>
 </head>
@@ -648,40 +681,46 @@
 
     <div class="nav-links">
 
-  <a href="index.html">
-    Home
-  </a>
+      <a href="index.html">
+        Home
+      </a>
 
-  <a href="services.html">
-    Services
-  </a>
+      <a href="services.html">
+        Services
+      </a>
 
-  <a href="work.html">
-    Our Work
-  </a>
+      <a href="work.html">
+        Our Work
+      </a>
 
-  <a href="contact.html" class="nav-button">
-    Let's Talk
-  </a>
+      <a href="contact.html" class="nav-button">
+        Let's Talk
+      </a>
 
-</div>
+    </div>
 
-<button class="mobile-menu-button" onclick="toggleMenu()" aria-label="Open navigation menu">
-  ☰
-</button>
-<div class="mobile-menu" id="mobileMenu">
+    <button
+      class="mobile-menu-button"
+      onclick="toggleMenu()"
+      aria-label="Open navigation menu">
+      ☰
+    </button>
 
-  <a href="index.html">Home</a>
+    <div class="mobile-menu" id="mobileMenu">
 
-  <a href="services.html">Services</a>
+      <a href="index.html">Home</a>
 
-  <a href="work.html">Our Work</a>
+      <a href="services.html">Services</a>
 
-  <a href="contact.html">Let's Talk</a>
+      <a href="work.html">Our Work</a>
 
-</div>
-     </div>
+      <a href="contact.html">Let's Talk</a>
+
+    </div>
+
+  </div>
 </nav>
+
 
 <!-- HERO -->
 
@@ -709,11 +748,11 @@
       <div class="buttons">
 
         <a href="work.html" class="button primary">
-  View Our Work
+          View Our Work
         </a>
 
         <a href="contact.html" class="button secondary">
-  Start a Project
+          Start a Project
         </a>
 
       </div>
@@ -883,7 +922,7 @@
       <div class="project">
 
         <div class="project-image plumbing">
-          CLEARFLOW
+          <span>CLEARFLOW</span>
         </div>
 
         <div class="project-content">
@@ -917,7 +956,7 @@
       <div class="project">
 
         <div class="project-image windows">
-          NORTHLINE
+          <span>NORTHLINE</span>
         </div>
 
         <div class="project-content">
@@ -951,7 +990,7 @@
       <div class="project">
 
         <div class="project-image apparel">
-          VANTA
+          <span>VANTA</span>
         </div>
 
         <div class="project-content">
@@ -1216,7 +1255,7 @@
 
       </div>
 
-   </div>
+    </div>
 
     <div style="text-align:center; margin-top:35px;">
 
@@ -1281,7 +1320,7 @@
 
       </div>
 
-   </div>
+    </div>
 
     <div style="text-align:center; margin-top:35px;">
 
@@ -1320,14 +1359,14 @@
 
       <a
         href="contact.html"
-  class="button primary">
-  Request a Quote
-</a>
+        class="button primary">
+        Request a Quote
+      </a>
 
-<a
-  href="contact.html"
-  class="button secondary">
-  Email Northstar
+      <a
+        href="contact.html"
+        class="button secondary">
+        Email Northstar
       </a>
 
     </div>
@@ -1357,7 +1396,8 @@
   </div>
 
 </footer>
-    
+
+
 <script>
   function toggleMenu() {
     const menu = document.getElementById("mobileMenu");

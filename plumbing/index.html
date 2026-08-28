@@ -10,6 +10,7 @@
     content="ClearFlow Plumbing provides reliable residential and commercial plumbing services, emergency repairs, drain cleaning and water heater services.">
 
   <style>
+
     * {
       margin: 0;
       padding: 0;
@@ -38,7 +39,10 @@
       margin: auto;
     }
 
-    /* TOP BAR */
+
+    /* =========================
+       TOP BAR
+    ========================= */
 
     .topbar {
       background: #092f55;
@@ -53,7 +57,10 @@
       align-items: center;
     }
 
-    /* NAV */
+
+    /* =========================
+       NAVIGATION
+    ========================= */
 
     nav {
       position: sticky;
@@ -100,35 +107,56 @@
       border-radius: 6px;
     }
 
-    /* HERO */
+
+    /* =========================
+       HERO
+    ========================= */
 
     .hero {
-      min-height: 650px;
+      min-height: 680px;
       display: flex;
       align-items: center;
       position: relative;
       overflow: hidden;
+
       background:
-        linear-gradient(90deg, rgba(6,38,68,.96), rgba(6,38,68,.82)),
-        linear-gradient(135deg, #0b5c8e, #78c6e8);
+        linear-gradient(
+          90deg,
+          rgba(6,38,68,.92),
+          rgba(6,38,68,.60)
+        ),
+        url("images/clearflow-hero.jpg")
+        center/cover no-repeat;
+
+      color: white;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 650px;
+      height: 650px;
+      right: -280px;
+      top: -220px;
+      border-radius: 50%;
+      border: 90px solid rgba(255,255,255,.06);
     }
 
     .hero::after {
       content: "";
       position: absolute;
-      width: 500px;
-      height: 500px;
-      right: -180px;
+      width: 300px;
+      height: 300px;
+      right: 12%;
       bottom: -180px;
       border-radius: 50%;
-      border: 80px solid rgba(255,255,255,.07);
+      border: 50px solid rgba(104,201,240,.08);
     }
 
     .hero-content {
       position: relative;
       z-index: 2;
       max-width: 730px;
-      color: white;
     }
 
     .eyebrow {
@@ -149,6 +177,7 @@
 
     .hero h1 span {
       color: #68c9f0;
+      display: block;
     }
 
     .hero p {
@@ -182,11 +211,14 @@
     }
 
     .secondary {
-      border: 1px solid rgba(255,255,255,.4);
+      border: 1px solid rgba(255,255,255,.55);
       color: white;
     }
 
-    /* TRUST */
+
+    /* =========================
+       TRUST BAR
+    ========================= */
 
     .trust {
       padding: 28px 0;
@@ -213,7 +245,10 @@
       font-weight: 500;
     }
 
-    /* SECTIONS */
+
+    /* =========================
+       GENERAL SECTIONS
+    ========================= */
 
     section {
       padding: 100px 0;
@@ -236,7 +271,10 @@
       font-size: 17px;
     }
 
-    /* SERVICES */
+
+    /* =========================
+       SERVICES
+    ========================= */
 
     .services {
       background: white;
@@ -286,18 +324,33 @@
       font-size: 15px;
     }
 
-    /* EMERGENCY */
+
+    /* =========================
+       EMERGENCY SECTION
+    ========================= */
 
     .emergency {
-      background: #092f55;
+      position: relative;
+      overflow: hidden;
       color: white;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(9,47,85,.94),
+          rgba(9,47,85,.72)
+        ),
+        url("images/clearflow-emergency.jpg")
+        center/cover no-repeat;
     }
 
     .emergency-grid {
       display: grid;
-      grid-template-columns: 1.4fr .6fr;
+      grid-template-columns: 1.3fr .7fr;
       gap: 50px;
       align-items: center;
+      position: relative;
+      z-index: 2;
     }
 
     .emergency h2 {
@@ -323,9 +376,13 @@
       border-radius: 7px;
       font-size: 20px;
       font-weight: 900;
+      box-shadow: 0 12px 30px rgba(0,0,0,.2);
     }
 
-    /* ABOUT */
+
+    /* =========================
+       ABOUT SECTION
+    ========================= */
 
     .about {
       background: #f6f8fa;
@@ -350,11 +407,32 @@
       margin-bottom: 18px;
     }
 
-    .about-card {
-      background: white;
-      padding: 35px;
+    .about-visual {
+      min-height: 500px;
       border-radius: 10px;
-      box-shadow: 0 15px 40px rgba(20,40,60,.08);
+      overflow: hidden;
+
+      background:
+        linear-gradient(
+          180deg,
+          rgba(0,0,0,.05),
+          rgba(0,0,0,.35)
+        ),
+        url("images/clearflow-bathroom.jpg")
+        center/cover no-repeat;
+
+      box-shadow: 0 20px 45px rgba(20,40,60,.12);
+    }
+
+    .about-card {
+      margin-top: -90px;
+      margin-left: 30px;
+      position: relative;
+      z-index: 2;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 15px 40px rgba(20,40,60,.12);
     }
 
     .about-card h3 {
@@ -368,7 +446,69 @@
       color: #526073;
     }
 
-    /* REVIEWS */
+
+    /* =========================
+       COMMERCIAL FEATURE
+    ========================= */
+
+    .commercial {
+      background: white;
+    }
+
+    .commercial-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 460px;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #092f55;
+    }
+
+    .commercial-image {
+      min-height: 460px;
+
+      background:
+        linear-gradient(
+          180deg,
+          rgba(0,0,0,.02),
+          rgba(0,0,0,.30)
+        ),
+        url("images/clearflow-commercial.jpg")
+        center/cover no-repeat;
+    }
+
+    .commercial-content {
+      padding: 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: white;
+    }
+
+    .commercial-content .eyebrow {
+      color: #68c9f0;
+    }
+
+    .commercial-content h2 {
+      font-size: 42px;
+      line-height: 1.1;
+      margin-bottom: 18px;
+    }
+
+    .commercial-content p {
+      color: #c9d8e7;
+      margin-bottom: 25px;
+      max-width: 500px;
+    }
+
+    .commercial-content .button {
+      align-self: flex-start;
+    }
+
+
+    /* =========================
+       REVIEWS
+    ========================= */
 
     .review-grid {
       display: grid;
@@ -398,7 +538,10 @@
       color: #182b42;
     }
 
-    /* SERVICE AREA */
+
+    /* =========================
+       SERVICE AREAS
+    ========================= */
 
     .areas {
       background: #f6f8fa;
@@ -419,7 +562,10 @@
       font-weight: 600;
     }
 
-    /* CTA */
+
+    /* =========================
+       CTA
+    ========================= */
 
     .contact {
       background: #eef8fc;
@@ -439,7 +585,10 @@
       color: #667487;
     }
 
-    /* FOOTER */
+
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer {
       background: #071f38;
@@ -476,7 +625,10 @@
       color: #68c9f0;
     }
 
-    /* MOBILE */
+
+    /* =========================
+       MOBILE
+    ========================= */
 
     @media(max-width: 850px) {
 
@@ -496,6 +648,7 @@
       .review-grid,
       .about-grid,
       .emergency-grid,
+      .commercial-grid,
       .footer-grid {
         grid-template-columns: 1fr;
       }
@@ -510,29 +663,76 @@
         font-size: 40px;
       }
 
+      .hero {
+        min-height: 600px;
+      }
+
+      .hero h1 {
+        font-size: 50px;
+      }
+
+      .about-visual {
+        min-height: 400px;
+      }
+
+      .about-card {
+        margin: -50px 20px 0;
+      }
+
+      .commercial-image {
+        min-height: 350px;
+      }
+
+      .commercial-content {
+        padding: 40px 30px;
+      }
+
+      .commercial-content h2 {
+        font-size: 35px;
+      }
+
       .copyright {
         flex-direction: column;
         gap: 10px;
       }
+
     }
+
   </style>
 </head>
 
+
 <body>
 
-<!-- TOP BAR -->
+
+<!-- =========================
+     TOP BAR
+========================= -->
 
 <div class="topbar">
+
   <div class="container topbar-inner">
-    <div>24/7 Emergency Plumbing Available</div>
-    <div>Call: (555) 014-7824</div>
+
+    <div>
+      24/7 Emergency Plumbing Available
+    </div>
+
+    <div>
+      Call: (555) 014-7824
+    </div>
+
   </div>
+
 </div>
 
 
-<!-- NAVIGATION -->
+
+<!-- =========================
+     NAVIGATION
+========================= -->
 
 <nav>
+
   <div class="container nav-inner">
 
     <div class="logo">
@@ -540,18 +740,42 @@
     </div>
 
     <div class="nav-links">
-      <a href="#services">Services</a>
-      <a href="#about">About</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#areas">Service Areas</a>
-      <a href="#contact" class="nav-cta">Request a Quote</a>
+
+      <a href="#services">
+        Services
+      </a>
+
+      <a href="#about">
+        About
+      </a>
+
+      <a href="#commercial">
+        Commercial
+      </a>
+
+      <a href="#reviews">
+        Reviews
+      </a>
+
+      <a href="#areas">
+        Service Areas
+      </a>
+
+      <a href="#contact" class="nav-cta">
+        Request a Quote
+      </a>
+
     </div>
 
   </div>
+
 </nav>
 
 
-<!-- HERO -->
+
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero">
 
@@ -576,11 +800,15 @@
 
       <div class="hero-buttons">
 
-        <a href="tel:15550147824" class="button primary">
+        <a
+          href="tel:15550147824"
+          class="button primary">
           Call Now
         </a>
 
-        <a href="#contact" class="button secondary">
+        <a
+          href="#contact"
+          class="button secondary">
           Request a Quote
         </a>
 
@@ -593,7 +821,10 @@
 </section>
 
 
-<!-- TRUST -->
+
+<!-- =========================
+     TRUST BAR
+========================= -->
 
 <div class="trust">
 
@@ -603,22 +834,30 @@
 
       <div class="trust-item">
         24/7
-        <span>Emergency Service</span>
+        <span>
+          Emergency Service
+        </span>
       </div>
 
       <div class="trust-item">
         Licensed
-        <span>Professional Technicians</span>
+        <span>
+          Professional Technicians
+        </span>
       </div>
 
       <div class="trust-item">
         Fast
-        <span>Response Times</span>
+        <span>
+          Response Times
+        </span>
       </div>
 
       <div class="trust-item">
         Upfront
-        <span>Clear Pricing</span>
+        <span>
+          Clear Pricing
+        </span>
       </div>
 
     </div>
@@ -628,9 +867,14 @@
 </div>
 
 
-<!-- SERVICES -->
 
-<section class="services" id="services">
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section
+  class="services"
+  id="services">
 
   <div class="container">
 
@@ -645,8 +889,8 @@
       </h2>
 
       <p>
-        From small repairs to major plumbing problems, our team
-        is ready to help.
+        From small repairs to major plumbing problems,
+        our team is ready to help.
       </p>
 
     </div>
@@ -654,59 +898,114 @@
 
     <div class="service-grid">
 
-      <div class="service">
-        <div class="service-icon">⚡</div>
-        <h3>Emergency Plumbing</h3>
-        <p>
-          Burst pipes, major leaks and urgent plumbing problems
-          when you need help immediately.
-        </p>
-      </div>
 
       <div class="service">
-        <div class="service-icon">◉</div>
-        <h3>Drain Cleaning</h3>
+
+        <div class="service-icon">
+          ⚡
+        </div>
+
+        <h3>
+          Emergency Plumbing
+        </h3>
+
+        <p>
+          Burst pipes, major leaks and urgent plumbing
+          problems when you need help immediately.
+        </p>
+
+      </div>
+
+
+      <div class="service">
+
+        <div class="service-icon">
+          ◉
+        </div>
+
+        <h3>
+          Drain Cleaning
+        </h3>
+
         <p>
           Clear stubborn clogs and keep your drains flowing
           properly with professional cleaning.
         </p>
+
       </div>
 
-      <div class="service">
-        <div class="service-icon">♨</div>
-        <h3>Water Heaters</h3>
-        <p>
-          Water heater repair, replacement and maintenance for
-          dependable hot water.
-        </p>
-      </div>
 
       <div class="service">
-        <div class="service-icon">⌁</div>
-        <h3>Leak Detection</h3>
+
+        <div class="service-icon">
+          ♨
+        </div>
+
+        <h3>
+          Water Heaters
+        </h3>
+
         <p>
-          Find hidden leaks before they become expensive water
-          damage problems.
+          Water heater repair, replacement and maintenance
+          for dependable hot water.
         </p>
+
       </div>
 
-      <div class="service">
-        <div class="service-icon">⌂</div>
-        <h3>Residential Plumbing</h3>
-        <p>
-          Complete plumbing solutions for homeowners, from repairs
-          to installations.
-        </p>
-      </div>
 
       <div class="service">
-        <div class="service-icon">▦</div>
-        <h3>Commercial Plumbing</h3>
+
+        <div class="service-icon">
+          ⌁
+        </div>
+
+        <h3>
+          Leak Detection
+        </h3>
+
         <p>
-          Dependable plumbing support for offices, restaurants,
-          retail and commercial properties.
+          Find hidden leaks before they become expensive
+          water damage problems.
         </p>
+
       </div>
+
+
+      <div class="service">
+
+        <div class="service-icon">
+          ⌂
+        </div>
+
+        <h3>
+          Residential Plumbing
+        </h3>
+
+        <p>
+          Complete plumbing solutions for homeowners,
+          from repairs to installations.
+        </p>
+
+      </div>
+
+
+      <div class="service">
+
+        <div class="service-icon">
+          ▦
+        </div>
+
+        <h3>
+          Commercial Plumbing
+        </h3>
+
+        <p>
+          Dependable plumbing support for offices,
+          restaurants, retail and commercial properties.
+        </p>
+
+      </div>
+
 
     </div>
 
@@ -715,7 +1014,10 @@
 </section>
 
 
-<!-- EMERGENCY -->
+
+<!-- =========================
+     EMERGENCY
+========================= -->
 
 <section class="emergency">
 
@@ -734,11 +1036,12 @@
         </h2>
 
         <p>
-          Our emergency service is available around the clock
-          for urgent plumbing problems.
+          Our emergency service is available around the
+          clock for urgent plumbing problems.
         </p>
 
       </div>
+
 
       <div class="emergency-button">
 
@@ -755,13 +1058,19 @@
 </section>
 
 
-<!-- ABOUT -->
 
-<section class="about" id="about">
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section
+  class="about"
+  id="about">
 
   <div class="container">
 
     <div class="about-grid">
+
 
       <div>
 
@@ -775,32 +1084,51 @@
 
         <p>
           ClearFlow Plumbing was built around a simple idea:
-          customers deserve reliable service, honest communication
-          and quality workmanship.
+          customers deserve reliable service, honest
+          communication and quality workmanship.
         </p>
 
         <p>
-          Our team approaches every job with the same attention
-          to detail, whether it's a small repair or a major
-          plumbing project.
+          Our team approaches every job with the same
+          attention to detail, whether it's a small repair
+          or a major plumbing project.
         </p>
 
+
+        <div class="about-card">
+
+          <h3>
+            Why homeowners choose ClearFlow
+          </h3>
+
+          <div>
+            ✓ Clear, upfront communication
+          </div>
+
+          <div>
+            ✓ Professional technicians
+          </div>
+
+          <div>
+            ✓ Reliable scheduling
+          </div>
+
+          <div>
+            ✓ Quality workmanship
+          </div>
+
+          <div>
+            ✓ Emergency availability
+          </div>
+
+        </div>
+
       </div>
 
 
-      <div class="about-card">
-
-        <h3>
-          Why homeowners choose ClearFlow
-        </h3>
-
-        <div>✓ Clear, upfront communication</div>
-        <div>✓ Professional technicians</div>
-        <div>✓ Reliable scheduling</div>
-        <div>✓ Quality workmanship</div>
-        <div>✓ Emergency availability</div>
-
+      <div class="about-visual">
       </div>
+
 
     </div>
 
@@ -809,7 +1137,60 @@
 </section>
 
 
-<!-- REVIEWS -->
+
+<!-- =========================
+     COMMERCIAL
+========================= -->
+
+<section
+  class="commercial"
+  id="commercial">
+
+  <div class="container">
+
+    <div class="commercial-grid">
+
+
+      <div class="commercial-image">
+      </div>
+
+
+      <div class="commercial-content">
+
+        <div class="eyebrow">
+          Commercial Plumbing
+        </div>
+
+        <h2>
+          Reliable plumbing for the way your business operates.
+        </h2>
+
+        <p>
+          From restaurants and retail spaces to offices and
+          commercial properties, ClearFlow provides dependable
+          plumbing support designed around your business.
+        </p>
+
+        <a
+          href="#contact"
+          class="button primary">
+          Discuss Your Project
+        </a>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     REVIEWS
+========================= -->
 
 <section id="reviews">
 
@@ -826,14 +1207,15 @@
       </h2>
 
       <p>
-        A few examples of the customer experience ClearFlow
-        aims to deliver.
+        A few examples of the customer experience
+        ClearFlow aims to deliver.
       </p>
 
     </div>
 
 
     <div class="review-grid">
+
 
       <div class="review">
 
@@ -888,6 +1270,7 @@
 
       </div>
 
+
     </div>
 
   </div>
@@ -895,9 +1278,14 @@
 </section>
 
 
-<!-- SERVICE AREAS -->
 
-<section class="areas" id="areas">
+<!-- =========================
+     SERVICE AREAS
+========================= -->
+
+<section
+  class="areas"
+  id="areas">
 
   <div class="container">
 
@@ -913,16 +1301,40 @@
 
     </div>
 
+
     <div class="area-list">
 
-      <div class="area">Downtown</div>
-      <div class="area">Northside</div>
-      <div class="area">Westside</div>
-      <div class="area">Eastside</div>
-      <div class="area">Riverside</div>
-      <div class="area">Oakwood</div>
-      <div class="area">Brookfield</div>
-      <div class="area">Lakeview</div>
+      <div class="area">
+        Downtown
+      </div>
+
+      <div class="area">
+        Northside
+      </div>
+
+      <div class="area">
+        Westside
+      </div>
+
+      <div class="area">
+        Eastside
+      </div>
+
+      <div class="area">
+        Riverside
+      </div>
+
+      <div class="area">
+        Oakwood
+      </div>
+
+      <div class="area">
+        Brookfield
+      </div>
+
+      <div class="area">
+        Lakeview
+      </div>
 
     </div>
 
@@ -931,9 +1343,14 @@
 </section>
 
 
-<!-- CONTACT -->
 
-<section class="contact" id="contact">
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section
+  class="contact"
+  id="contact">
 
   <div class="container">
 
@@ -946,11 +1363,13 @@
     </h2>
 
     <p>
-      Tell us what you need and we'll help you find the right
-      solution.
+      Tell us what you need and we'll help you find
+      the right solution.
     </p>
 
-    <a href="tel:15550147824" class="button primary">
+    <a
+      href="tel:15550147824"
+      class="button primary">
       Call ClearFlow
     </a>
 
@@ -959,7 +1378,10 @@
 </section>
 
 
-<!-- FOOTER -->
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
@@ -967,33 +1389,55 @@
 
     <div class="footer-grid">
 
-      <div>
-        <h3>CLEARFLOW PLUMBING</h3>
-        <p>
-          Reliable plumbing services for homes and businesses.
-          Available for routine service and emergencies.
-        </p>
-      </div>
 
       <div>
-        <h3>Services</h3>
+
+        <h3>
+          CLEARFLOW PLUMBING
+        </h3>
+
+        <p>
+          Reliable plumbing services for homes and
+          businesses. Available for routine service
+          and emergencies.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h3>
+          Services
+        </h3>
+
         <p>
           Emergency Plumbing<br>
           Drain Cleaning<br>
           Water Heaters<br>
-          Leak Detection
+          Leak Detection<br>
+          Commercial Plumbing
         </p>
+
       </div>
 
+
       <div>
-        <h3>Contact</h3>
+
+        <h3>
+          Contact
+        </h3>
+
         <p>
           (555) 014-7824<br>
           hello@clearflowplumbing.example
         </p>
+
       </div>
 
+
     </div>
+
 
     <div class="copyright">
 
@@ -1011,5 +1455,7 @@
 
 </footer>
 
+
 </body>
 </html>
+```

@@ -58,31 +58,47 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(10, 17, 32, 0.94);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+      background: rgba(10, 17, 32, 0.96);
+
+      border-bottom:
+        1px solid rgba(255, 255, 255, 0.08);
+
       backdrop-filter: blur(14px);
     }
 
     .nav-inner {
-      min-height: 86px;
+      min-height: 88px;
+
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
 
+    /*
+      NORTHSTAR BRANDING
+    */
+
     .logo {
       display: flex;
       align-items: center;
+
       gap: 14px;
-      font-size: 28px;
-      font-weight: 800;
-      letter-spacing: 1.5px;
+
+      font-size: 32px;
+      font-weight: 900;
+
+      letter-spacing: 2.5px;
+
       white-space: nowrap;
     }
 
-    .logo-image {
-      height: 62px;
-      width: auto;
+    .logo img {
+      width: 64px;
+      height: 64px;
+
+      object-fit: contain;
+
       display: block;
     }
 
@@ -90,15 +106,20 @@
       color: #65a9ff;
     }
 
+
+    /* NAV LINKS */
+
     .nav-links {
       display: flex;
-      gap: 28px;
       align-items: center;
+      gap: 28px;
     }
 
     .nav-links a {
       color: #b9c4d4;
+
       font-size: 14px;
+
       transition: 0.25s;
     }
 
@@ -108,9 +129,13 @@
 
     .nav-button {
       background: #65a9ff;
+
       color: #07101f !important;
+
       padding: 11px 18px;
+
       border-radius: 7px;
+
       font-weight: 700;
     }
 
@@ -121,20 +146,29 @@
 
     .hero {
       min-height: 88vh;
+
       display: flex;
       align-items: center;
+
       position: relative;
+
       overflow: hidden;
     }
 
     .hero::before {
       content: "";
+
       position: absolute;
+
       width: 620px;
       height: 620px;
+
       background: #1d4ed8;
+
       filter: blur(190px);
+
       opacity: 0.22;
+
       right: -260px;
       top: -220px;
     }
@@ -142,22 +176,31 @@
     .hero-content {
       position: relative;
       z-index: 2;
+
       max-width: 850px;
     }
 
     .eyebrow {
       color: #65a9ff;
+
       text-transform: uppercase;
+
       letter-spacing: 3px;
+
       font-size: 12px;
+
       font-weight: 800;
+
       margin-bottom: 20px;
     }
 
     .hero h1 {
       font-size: clamp(48px, 7vw, 84px);
+
       line-height: 1.01;
+
       margin-bottom: 25px;
+
       letter-spacing: -3px;
     }
 
@@ -167,27 +210,37 @@
 
     .hero p {
       font-size: 19px;
+
       color: #aeb9c9;
+
       max-width: 720px;
+
       margin-bottom: 34px;
     }
 
     .buttons {
       display: flex;
+
       gap: 14px;
+
       flex-wrap: wrap;
     }
 
     .button {
       display: inline-block;
+
       padding: 14px 23px;
+
       border-radius: 7px;
+
       font-weight: 700;
+
       transition: 0.25s;
     }
 
     .primary {
       background: #65a9ff;
+
       color: #07101f;
     }
 
@@ -197,6 +250,7 @@
 
     .secondary {
       border: 1px solid #536174;
+
       color: #ffffff;
     }
 
@@ -210,25 +264,35 @@
     ========================= */
 
     .stats {
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      border-top:
+        1px solid rgba(255, 255, 255, 0.08);
+
+      border-bottom:
+        1px solid rgba(255, 255, 255, 0.08);
+
       padding: 34px 0;
     }
 
     .stats-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
       text-align: center;
+
       gap: 25px;
     }
 
     .stat h3 {
       font-size: 25px;
+
       margin-bottom: 4px;
     }
 
     .stat p {
       color: #8e9bad;
+
       font-size: 14px;
     }
 
@@ -243,18 +307,23 @@
 
     .section-title {
       max-width: 720px;
+
       margin-bottom: 55px;
     }
 
     .section-title h2 {
       font-size: 45px;
+
       line-height: 1.1;
+
       margin-bottom: 15px;
+
       letter-spacing: -1px;
     }
 
     .section-title p {
       color: #9eabba;
+
       font-size: 17px;
     }
 
@@ -269,36 +338,48 @@
 
     .service-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
       gap: 20px;
     }
 
     .service {
       padding: 32px;
+
       border: 1px solid #273448;
+
       background: #111c2d;
+
       border-radius: 12px;
+
       transition: 0.3s;
     }
 
     .service:hover {
       transform: translateY(-5px);
+
       border-color: #65a9ff;
     }
 
     .service-number {
       color: #65a9ff;
+
       font-weight: 800;
+
       margin-bottom: 18px;
     }
 
     .service h3 {
       font-size: 21px;
+
       margin-bottom: 10px;
     }
 
     .service p {
       color: #9eabba;
+
       font-size: 15px;
     }
 
@@ -309,65 +390,93 @@
 
     .projects-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
       gap: 20px;
     }
 
     .project {
       background: #111c2d;
+
       border: 1px solid #273448;
+
       border-radius: 12px;
+
       overflow: hidden;
+
       transition: 0.3s;
     }
 
     .project:hover {
       transform: translateY(-6px);
+
       border-color: #65a9ff;
     }
 
     .project-image {
       height: 250px;
+
       position: relative;
+
       overflow: hidden;
+
       display: flex;
+
       align-items: flex-end;
+
       padding: 22px;
+
       background-size: cover;
+
       background-position: center;
+
       color: white;
     }
 
     .project-image::before {
       content: "";
+
       position: absolute;
+
       inset: 0;
-      background: linear-gradient(
-        180deg,
-        rgba(0, 0, 0, 0.02) 20%,
-        rgba(0, 0, 0, 0.72) 100%
-      );
+
+      background:
+        linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.02) 20%,
+          rgba(0, 0, 0, 0.72) 100%
+        );
+
       z-index: 1;
     }
 
     .project-image span {
       position: relative;
+
       z-index: 2;
+
       font-size: 24px;
+
       font-weight: 800;
+
       letter-spacing: 1px;
     }
 
     .plumbing {
-      background-image: url("plumbing/images/clearflow-hero.jpg");
+      background-image:
+        url("plumbing/images/clearflow-hero.jpg");
     }
 
     .windows {
-      background-image: url("windows-glass/images/northline-hero.jpg");
+      background-image:
+        url("windows-glass/images/northline-hero.jpg");
     }
 
     .apparel {
-      background-image: url("apparel/images/vanta-story.jpg.jpg");
+      background-image:
+        url("apparel/images/vanta-story.jpg.jpg");
     }
 
     .project-content {
@@ -376,25 +485,33 @@
 
     .project-content small {
       color: #65a9ff;
+
       text-transform: uppercase;
+
       letter-spacing: 2px;
+
       font-size: 11px;
+
       font-weight: 700;
     }
 
     .project-content h3 {
       margin: 8px 0;
+
       font-size: 23px;
     }
 
     .project-content p {
       color: #9eabba;
+
       margin-bottom: 20px;
+
       font-size: 15px;
     }
 
     .project-link {
       color: #65a9ff;
+
       font-weight: 700;
     }
 
@@ -409,20 +526,30 @@
 
     .process-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+
+      grid-template-columns:
+        repeat(4, 1fr);
+
       gap: 20px;
     }
 
     .process-step {
       padding: 28px;
-      border-left: 2px solid #65a9ff;
+
+      border-left:
+        2px solid #65a9ff;
+
       background: #111c2d;
-      border-radius: 0 10px 10px 0;
+
+      border-radius:
+        0 10px 10px 0;
     }
 
     .process-step span {
       color: #65a9ff;
+
       font-size: 13px;
+
       font-weight: 800;
     }
 
@@ -432,6 +559,7 @@
 
     .process-step p {
       color: #9eabba;
+
       font-size: 14px;
     }
 
@@ -442,42 +570,57 @@
 
     .pricing-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
       gap: 20px;
     }
 
     .price-card {
       padding: 35px;
+
       background: #111c2d;
+
       border: 1px solid #273448;
+
       border-radius: 12px;
     }
 
     .price-card.featured {
       border-color: #65a9ff;
-      box-shadow: 0 0 35px rgba(101, 169, 255, 0.08);
+
+      box-shadow:
+        0 0 35px rgba(101, 169, 255, 0.08);
     }
 
     .price-card h3 {
       font-size: 22px;
+
       margin-bottom: 10px;
     }
 
     .price {
       font-size: 38px;
+
       font-weight: 800;
+
       margin: 12px 0;
     }
 
     .price-card p {
       color: #9eabba;
+
       font-size: 14px;
+
       margin-bottom: 20px;
     }
 
     .price-card ul {
       list-style: none;
+
       color: #c3ccd9;
+
       font-size: 14px;
     }
 
@@ -487,7 +630,9 @@
 
     .pricing-note {
       margin-top: 30px;
+
       color: #8e9bad;
+
       font-size: 14px;
     }
 
@@ -498,32 +643,44 @@
 
     .support {
       background: #f4f6f8;
+
       color: #111827;
     }
 
     .support-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+
+      grid-template-columns:
+        1fr 1fr;
+
       gap: 60px;
+
       align-items: center;
     }
 
     .support h2 {
       font-size: 45px;
+
       line-height: 1.1;
+
       margin-bottom: 18px;
     }
 
     .support p {
       color: #5b6470;
+
       margin-bottom: 18px;
     }
 
     .support-box {
       background: #ffffff;
+
       padding: 35px;
+
       border-radius: 15px;
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+
+      box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.08);
     }
 
     .support-box h3 {
@@ -532,8 +689,12 @@
 
     .support-box li {
       list-style: none;
+
       padding: 9px 0;
-      border-bottom: 1px solid #e5e7eb;
+
+      border-bottom:
+        1px solid #e5e7eb;
+
       color: #4b5563;
     }
 
@@ -544,30 +705,40 @@
 
     .about {
       background: #ffffff;
+
       color: #111827;
     }
 
     .about-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+
+      grid-template-columns:
+        1fr 1fr;
+
       gap: 70px;
+
       align-items: center;
     }
 
     .about h2 {
       font-size: 45px;
+
       line-height: 1.1;
+
       margin-bottom: 20px;
     }
 
     .about p {
       color: #5b6470;
+
       margin-bottom: 18px;
     }
 
     .about-box {
       background: #f4f6f8;
+
       padding: 40px;
+
       border-radius: 15px;
     }
 
@@ -581,7 +752,10 @@
 
     .about-box li {
       padding: 9px 0;
-      border-bottom: 1px solid #dfe3e8;
+
+      border-bottom:
+        1px solid #dfe3e8;
+
       color: #4b5563;
     }
 
@@ -592,22 +766,28 @@
 
     .cta-section {
       text-align: center;
-      background: linear-gradient(
-        135deg,
-        #122544,
-        #0b1220
-      );
+
+      background:
+        linear-gradient(
+          135deg,
+          #122544,
+          #0b1220
+        );
     }
 
     .cta-section h2 {
       font-size: 53px;
+
       line-height: 1.1;
+
       margin-bottom: 18px;
     }
 
     .cta-section p {
       max-width: 650px;
+
       margin: 0 auto 30px;
+
       color: #aeb9c9;
     }
 
@@ -618,19 +798,26 @@
 
     footer {
       padding: 35px 0;
-      border-top: 1px solid #273448;
+
+      border-top:
+        1px solid #273448;
+
       color: #788598;
+
       font-size: 14px;
     }
 
     .footer-inner {
       display: flex;
+
       justify-content: space-between;
+
       gap: 20px;
     }
 
     .footer-links {
       display: flex;
+
       gap: 20px;
     }
 
@@ -645,34 +832,55 @@
 
     .mobile-menu-button {
       display: none;
+
       background: transparent;
-      border: 1px solid #344258;
+
+      border:
+        1px solid #344258;
+
       color: white;
+
       font-size: 22px;
+
       width: 44px;
       height: 44px;
+
       border-radius: 7px;
+
       cursor: pointer;
     }
 
     .mobile-menu {
       display: none;
+
       position: absolute;
-      top: 85px;
+
+      top: 87px;
+
       left: 0;
       right: 0;
+
       background: #0b1220;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+      border-bottom:
+        1px solid rgba(255, 255, 255, 0.08);
+
       padding: 15px 5%;
+
       z-index: 999;
     }
 
     .mobile-menu a {
       display: block;
+
       padding: 14px 0;
+
       color: #c8d1df;
+
       font-size: 16px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
+      border-bottom:
+        1px solid rgba(255, 255, 255, 0.06);
     }
 
     .mobile-menu a:hover {
@@ -695,12 +903,16 @@
       }
 
       .logo {
-        font-size: 21px;
-        gap: 9px;
+        font-size: 25px;
+
+        letter-spacing: 1.5px;
+
+        gap: 10px;
       }
 
-      .logo-image {
-        height: 48px;
+      .logo img {
+        width: 54px;
+        height: 54px;
       }
 
       .hero {
@@ -734,7 +946,37 @@
       .project-image {
         height: 280px;
       }
+    }
 
+
+    /* SMALL PHONES */
+
+    @media (max-width: 500px) {
+
+      .logo {
+        font-size: 20px;
+
+        letter-spacing: 1px;
+
+        gap: 8px;
+      }
+
+      .logo img {
+        width: 46px;
+        height: 46px;
+      }
+
+      .nav-inner {
+        min-height: 76px;
+      }
+
+      .mobile-menu {
+        top: 75px;
+      }
+
+      .hero h1 {
+        letter-spacing: -2px;
+      }
     }
 
   </style>
@@ -753,12 +995,14 @@
 
     <div class="container nav-inner">
 
-      <a href="#top" class="logo">
+      <a
+        href="#top"
+        class="logo"
+      >
 
         <img
           src="images/Northstar-logo.2.jpg"
           alt="Northstar Digital logo"
-          class="logo-image"
         >
 
         <span>
@@ -858,6 +1102,7 @@
           for small businesses that want to look credible, connect
           with customers and turn more visitors into opportunities.
         </p>
+
 
         <div class="buttons">
 
@@ -1037,8 +1282,8 @@
           </h3>
 
           <p>
-            Keep your website current with content changes, new
-            images, promotions, pages and ongoing improvements.
+            Keep your website current with content changes,
+            new images, promotions, pages and ongoing improvements.
           </p>
 
         </div>
@@ -1083,7 +1328,10 @@
 
 
       <div
-        style="text-align: center; margin-top: 35px;"
+        style="
+          text-align: center;
+          margin-top: 35px;
+        "
       >
 
         <a
@@ -1249,7 +1497,6 @@
 
         </div>
 
-
       </div>
 
     </div>
@@ -1300,8 +1547,8 @@
           </h3>
 
           <p>
-            We learn about your business, customers, services and
-            what you want your website to accomplish.
+            We learn about your business, customers, services
+            and what you want your website to accomplish.
           </p>
 
         </div>
@@ -1318,8 +1565,8 @@
           </h3>
 
           <p>
-            We create the structure, messaging and visual direction
-            around your business.
+            We create the structure, messaging and visual
+            direction around your business.
           </p>
 
         </div>
@@ -1336,8 +1583,8 @@
           </h3>
 
           <p>
-            Your website is built to be responsive, clear and easy
-            for customers to navigate.
+            Your website is built to be responsive, clear
+            and easy for customers to navigate.
           </p>
 
         </div>
@@ -1354,12 +1601,11 @@
           </h3>
 
           <p>
-            Once your website is live, ongoing updates and digital
-            support are available when you need them.
+            Once your website is live, ongoing updates and
+            digital support are available when you need them.
           </p>
 
         </div>
-
 
       </div>
 
@@ -1519,7 +1765,6 @@
 
         </div>
 
-
       </div>
 
 
@@ -1609,12 +1854,14 @@
 
         </div>
 
-
       </div>
 
 
       <div
-        style="text-align: center; margin-top: 35px;"
+        style="
+          text-align: center;
+          margin-top: 35px;
+        "
       >
 
         <a
@@ -1662,9 +1909,9 @@
           </p>
 
           <p>
-            We focus on practical websites that communicate clearly,
-            look professional and make it easier for customers to
-            take the next step.
+            We focus on practical websites that communicate
+            clearly, look professional and make it easier for
+            customers to take the next step.
           </p>
 
         </div>
@@ -1706,12 +1953,14 @@
 
         </div>
 
-
       </div>
 
 
       <div
-        style="text-align: center; margin-top: 35px;"
+        style="
+          text-align: center;
+          margin-top: 35px;
+        "
       >
 
         <a
@@ -1748,15 +1997,17 @@
       </h2>
 
       <p>
-        Have an outdated website, need a new online presence or
-        simply want to talk through an idea? Tell us what you're
-        looking for and we'll take it from there.
+        Have an outdated website, need a new online presence
+        or simply want to talk through an idea? Tell us what
+        you're looking for and we'll take it from there.
       </p>
 
 
       <div
         class="buttons"
-        style="justify-content: center;"
+        style="
+          justify-content: center;
+        "
       >
 
         <a
@@ -1791,6 +2042,7 @@
       <div>
         © 2026 Northstar Digital
       </div>
+
 
       <div class="footer-links">
 

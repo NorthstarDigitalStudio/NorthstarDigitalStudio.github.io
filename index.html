@@ -59,7 +59,7 @@
       top: 0;
       z-index: 1000;
 
-      background: rgba(10, 17, 32, 0.94);
+      background: rgba(10, 17, 32, 0.96);
 
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 
@@ -67,40 +67,44 @@
     }
 
     .nav-inner {
-      min-height: 86px;
+      min-height: 105px;
 
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
 
-    /*
-      BRAND
 
-      The logo is the icon-only version.
-      The text is kept separately beside it.
-    */
+    /* =========================
+       BRAND
+    ========================= */
 
     .brand {
       display: flex;
       align-items: center;
-      gap: 15px;
+
+      gap: 18px;
+
+      height: 100%;
     }
 
     .brand-logo {
-      width: 70px;
-      height: 70px;
+      width: 90px;
+      height: 90px;
 
       object-fit: contain;
 
       display: block;
+
+      flex-shrink: 0;
     }
 
     .brand-name {
-      font-size: 27px;
+      font-size: 30px;
+
       font-weight: 800;
 
-      letter-spacing: 1.8px;
+      letter-spacing: 2px;
 
       line-height: 1;
 
@@ -113,9 +117,16 @@
       color: #65a9ff;
     }
 
+
+    /* =========================
+       NAV LINKS
+    ========================= */
+
     .nav-links {
       display: flex;
+
       gap: 28px;
+
       align-items: center;
     }
 
@@ -136,7 +147,7 @@
 
       color: #07101f !important;
 
-      padding: 11px 18px;
+      padding: 12px 19px;
 
       border-radius: 7px;
 
@@ -152,6 +163,7 @@
       min-height: 88vh;
 
       display: flex;
+
       align-items: center;
 
       position: relative;
@@ -174,6 +186,7 @@
       opacity: 0.22;
 
       right: -260px;
+
       top: -220px;
     }
 
@@ -582,7 +595,8 @@
     .price-card.featured {
       border-color: #65a9ff;
 
-      box-shadow: 0 0 35px rgba(101, 169, 255, 0.08);
+      box-shadow:
+        0 0 35px rgba(101, 169, 255, 0.08);
     }
 
     .price-card h3 {
@@ -669,7 +683,8 @@
 
       border-radius: 15px;
 
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+      box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.08);
     }
 
     .support-box h3 {
@@ -839,7 +854,7 @@
 
       position: absolute;
 
-      top: 85px;
+      top: 105px;
 
       left: 0;
 
@@ -872,7 +887,7 @@
 
 
     /* =========================
-       MOBILE
+       TABLET / MOBILE
     ========================= */
 
     @media (max-width: 900px) {
@@ -886,22 +901,22 @@
       }
 
       .nav-inner {
-        min-height: 82px;
-      }
-
-      .brand {
-        gap: 10px;
+        min-height: 90px;
       }
 
       .brand-logo {
-        width: 58px;
-        height: 58px;
+        width: 72px;
+        height: 72px;
       }
 
       .brand-name {
-        font-size: 21px;
+        font-size: 23px;
 
         letter-spacing: 1.2px;
+      }
+
+      .mobile-menu {
+        top: 90px;
       }
 
       .hero {
@@ -944,9 +959,13 @@
 
     @media (max-width: 500px) {
 
+      .brand {
+        gap: 8px;
+      }
+
       .brand-logo {
-        width: 52px;
-        height: 52px;
+        width: 62px;
+        height: 62px;
       }
 
       .brand-name {
@@ -986,7 +1005,10 @@
 
       <!-- BRAND -->
 
-      <a href="#top" class="brand">
+      <a
+        href="#top"
+        class="brand"
+      >
 
         <img
           src="images/Northstar-logo.1.JPG"
@@ -1143,7 +1165,6 @@
 
         </div>
 
-
         <div class="stat">
 
           <h3>
@@ -1155,7 +1176,6 @@
           </p>
 
         </div>
-
 
         <div class="stat">
 
@@ -1497,7 +1517,10 @@
        PROCESS
   ========================= -->
 
-  <section class="process" id="process">
+  <section
+    class="process"
+    id="process"
+  >
 
     <div class="container">
 
@@ -1630,8 +1653,6 @@
       <div class="pricing-grid">
 
 
-        <!-- STARTER -->
-
         <div class="price-card">
 
           <h3>
@@ -1669,8 +1690,6 @@
 
         </div>
 
-
-        <!-- BUSINESS -->
 
         <div class="price-card featured">
 
@@ -1713,8 +1732,6 @@
 
         </div>
 
-
-        <!-- GROWTH -->
 
         <div class="price-card">
 
@@ -2067,7 +2084,8 @@
 
     function toggleMenu() {
 
-      const menu = document.getElementById("mobileMenu");
+      const menu =
+        document.getElementById("mobileMenu");
 
       if (menu.style.display === "block") {
 

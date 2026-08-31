@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,13 +11,11 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>
-    Services | Northstar Digital
-  </title>
+  <title>Services | Northstar Digital</title>
 
   <meta
     name="description"
-    content="Northstar Digital provides professional website design, website redesigns, landing pages, website maintenance and basic SEO for small businesses."
+    content="Northstar Digital provides professional website design, redesigns, landing pages, website maintenance and basic SEO for small businesses."
   >
 
   <style>
@@ -118,9 +117,6 @@
       color: #65a9ff;
     }
 
-
-    /* NAV LINKS */
-
     .nav-links {
       display: flex;
       align-items: center;
@@ -163,7 +159,9 @@
     }
 
 
-    /* MOBILE MENU */
+    /* =========================
+       MOBILE MENU
+    ========================= */
 
     .mobile-menu-button {
       display: none;
@@ -228,7 +226,7 @@
 
 
     /* =========================
-       PAGE HERO
+       HERO
     ========================= */
 
     .page-hero {
@@ -441,7 +439,7 @@
 
 
     /* =========================
-       PRICING LINK
+       PRICING CALLOUT
     ========================= */
 
     .pricing-callout {
@@ -498,41 +496,46 @@
     ========================= */
 
     .why-section {
-      padding: 100px 0;
+      padding: 110px 0;
+
+      background: #0a1120;
+    }
+
+    .why-header {
+      max-width: 760px;
+
+      margin-bottom: 55px;
+    }
+
+    .why-header h2 {
+      font-size: 48px;
+
+      line-height: 1.08;
+
+      letter-spacing: -1.8px;
+
+      margin-bottom: 18px;
+    }
+
+    .why-header p {
+      color: #aeb9c9;
+
+      font-size: 17px;
+
+      max-width: 680px;
     }
 
     .why-grid {
       display: grid;
 
       grid-template-columns:
-        1fr 1fr;
+        repeat(3, 1fr);
 
-      gap: 70px;
-
-      align-items: center;
+      gap: 20px;
     }
 
-    .why-section h2 {
-      font-size: 45px;
-
-      line-height: 1.1;
-
-      margin-bottom: 20px;
-
-      letter-spacing: -1.5px;
-    }
-
-    .why-section p {
-      color: #aeb9c9;
-
-      margin-bottom: 18px;
-
-      max-width: 560px;
-    }
-
-    .why-box {
-      border:
-        1px solid #273448;
+    .why-card {
+      padding: 32px;
 
       background:
         linear-gradient(
@@ -541,34 +544,119 @@
           #0e1929
         );
 
-      border-radius: 14px;
-
-      padding: 35px;
-    }
-
-    .why-box h3 {
-      margin-bottom: 15px;
-
-      font-size: 21px;
-    }
-
-    .why-box ul {
-      list-style: none;
-    }
-
-    .why-box li {
-      padding: 10px 0;
-
-      border-bottom:
+      border:
         1px solid #273448;
 
-      color: #c5ceda;
+      border-radius: 14px;
+
+      transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+    }
+
+    .why-card:hover {
+      transform: translateY(-5px);
+
+      border-color: #65a9ff;
+    }
+
+    .why-number {
+      color: #65a9ff;
+
+      font-size: 12px;
+
+      font-weight: 800;
+
+      letter-spacing: 1px;
+
+      margin-bottom: 18px;
+    }
+
+    .why-card h3 {
+      font-size: 22px;
+
+      margin-bottom: 12px;
+    }
+
+    .why-card p {
+      color: #9eabba;
 
       font-size: 14px;
     }
 
-    .why-box li:last-child {
+
+    /* =========================
+       WHY NORTHSTAR FEATURE
+    ========================= */
+
+    .why-feature {
+      margin-top: 20px;
+
+      padding: 38px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #122544,
+          #0e1929
+        );
+
+      border:
+        1px solid rgba(101, 169, 255, 0.25);
+
+      border-radius: 14px;
+
+      display: grid;
+
+      grid-template-columns:
+        1.2fr 0.8fr;
+
+      gap: 50px;
+
+      align-items: center;
+    }
+
+    .why-feature h3 {
+      font-size: 30px;
+
+      line-height: 1.15;
+
+      margin-bottom: 14px;
+    }
+
+    .why-feature p {
+      color: #aeb9c9;
+
+      font-size: 15px;
+
+      max-width: 650px;
+    }
+
+    .why-feature-list {
+      list-style: none;
+    }
+
+    .why-feature-list li {
+      padding: 11px 0;
+
+      color: #d3dbe6;
+
+      font-size: 14px;
+
+      border-bottom:
+        1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .why-feature-list li:last-child {
       border-bottom: none;
+    }
+
+    .why-feature-list span {
+      color: #65a9ff;
+
+      font-weight: 800;
+
+      margin-right: 8px;
     }
 
 
@@ -742,8 +830,14 @@
         align-items: flex-start;
       }
 
+      .why-feature {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+      }
+
       .section-intro h2,
-      .why-section h2 {
+      .why-header h2 {
         font-size: 38px;
       }
 
@@ -811,12 +905,21 @@
       }
 
       .section-intro h2,
-      .why-section h2 {
+      .why-header h2 {
         font-size: 34px;
       }
 
-      .service-card {
+      .service-card,
+      .why-card {
         padding: 28px;
+      }
+
+      .why-feature {
+        padding: 28px;
+      }
+
+      .why-feature h3 {
+        font-size: 25px;
       }
 
       .cta {
@@ -936,7 +1039,7 @@
 
 
   <!-- =========================
-       PAGE HERO
+       HERO
   ========================= -->
 
   <section class="page-hero">
@@ -997,8 +1100,6 @@
       <div class="service-grid">
 
 
-        <!-- SERVICE 1 -->
-
         <div class="service-card">
 
           <div class="service-number">
@@ -1017,32 +1118,16 @@
 
           <ul>
 
-            <li>
-              ✓ Custom page structure
-            </li>
-
-            <li>
-              ✓ Mobile-responsive design
-            </li>
-
-            <li>
-              ✓ Business-focused messaging
-            </li>
-
-            <li>
-              ✓ Clear calls-to-action
-            </li>
-
-            <li>
-              ✓ Contact functionality
-            </li>
+            <li>✓ Custom page structure</li>
+            <li>✓ Mobile-responsive design</li>
+            <li>✓ Business-focused messaging</li>
+            <li>✓ Clear calls-to-action</li>
+            <li>✓ Contact functionality</li>
 
           </ul>
 
         </div>
 
-
-        <!-- SERVICE 2 -->
 
         <div class="service-card">
 
@@ -1062,32 +1147,16 @@
 
           <ul>
 
-            <li>
-              ✓ Modern visual design
-            </li>
-
-            <li>
-              ✓ Improved navigation
-            </li>
-
-            <li>
-              ✓ Mobile optimization
-            </li>
-
-            <li>
-              ✓ Stronger calls-to-action
-            </li>
-
-            <li>
-              ✓ Better content organization
-            </li>
+            <li>✓ Modern visual design</li>
+            <li>✓ Improved navigation</li>
+            <li>✓ Mobile optimization</li>
+            <li>✓ Stronger calls-to-action</li>
+            <li>✓ Better content organization</li>
 
           </ul>
 
         </div>
 
-
-        <!-- SERVICE 3 -->
 
         <div class="service-card">
 
@@ -1106,32 +1175,16 @@
 
           <ul>
 
-            <li>
-              ✓ Campaign-focused layout
-            </li>
-
-            <li>
-              ✓ Clear messaging
-            </li>
-
-            <li>
-              ✓ Conversion-focused design
-            </li>
-
-            <li>
-              ✓ Strong call-to-action
-            </li>
-
-            <li>
-              ✓ Mobile-friendly experience
-            </li>
+            <li>✓ Campaign-focused layout</li>
+            <li>✓ Clear messaging</li>
+            <li>✓ Conversion-focused design</li>
+            <li>✓ Strong call-to-action</li>
+            <li>✓ Mobile-friendly experience</li>
 
           </ul>
 
         </div>
 
-
-        <!-- SERVICE 4 -->
 
         <div class="service-card">
 
@@ -1151,32 +1204,16 @@
 
           <ul>
 
-            <li>
-              ✓ Text and image updates
-            </li>
-
-            <li>
-              ✓ New pages and sections
-            </li>
-
-            <li>
-              ✓ Promotions and announcements
-            </li>
-
-            <li>
-              ✓ Website troubleshooting
-            </li>
-
-            <li>
-              ✓ General website management
-            </li>
+            <li>✓ Text and image updates</li>
+            <li>✓ New pages and sections</li>
+            <li>✓ Promotions and announcements</li>
+            <li>✓ Website troubleshooting</li>
+            <li>✓ General website management</li>
 
           </ul>
 
         </div>
 
-
-        <!-- SERVICE 5 -->
 
         <div class="service-card">
 
@@ -1196,25 +1233,11 @@
 
           <ul>
 
-            <li>
-              ✓ Page titles and descriptions
-            </li>
-
-            <li>
-              ✓ Search-friendly structure
-            </li>
-
-            <li>
-              ✓ Content optimization
-            </li>
-
-            <li>
-              ✓ Basic local SEO guidance
-            </li>
-
-            <li>
-              ✓ Search engine setup
-            </li>
+            <li>✓ Page titles and descriptions</li>
+            <li>✓ Search-friendly structure</li>
+            <li>✓ Content optimization</li>
+            <li>✓ Basic local SEO guidance</li>
+            <li>✓ Search engine setup</li>
 
           </ul>
 
@@ -1223,8 +1246,6 @@
 
       </div>
 
-
-      <!-- PRICING CALLOUT -->
 
       <div class="pricing-callout">
 
@@ -1263,69 +1284,192 @@
 
     <div class="container">
 
+      <div class="why-header">
+
+        <div class="eyebrow">
+          Why Northstar
+        </div>
+
+        <h2>
+          A better website shouldn't require a complicated agency.
+        </h2>
+
+        <p>
+          Northstar Digital was built around a simple idea:
+          small businesses deserve professional websites without
+          unnecessary complexity, inflated agency overhead or
+          confusing processes.
+        </p>
+
+      </div>
+
+
       <div class="why-grid">
 
 
-        <div>
+        <div class="why-card">
 
-          <div class="eyebrow">
-            Why Northstar
+          <div class="why-number">
+            01 — FOCUSED
           </div>
 
-          <h2>
-            Professional doesn't have to mean complicated.
-          </h2>
-
-          <p>
-            Small businesses shouldn't have to navigate a
-            complicated agency process just to get a website
-            that works.
-          </p>
-
-          <p>
-            Northstar Digital focuses on clear communication,
-            practical solutions and websites designed around
-            what your customers actually need.
-          </p>
-
-        </div>
-
-
-        <div class="why-box">
-
           <h3>
-            Our approach
+            We Keep It Simple
           </h3>
 
-          <ul>
-
-            <li>
-              ✓ Clear communication
-            </li>
-
-            <li>
-              ✓ Straightforward project scope
-            </li>
-
-            <li>
-              ✓ Mobile-friendly design
-            </li>
-
-            <li>
-              ✓ Business-focused websites
-            </li>
-
-            <li>
-              ✓ Flexible project options
-            </li>
-
-            <li>
-              ✓ Support after launch
-            </li>
-
-          </ul>
+          <p>
+            You don't need a massive agency or a dozen different
+            services. We focus on the website and digital essentials
+            that actually matter to your business.
+          </p>
 
         </div>
+
+
+        <div class="why-card">
+
+          <div class="why-number">
+            02 — PRACTICAL
+          </div>
+
+          <h3>
+            Built for Real Businesses
+          </h3>
+
+          <p>
+            Your website should do more than look good. We focus on
+            clear messaging, easy navigation and strong calls-to-action
+            that help customers understand what you offer.
+          </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+          <div class="why-number">
+            03 — PERSONAL
+          </div>
+
+          <h3>
+            Direct Communication
+          </h3>
+
+          <p>
+            No layers of account managers or complicated agency
+            processes. You communicate directly with the people
+            working on your project.
+          </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+          <div class="why-number">
+            04 — FLEXIBLE
+          </div>
+
+          <h3>
+            Start Where You Need
+          </h3>
+
+          <p>
+            Whether you need a complete website, a single landing
+            page or help improving an existing site, we can work
+            around the actual needs of your business.
+          </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+          <div class="why-number">
+            05 — TRANSPARENT
+          </div>
+
+          <h3>
+            Clear Scope & Pricing
+          </h3>
+
+          <p>
+            You should know what you're paying for and what you're
+            getting. We keep project expectations and deliverables
+            straightforward from the beginning.
+          </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+          <div class="why-number">
+            06 — LONG-TERM
+          </div>
+
+          <h3>
+            We're Here After Launch
+          </h3>
+
+          <p>
+            A website isn't finished just because it goes live.
+            We can continue helping with updates, improvements,
+            maintenance and ongoing website needs.
+          </p>
+
+        </div>
+
+
+      </div>
+
+
+      <div class="why-feature">
+
+        <div>
+
+          <h3>
+            You get the expertise without the agency experience.
+          </h3>
+
+          <p>
+            Northstar Digital gives small businesses a professional,
+            modern web presence while keeping the process direct,
+            understandable and focused on what actually moves the
+            business forward.
+          </p>
+
+        </div>
+
+
+        <ul class="why-feature-list">
+
+          <li>
+            <span>✓</span>
+            Professional, modern websites
+          </li>
+
+          <li>
+            <span>✓</span>
+            Business-focused strategy
+          </li>
+
+          <li>
+            <span>✓</span>
+            Straightforward communication
+          </li>
+
+          <li>
+            <span>✓</span>
+            No unnecessary services
+          </li>
+
+          <li>
+            <span>✓</span>
+            Support beyond launch
+          </li>
+
+        </ul>
 
       </div>
 
@@ -1378,7 +1522,6 @@
       <div>
         © 2026 Northstar Digital
       </div>
-
 
       <div class="footer-links">
 
@@ -1472,3 +1615,4 @@
 </body>
 
 </html>
+```

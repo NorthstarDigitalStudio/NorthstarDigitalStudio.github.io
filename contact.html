@@ -69,8 +69,6 @@
     }
 
     .logo {
-      display: flex;
-      align-items: center;
       font-size: 22px;
       font-weight: 800;
       letter-spacing: 1px;
@@ -107,61 +105,6 @@
       padding: 11px 18px;
       border-radius: 7px;
       font-weight: 700;
-    }
-
-    .nav-button:hover {
-      background: #7ab5ff;
-      color: #07101f !important;
-      transform: translateY(-1px);
-    }
-
-
-    /* =========================
-       MOBILE MENU
-    ========================= */
-
-    .mobile-menu-button {
-      display: none;
-      background: transparent;
-      border: 1px solid #344258;
-      color: white;
-      font-size: 22px;
-      width: 44px;
-      height: 44px;
-      border-radius: 7px;
-      cursor: pointer;
-    }
-
-    .mobile-menu-button:hover {
-      border-color: #65a9ff;
-    }
-
-    .mobile-menu {
-      display: none;
-      position: absolute;
-      top: 75px;
-      left: 0;
-      right: 0;
-      background: #0b1220;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      padding: 15px 5%;
-      z-index: 999;
-    }
-
-    .mobile-menu a {
-      display: block;
-      padding: 14px 0;
-      color: #c8d1df;
-      font-size: 16px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-    }
-
-    .mobile-menu a:hover {
-      color: #ffffff;
-    }
-
-    .mobile-menu a:last-child {
-      border-bottom: none;
     }
 
 
@@ -370,7 +313,6 @@
     .submit-button:hover {
       transform: translateY(-2px);
       box-shadow: 0 8px 20px rgba(101, 169, 255, 0.15);
-      background: #7ab5ff;
     }
 
     .form-note {
@@ -418,12 +360,6 @@
       background: #111c2d;
       border: 1px solid #273448;
       border-radius: 12px;
-      transition: 0.25s;
-    }
-
-    .step-card:hover {
-      border-color: #3d506a;
-      transform: translateY(-2px);
     }
 
     .step-number {
@@ -518,8 +454,9 @@
         display: none;
       }
 
-      .mobile-menu-button {
-        display: block;
+      .portfolio-intro-inner {
+        flex-direction: column;
+        align-items: flex-start;
       }
 
       .contact-grid {
@@ -565,20 +502,12 @@
 
     @media (max-width: 500px) {
 
-      .nav-inner {
-        min-height: 76px;
-      }
-
-      .mobile-menu {
-        top: 75px;
+      .page-hero {
+        padding: 90px 0 65px;
       }
 
       h1 {
         letter-spacing: -2px;
-      }
-
-      .page-hero {
-        padding: 90px 0 65px;
       }
 
     }
@@ -618,37 +547,6 @@
         </a>
 
         <a href="contact.html" class="nav-button active">
-          Let's Talk
-        </a>
-
-      </div>
-
-      <button
-        class="mobile-menu-button"
-        onclick="toggleMenu()"
-        aria-label="Open navigation menu"
-      >
-        ☰
-      </button>
-
-      <div
-        class="mobile-menu"
-        id="mobileMenu"
-      >
-
-        <a href="index.html">
-          Home
-        </a>
-
-        <a href="services.html">
-          Services
-        </a>
-
-        <a href="work.html">
-          Our Work
-        </a>
-
-        <a href="contact.html">
           Let's Talk
         </a>
 
@@ -782,7 +680,6 @@
             action="https://formspree.io/f/maewrrnk"
             method="POST"
           >
-
 
             <div class="form-row">
 
@@ -1140,32 +1037,6 @@
     </div>
 
   </footer>
-
-
-  <!-- =========================
-       MOBILE MENU SCRIPT
-  ========================= -->
-
-  <script>
-
-    function toggleMenu() {
-
-      const menu =
-        document.getElementById("mobileMenu");
-
-      if (menu.style.display === "block") {
-
-        menu.style.display = "none";
-
-      } else {
-
-        menu.style.display = "block";
-
-      }
-
-    }
-
-  </script>
 
 
 </body>

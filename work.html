@@ -81,6 +81,8 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+
+      position: relative;
     }
 
     .logo {
@@ -187,6 +189,11 @@
       cursor: pointer;
     }
 
+
+    /* =========================
+       MOBILE MENU
+    ========================= */
+
     .mobile-menu {
       display: none;
 
@@ -207,6 +214,10 @@
       z-index: 999;
     }
 
+    .mobile-menu.open {
+      display: block;
+    }
+
     .mobile-menu a {
       display: block;
 
@@ -225,7 +236,7 @@
     }
 
     .mobile-menu a:hover {
-      color: white;
+      color: #ffffff;
     }
 
 
@@ -257,6 +268,8 @@
 
       right: -220px;
       top: -170px;
+
+      pointer-events: none;
     }
 
     .hero-content {
@@ -399,11 +412,15 @@
 
       background: #111c2d;
 
-      transition: 0.3s;
+      transition:
+        border-color 0.3s ease,
+        transform 0.3s ease;
     }
 
     .project:hover {
       border-color: #3d506a;
+
+      transform: translateY(-2px);
     }
 
     .project:last-child {
@@ -557,11 +574,15 @@
 
       font-weight: 700;
 
-      transition: 0.25s;
+      transition:
+        transform 0.25s ease,
+        background 0.25s ease;
     }
 
     .project-link:hover {
       transform: translateY(-3px);
+
+      background: #7db8ff;
     }
 
 
@@ -780,6 +801,38 @@
           #122544,
           #0b1220
         );
+
+      position: relative;
+
+      overflow: hidden;
+    }
+
+    .cta::before {
+      content: "";
+
+      position: absolute;
+
+      width: 400px;
+      height: 400px;
+
+      background: #1d4ed8;
+
+      filter: blur(180px);
+
+      opacity: 0.13;
+
+      left: 50%;
+      top: 50%;
+
+      transform: translate(-50%, -50%);
+
+      pointer-events: none;
+    }
+
+    .cta .container {
+      position: relative;
+
+      z-index: 2;
     }
 
     .cta h2 {
@@ -799,7 +852,11 @@
     }
 
     .button {
-      display: inline-block;
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
 
       padding: 15px 24px;
 
@@ -811,11 +868,15 @@
 
       color: #07101f;
 
-      transition: 0.25s;
+      transition:
+        transform 0.25s ease,
+        background 0.25s ease;
     }
 
     .button:hover {
       transform: translateY(-3px);
+
+      background: #7db8ff;
     }
 
 
@@ -858,7 +919,7 @@
 
 
     /* =========================
-       TABLET / MOBILE
+       TABLET
     ========================= */
 
     @media (max-width: 900px) {
@@ -1012,6 +1073,22 @@
         font-size: 25px;
       }
 
+      .portfolio-note {
+        padding: 65px 0;
+      }
+
+      .portfolio-note h2 {
+        font-size: 30px;
+      }
+
+      .cta {
+        padding: 80px 20px;
+      }
+
+      .cta h2 {
+        font-size: 34px;
+      }
+
     }
 
   </style>
@@ -1077,6 +1154,7 @@
 
       <button
         class="mobile-menu-button"
+        type="button"
         onclick="toggleMenu()"
         aria-label="Open navigation menu"
         aria-expanded="false"
@@ -1717,22 +1795,35 @@
       const button =
         document.getElementById("menuButton");
 
-      if (menu.style.display === "block") {
+      const isOpen =
+        menu.classList.contains("open");
 
-        menu.style.display = "none";
+      if (isOpen) {
+
+        menu.classList.remove("open");
 
         button.setAttribute(
           "aria-expanded",
           "false"
         );
 
+        button.setAttribute(
+          "aria-label",
+          "Open navigation menu"
+        );
+
       } else {
 
-        menu.style.display = "block";
+        menu.classList.add("open");
 
         button.setAttribute(
           "aria-expanded",
           "true"
+        );
+
+        button.setAttribute(
+          "aria-label",
+          "Close navigation menu"
         );
 
       }
@@ -1749,19 +1840,58 @@
           "click",
           function() {
 
-            document.getElementById(
-              "mobileMenu"
-            ).style.display = "none";
+            const menu =
+              document.getElementById("mobileMenu");
 
-            document.getElementById(
-              "menuButton"
-            ).setAttribute(
+            const button =
+              document.getElementById("menuButton");
+
+            menu.classList.remove("open");
+
+            button.setAttribute(
               "aria-expanded",
               "false"
             );
 
+            button.setAttribute(
+              "aria-label",
+              "Open navigation menu"
+            );
+
           }
         );
+
+      }
+    );
+
+
+    /* Reset mobile menu when returning to desktop */
+
+    window.addEventListener(
+      "resize",
+      function() {
+
+        if (window.innerWidth > 900) {
+
+          const menu =
+            document.getElementById("mobileMenu");
+
+          const button =
+            document.getElementById("menuButton");
+
+          menu.classList.remove("open");
+
+          button.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+          button.setAttribute(
+            "aria-label",
+            "Open navigation menu"
+          );
+
+        }
 
       }
     );
@@ -1772,4 +1902,3 @@
 </body>
 
 </html>
-```

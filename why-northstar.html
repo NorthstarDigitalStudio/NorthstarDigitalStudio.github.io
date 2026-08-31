@@ -1,1 +1,1710 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Why Northstar | Northstar Digital</title>
+
+  <meta
+    name="description"
+    content="Learn why small businesses choose Northstar Digital for professional websites, redesigns, landing pages, SEO and ongoing website support."
+  >
+
+  <style>
+
+    /* =========================
+       GLOBAL
+    ========================= */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0a1120;
+      color: #ffffff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    button {
+      font-family: inherit;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1180px;
+      margin: auto;
+    }
+
+
+    /* =========================
+       NAVIGATION
+    ========================= */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
+      background: rgba(10, 17, 32, 0.94);
+
+      border-bottom:
+        1px solid rgba(255, 255, 255, 0.08);
+
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    .nav-inner {
+      min-height: 86px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+
+      gap: 13px;
+
+      font-size: 27px;
+      font-weight: 900;
+
+      letter-spacing: 2px;
+
+      white-space: nowrap;
+    }
+
+    .logo img {
+      width: 58px;
+      height: 58px;
+
+      object-fit: contain;
+
+      display: block;
+
+      border-radius: 8px;
+    }
+
+    .logo span {
+      color: #ffffff;
+    }
+
+    .logo span::first-letter {
+      color: #65a9ff;
+    }
+
+
+    /* NAV LINKS */
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      color: #b9c4d4;
+
+      font-size: 14px;
+      font-weight: 600;
+
+      transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+    }
+
+    .nav-links a:hover {
+      color: #ffffff;
+    }
+
+    .nav-links .active {
+      color: #65a9ff;
+    }
+
+    .nav-button {
+      background: #65a9ff;
+
+      color: #07101f !important;
+
+      padding: 11px 19px;
+
+      border-radius: 7px;
+
+      font-weight: 800 !important;
+    }
+
+    .nav-button:hover {
+      transform: translateY(-2px);
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .page-hero {
+      min-height: 68vh;
+
+      display: flex;
+      align-items: center;
+
+      position: relative;
+
+      overflow: hidden;
+
+      padding: 110px 0 100px;
+    }
+
+    .page-hero::before {
+      content: "";
+
+      position: absolute;
+
+      width: 650px;
+      height: 650px;
+
+      background: #1d4ed8;
+
+      filter: blur(190px);
+
+      opacity: 0.20;
+
+      right: -280px;
+      top: -220px;
+
+      pointer-events: none;
+    }
+
+    .page-hero::after {
+      content: "";
+
+      position: absolute;
+
+      width: 300px;
+      height: 300px;
+
+      background: #65a9ff;
+
+      filter: blur(170px);
+
+      opacity: 0.06;
+
+      left: -180px;
+      bottom: -120px;
+
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+
+      max-width: 850px;
+    }
+
+    .eyebrow {
+      color: #65a9ff;
+
+      text-transform: uppercase;
+
+      letter-spacing: 3px;
+
+      font-size: 11px;
+
+      font-weight: 800;
+
+      margin-bottom: 20px;
+    }
+
+    .page-hero h1 {
+      font-size: clamp(48px, 7vw, 82px);
+
+      line-height: 1.02;
+
+      margin-bottom: 26px;
+
+      letter-spacing: -3.5px;
+    }
+
+    .page-hero h1 span {
+      color: #65a9ff;
+    }
+
+    .page-hero p {
+      font-size: 19px;
+
+      color: #aeb9c9;
+
+      max-width: 720px;
+    }
+
+
+    /* =========================
+       WHY NORTHSTAR INTRO
+    ========================= */
+
+    .intro-section {
+      background: #0f1828;
+
+      padding: 100px 0;
+    }
+
+    .intro-grid {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 70px;
+
+      align-items: center;
+    }
+
+    .intro-content h2 {
+      font-size: 45px;
+
+      line-height: 1.1;
+
+      margin-bottom: 20px;
+
+      letter-spacing: -1.5px;
+    }
+
+    .intro-content p {
+      color: #9eabba;
+
+      font-size: 16px;
+
+      margin-bottom: 18px;
+
+      max-width: 590px;
+    }
+
+    .intro-box {
+      background:
+        linear-gradient(
+          145deg,
+          #111c2d,
+          #0e1929
+        );
+
+      border: 1px solid #273448;
+
+      border-radius: 14px;
+
+      padding: 38px;
+    }
+
+    .intro-box h3 {
+      font-size: 22px;
+
+      margin-bottom: 15px;
+    }
+
+    .intro-box p {
+      color: #9eabba;
+
+      font-size: 15px;
+    }
+
+
+    /* =========================
+       DIFFERENCE
+    ========================= */
+
+    .difference-section {
+      background: #0a1120;
+
+      padding: 100px 0;
+    }
+
+    .section-title {
+      max-width: 740px;
+
+      margin-bottom: 55px;
+    }
+
+    .section-title h2 {
+      font-size: 45px;
+
+      line-height: 1.1;
+
+      margin-bottom: 15px;
+
+      letter-spacing: -1.5px;
+    }
+
+    .section-title p {
+      color: #9eabba;
+
+      font-size: 17px;
+    }
+
+    .difference-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 20px;
+    }
+
+    .difference-card {
+      padding: 32px;
+
+      border: 1px solid #273448;
+
+      background:
+        linear-gradient(
+          145deg,
+          #111c2d,
+          #0e1929
+        );
+
+      border-radius: 12px;
+
+      transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+    }
+
+    .difference-card:hover {
+      transform: translateY(-5px);
+
+      border-color: #65a9ff;
+
+      box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.16);
+    }
+
+    .difference-number {
+      color: #65a9ff;
+
+      font-weight: 800;
+
+      font-size: 13px;
+
+      letter-spacing: 1px;
+
+      margin-bottom: 18px;
+    }
+
+    .difference-card h3 {
+      font-size: 21px;
+
+      margin-bottom: 10px;
+    }
+
+    .difference-card p {
+      color: #9eabba;
+
+      font-size: 15px;
+    }
+
+
+    /* =========================
+       COMPARISON
+    ========================= */
+
+    .comparison-section {
+      background: #0f1828;
+
+      padding: 100px 0;
+    }
+
+    .comparison-grid {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 20px;
+    }
+
+    .comparison-card {
+      padding: 35px;
+
+      border-radius: 12px;
+
+      border: 1px solid #273448;
+
+      background: #111c2d;
+    }
+
+    .comparison-card.highlight {
+      border-color: #65a9ff;
+
+      box-shadow:
+        0 0 35px rgba(101, 169, 255, 0.07);
+    }
+
+    .comparison-card h3 {
+      font-size: 23px;
+
+      margin-bottom: 20px;
+    }
+
+    .comparison-card ul {
+      list-style: none;
+    }
+
+    .comparison-card li {
+      padding: 11px 0;
+
+      border-bottom:
+        1px solid rgba(255, 255, 255, 0.05);
+
+      color: #b9c4d4;
+
+      font-size: 14px;
+    }
+
+    .comparison-card li:last-child {
+      border-bottom: none;
+    }
+
+    .comparison-card.highlight li::first-letter {
+      color: #65a9ff;
+    }
+
+
+    /* =========================
+       FAQ
+    ========================= */
+
+    .faq-section {
+      background: #ffffff;
+
+      color: #111827;
+
+      padding: 100px 0;
+    }
+
+    .faq-header {
+      max-width: 720px;
+
+      margin-bottom: 55px;
+    }
+
+    .faq-header .eyebrow {
+      color: #2563eb;
+    }
+
+    .faq-header h2 {
+      font-size: 45px;
+
+      line-height: 1.1;
+
+      margin-bottom: 15px;
+
+      letter-spacing: -1.5px;
+    }
+
+    .faq-header p {
+      color: #5b6470;
+
+      font-size: 17px;
+    }
+
+    .faq-list {
+      max-width: 900px;
+
+      margin: auto;
+
+      border-top: 1px solid #dfe3e8;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #dfe3e8;
+    }
+
+    .faq-item summary {
+      list-style: none;
+
+      cursor: pointer;
+
+      padding: 23px 45px 23px 0;
+
+      position: relative;
+
+      font-size: 17px;
+
+      font-weight: 800;
+
+      color: #111827;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary::after {
+      content: "+";
+
+      position: absolute;
+
+      right: 5px;
+      top: 18px;
+
+      font-size: 25px;
+
+      font-weight: 400;
+
+      color: #2563eb;
+
+      transition: transform 0.25s ease;
+    }
+
+    .faq-item[open] summary::after {
+      content: "−";
+    }
+
+    .faq-answer {
+      padding: 0 45px 24px 0;
+
+      color: #5b6470;
+
+      font-size: 15px;
+
+      max-width: 800px;
+    }
+
+
+    /* =========================
+       CTA
+    ========================= */
+
+    .cta-section {
+      text-align: center;
+
+      background:
+        linear-gradient(
+          135deg,
+          #122544,
+          #0b1220
+        );
+
+      position: relative;
+
+      overflow: hidden;
+
+      padding: 100px 0;
+    }
+
+    .cta-section::before {
+      content: "";
+
+      position: absolute;
+
+      width: 400px;
+      height: 400px;
+
+      background: #1d4ed8;
+
+      filter: blur(180px);
+
+      opacity: 0.13;
+
+      left: 50%;
+      top: 50%;
+
+      transform: translate(-50%, -50%);
+
+      pointer-events: none;
+    }
+
+    .cta-section .container {
+      position: relative;
+
+      z-index: 2;
+    }
+
+    .cta-section h2 {
+      font-size: 53px;
+
+      line-height: 1.1;
+
+      margin-bottom: 18px;
+
+      letter-spacing: -2px;
+    }
+
+    .cta-section p {
+      max-width: 650px;
+
+      margin: 0 auto 30px;
+
+      color: #aeb9c9;
+    }
+
+    .button {
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      padding: 14px 23px;
+
+      border-radius: 7px;
+
+      font-weight: 800;
+
+      transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease;
+    }
+
+    .primary {
+      background: #65a9ff;
+
+      color: #07101f;
+    }
+
+    .primary:hover {
+      transform: translateY(-3px);
+
+      background: #7db8ff;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      padding: 35px 0;
+
+      border-top:
+        1px solid #273448;
+
+      color: #788598;
+
+      font-size: 14px;
+
+      background: #0a1120;
+    }
+
+    .footer-inner {
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 20px;
+    }
+
+    .footer-links {
+      display: flex;
+
+      gap: 20px;
+    }
+
+    .footer-links a:hover {
+      color: #ffffff;
+    }
+
+
+    /* =========================
+       MOBILE MENU BUTTON
+    ========================= */
+
+    .mobile-menu-button {
+      display: none;
+
+      background: transparent;
+
+      border:
+        1px solid #344258;
+
+      color: white;
+
+      font-size: 22px;
+
+      width: 44px;
+      height: 44px;
+
+      border-radius: 7px;
+
+      cursor: pointer;
+    }
+
+    .mobile-menu {
+      display: none;
+
+      position: absolute;
+
+      top: 86px;
+
+      left: 0;
+      right: 0;
+
+      background: #0b1220;
+
+      border-bottom:
+        1px solid rgba(255, 255, 255, 0.08);
+
+      padding: 15px 5%;
+
+      z-index: 999;
+    }
+
+    .mobile-menu a {
+      display: block;
+
+      padding: 14px 0;
+
+      color: #c8d1df;
+
+      font-size: 16px;
+
+      border-bottom:
+        1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .mobile-menu a:last-child {
+      border-bottom: none;
+    }
+
+    .mobile-menu a:hover {
+      color: white;
+    }
+
+
+    /* =========================
+       TABLET / MOBILE
+    ========================= */
+
+    @media (max-width: 900px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      .mobile-menu-button {
+        display: block;
+      }
+
+      .logo {
+        font-size: 24px;
+
+        letter-spacing: 1.5px;
+
+        gap: 10px;
+      }
+
+      .logo img {
+        width: 52px;
+        height: 52px;
+      }
+
+      .page-hero {
+        min-height: 60vh;
+
+        padding: 90px 0 80px;
+      }
+
+      .intro-grid,
+      .comparison-grid,
+      .difference-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-title h2,
+      .intro-content h2,
+      .faq-header h2 {
+        font-size: 38px;
+      }
+
+      .cta-section h2 {
+        font-size: 40px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+
+        align-items: flex-start;
+      }
+
+    }
+
+
+    /* =========================
+       SMALL PHONES
+    ========================= */
+
+    @media (max-width: 500px) {
+
+      .container {
+        width: 88%;
+      }
+
+      .logo {
+        font-size: 19px;
+
+        letter-spacing: 0.8px;
+
+        gap: 8px;
+      }
+
+      .logo img {
+        width: 45px;
+        height: 45px;
+      }
+
+      .nav-inner {
+        min-height: 74px;
+      }
+
+      .mobile-menu {
+        top: 74px;
+      }
+
+      .page-hero {
+        padding: 75px 0 70px;
+      }
+
+      .page-hero h1 {
+        font-size: 45px;
+
+        letter-spacing: -2.5px;
+      }
+
+      .page-hero p {
+        font-size: 17px;
+      }
+
+      .intro-section,
+      .difference-section,
+      .comparison-section,
+      .faq-section,
+      .cta-section {
+        padding: 75px 0;
+      }
+
+      .section-title h2,
+      .intro-content h2,
+      .faq-header h2 {
+        font-size: 34px;
+      }
+
+      .cta-section h2 {
+        font-size: 36px;
+      }
+
+      .intro-box,
+      .difference-card,
+      .comparison-card {
+        padding: 28px;
+      }
+
+      .faq-item summary {
+        font-size: 16px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =========================
+       NAVIGATION
+  ========================= -->
+
+  <nav>
+
+    <div class="container nav-inner">
+
+      <a
+        href="index.html"
+        class="logo"
+        aria-label="Northstar Digital home"
+      >
+
+        <img
+          src="images/Northstar-logo.2.jpg"
+          alt="Northstar Digital logo"
+        >
+
+        <span>
+          NORTHSTAR DIGITAL
+        </span>
+
+      </a>
+
+
+      <div class="nav-links">
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="services.html">
+          Services
+        </a>
+
+        <a href="work.html">
+          Our Work
+        </a>
+
+        <a
+          href="why-northstar.html"
+          class="active"
+        >
+          Why Northstar
+        </a>
+
+        <a
+          href="contact.html"
+          class="nav-button"
+        >
+          Let's Talk
+        </a>
+
+      </div>
+
+
+      <button
+        class="mobile-menu-button"
+        onclick="toggleMenu()"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        id="menuButton"
+      >
+        ☰
+      </button>
+
+
+      <div
+        class="mobile-menu"
+        id="mobileMenu"
+      >
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="services.html">
+          Services
+        </a>
+
+        <a href="work.html">
+          Our Work
+        </a>
+
+        <a href="why-northstar.html">
+          Why Northstar
+        </a>
+
+        <a href="contact.html">
+          Let's Talk
+        </a>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+
+  <!-- =========================
+       HERO
+  ========================= -->
+
+  <header
+    class="page-hero"
+    id="top"
+  >
+
+    <div class="container">
+
+      <div class="hero-content">
+
+        <div class="eyebrow">
+          Why Northstar
+        </div>
+
+        <h1>
+          A better way to build your
+          <span>online presence.</span>
+        </h1>
+
+        <p>
+          You don't need a large agency or an overly complicated
+          process to get a professional website. Northstar Digital
+          focuses on what small businesses actually need: a website
+          that looks credible, communicates clearly and helps
+          customers take the next step.
+        </p>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================
+       INTRO
+  ========================= -->
+
+  <section class="intro-section">
+
+    <div class="container">
+
+      <div class="intro-grid">
+
+
+        <div class="intro-content">
+
+          <div class="eyebrow">
+            Built Around Your Business
+          </div>
+
+          <h2>
+            We focus on the website — not the agency experience.
+          </h2>
+
+          <p>
+            Many small businesses don't need a massive digital
+            agency, a complicated technology stack or a website
+            project that takes months.
+          </p>
+
+          <p>
+            They need someone who understands what they're trying
+            to accomplish and can build a professional website
+            around those goals.
+          </p>
+
+          <p>
+            That's where Northstar Digital comes in.
+          </p>
+
+        </div>
+
+
+        <div class="intro-box">
+
+          <h3>
+            Our philosophy
+          </h3>
+
+          <p>
+            A good business website should make your business
+            easier to understand, easier to trust and easier to
+            contact. Everything we build starts with that idea.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       DIFFERENCE
+  ========================= -->
+
+  <section class="difference-section">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <div class="eyebrow">
+          The Northstar Difference
+        </div>
+
+        <h2>
+          Professional without unnecessary complexity.
+        </h2>
+
+        <p>
+          We keep our approach focused on the things that actually
+          matter to a small business and its customers.
+        </p>
+
+      </div>
+
+
+      <div class="difference-grid">
+
+
+        <div class="difference-card">
+
+          <div class="difference-number">
+            01
+          </div>
+
+          <h3>
+            Small-Business Focused
+          </h3>
+
+          <p>
+            Our websites are designed around the realities of
+            small businesses — limited time, practical budgets
+            and the need to turn website visitors into customers.
+          </p>
+
+        </div>
+
+
+        <div class="difference-card">
+
+          <div class="difference-number">
+            02
+          </div>
+
+          <h3>
+            Clear Communication
+          </h3>
+
+          <p>
+            No confusing technical language or unnecessary
+            layers between you and the person working on your
+            website.
+          </p>
+
+        </div>
+
+
+        <div class="difference-card">
+
+          <div class="difference-number">
+            03
+          </div>
+
+          <h3>
+            Business-Focused Design
+          </h3>
+
+          <p>
+            We don't design websites simply to look impressive.
+            We structure them to explain your services, build
+            trust and guide customers toward action.
+          </p>
+
+        </div>
+
+
+        <div class="difference-card">
+
+          <div class="difference-number">
+            04
+          </div>
+
+          <h3>
+            Straightforward Pricing
+          </h3>
+
+          <p>
+            Starting prices are clear and projects are scoped
+            around what you actually need rather than unnecessary
+            packages and add-ons.
+          </p>
+
+        </div>
+
+
+        <div class="difference-card">
+
+          <div class="difference-number">
+            05
+          </div>
+
+          <h3>
+            Mobile-Friendly
+          </h3>
+
+          <p>
+            Your customers use phones, tablets and computers.
+            Your website should provide a professional experience
+            regardless of the device.
+          </p>
+
+        </div>
+
+
+        <div class="difference-card">
+
+          <div class="difference-number">
+            06
+          </div>
+
+          <h3>
+            Support After Launch
+          </h3>
+
+          <p>
+            Your business will change over time. We can help keep
+            your website updated with new information, pages,
+            promotions and improvements.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       COMPARISON
+  ========================= -->
+
+  <section class="comparison-section">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <div class="eyebrow">
+          A Practical Alternative
+        </div>
+
+        <h2>
+          You don't need to choose between cheap and complicated.
+        </h2>
+
+        <p>
+          Northstar Digital is designed to sit in the middle:
+          professional website work without the unnecessary
+          overhead of a traditional agency.
+        </p>
+
+      </div>
+
+
+      <div class="comparison-grid">
+
+
+        <div class="comparison-card">
+
+          <h3>
+            Traditional Agency
+          </h3>
+
+          <ul>
+
+            <li>
+              ✕ Larger agency overhead
+            </li>
+
+            <li>
+              ✕ More complicated processes
+            </li>
+
+            <li>
+              ✕ Multiple layers of communication
+            </li>
+
+            <li>
+              ✕ Often built around larger projects
+            </li>
+
+            <li>
+              ✕ Can include services you don't need
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <div class="comparison-card highlight">
+
+          <h3>
+            Northstar Digital
+          </h3>
+
+          <ul>
+
+            <li>
+              ✓ Focused on small businesses
+            </li>
+
+            <li>
+              ✓ Straightforward project process
+            </li>
+
+            <li>
+              ✓ Direct communication
+            </li>
+
+            <li>
+              ✓ Flexible project scope
+            </li>
+
+            <li>
+              ✓ Website services built around your needs
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       FAQ
+  ========================= -->
+
+  <section class="faq-section">
+
+    <div class="container">
+
+      <div class="faq-header">
+
+        <div class="eyebrow">
+          Frequently Asked Questions
+        </div>
+
+        <h2>
+          Have questions? We've got answers.
+        </h2>
+
+        <p>
+          Here are some of the questions businesses commonly
+          have before starting a website project with Northstar.
+        </p>
+
+      </div>
+
+
+      <div class="faq-list">
+
+
+        <details class="faq-item">
+
+          <summary>
+            How much does a website cost?
+          </summary>
+
+          <div class="faq-answer">
+            Our introductory website packages start at $199,
+            with larger projects starting at $399 and $599.
+            Final pricing depends on the number of pages,
+            content, functionality and overall project scope.
+          </div>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            How long does it take to build a website?
+          </summary>
+
+          <div class="faq-answer">
+            Project timelines depend on the size and complexity
+            of the website and how quickly the necessary content
+            is provided. Smaller websites can generally move
+            faster than larger, more customized projects.
+          </div>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            Do I need to provide all of the content?
+          </summary>
+
+          <div class="faq-answer">
+            Not necessarily. We can work with the information,
+            images and materials you already have and help
+            structure the website around your business. If
+            additional content is needed, we'll discuss what
+            makes sense for your project.
+          </div>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            Can you redesign my existing website?
+          </summary>
+
+          <div class="faq-answer">
+            Yes. We can modernize an outdated website by improving
+            its design, structure, messaging, mobile experience
+            and calls to action while keeping the focus on your
+            business goals.
+          </div>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            Do you handle domains and hosting?
+          </summary>
+
+          <div class="faq-answer">
+            Domain registration and hosting can be handled
+            separately depending on your preferences. We can
+            discuss the options and help make sure your website
+            is properly connected and accessible after launch.
+          </div>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            Do you offer website maintenance?
+          </summary>
+
+          <div class="faq-answer">
+            Yes. Ongoing maintenance is available for businesses
+            that need help keeping their website current. This
+            can include text and image updates, new pages,
+            promotions, basic SEO improvements and general
+            website management.
+          </div>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            Do you work with businesses remotely?
+          </summary>
+
+          <div class="faq-answer">
+            Yes. Website projects can be handled remotely through
+            email and online communication, making it possible
+            to work with businesses regardless of location.
+          </div>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            What happens after I submit an inquiry?
+          </summary>
+
+          <div class="faq-answer">
+            We'll review the information you provide and follow
+            up by email to discuss your business, project goals,
+            scope and potential next steps. There is no obligation
+            or commitment required just to start the conversation.
+          </div>
+
+        </details>
+
+
+        <details class="faq-item">
+
+          <summary>
+            Do I have to know exactly what I want before contacting you?
+          </summary>
+
+          <div class="faq-answer">
+            No. You don't need to have the entire project figured
+            out before reaching out. Tell us what your business
+            does, what you currently have and what you'd like
+            to improve, and we'll help determine what makes sense.
+          </div>
+
+        </details>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       FINAL CTA
+  ========================= -->
+
+  <section class="cta-section">
+
+    <div class="container">
+
+      <div class="eyebrow">
+        Ready to Get Started?
+      </div>
+
+      <h2>
+        Let's build something better.
+      </h2>
+
+      <p>
+        Whether you need a new website, a redesign or simply
+        want to talk through an idea, tell us what you're looking
+        for and we'll take it from there.
+      </p>
+
+      <a
+        href="contact.html"
+        class="button primary"
+      >
+        Start Your Project →
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <div class="container footer-inner">
+
+      <div>
+        © 2026 Northstar Digital
+      </div>
+
+
+      <div class="footer-links">
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="services.html">
+          Services
+        </a>
+
+        <a href="work.html">
+          Our Work
+        </a>
+
+        <a href="contact.html">
+          Contact
+        </a>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================
+       MOBILE MENU SCRIPT
+  ========================= -->
+
+  <script>
+
+    function toggleMenu() {
+
+      const menu =
+        document.getElementById("mobileMenu");
+
+      const button =
+        document.getElementById("menuButton");
+
+      if (menu.style.display === "block") {
+
+        menu.style.display = "none";
+
+        button.setAttribute(
+          "aria-expanded",
+          "false"
+        );
+
+      } else {
+
+        menu.style.display = "block";
+
+        button.setAttribute(
+          "aria-expanded",
+          "true"
+        );
+
+      }
+
+    }
+
+
+    /* Close mobile menu after clicking a link */
+
+    document.querySelectorAll(".mobile-menu a").forEach(
+      function(link) {
+
+        link.addEventListener(
+          "click",
+          function() {
+
+            document.getElementById(
+              "mobileMenu"
+            ).style.display = "none";
+
+            document.getElementById(
+              "menuButton"
+            ).setAttribute(
+              "aria-expanded",
+              "false"
+            );
+
+          }
+        );
+
+      }
+    );
+
+  </script>
+
+
+</body>
+
+</html>
+```
 

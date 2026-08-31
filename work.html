@@ -81,8 +81,6 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-
-      position: relative;
     }
 
     .logo {
@@ -166,7 +164,7 @@
 
 
     /* =========================
-       MOBILE MENU BUTTON
+       MOBILE MENU
     ========================= */
 
     .mobile-menu-button {
@@ -189,11 +187,6 @@
       cursor: pointer;
     }
 
-
-    /* =========================
-       MOBILE MENU
-    ========================= */
-
     .mobile-menu {
       display: none;
 
@@ -212,10 +205,6 @@
       padding: 15px 5%;
 
       z-index: 999;
-    }
-
-    .mobile-menu.open {
-      display: block;
     }
 
     .mobile-menu a {
@@ -413,14 +402,18 @@
       background: #111c2d;
 
       transition:
+        transform 0.3s ease,
         border-color 0.3s ease,
-        transform 0.3s ease;
+        box-shadow 0.3s ease;
     }
 
     .project:hover {
       border-color: #3d506a;
 
       transform: translateY(-2px);
+
+      box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.14);
     }
 
     .project:last-child {
@@ -429,7 +422,7 @@
 
 
     /* =========================
-       PROJECT IMAGES
+       PROJECT VISUALS
     ========================= */
 
     .project-visual {
@@ -469,6 +462,8 @@
       font-weight: 800;
 
       letter-spacing: 1.4px;
+
+      pointer-events: none;
     }
 
     .project-visual img {
@@ -502,6 +497,8 @@
       flex-direction: column;
 
       justify-content: center;
+
+      min-width: 0;
     }
 
     .project-type {
@@ -560,7 +557,11 @@
     }
 
     .project-link {
-      display: inline-block;
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
 
       width: fit-content;
 
@@ -591,12 +592,24 @@
     ========================= */
 
     .why-section {
+      display: block;
+
+      position: relative;
+
+      width: 100%;
+
       padding: 110px 0;
 
       background: #0a1120;
+
+      overflow: visible;
     }
 
     .why-header {
+      display: block;
+
+      position: relative;
+
       max-width: 760px;
 
       margin-bottom: 55px;
@@ -624,12 +637,20 @@
       display: grid;
 
       grid-template-columns:
-        repeat(3, 1fr);
+        repeat(3, minmax(0, 1fr));
 
       gap: 20px;
+
+      width: 100%;
     }
 
     .why-card {
+      display: block;
+
+      position: relative;
+
+      min-height: 190px;
+
       padding: 32px;
 
       background:
@@ -685,6 +706,12 @@
     ========================= */
 
     .why-feature {
+      display: grid;
+
+      position: relative;
+
+      width: 100%;
+
       margin-top: 20px;
 
       padding: 38px;
@@ -700,8 +727,6 @@
         1px solid rgba(101, 169, 255, 0.25);
 
       border-radius: 14px;
-
-      display: grid;
 
       grid-template-columns:
         1.2fr 0.8fr;
@@ -729,6 +754,10 @@
 
     .why-feature-list {
       list-style: none;
+
+      margin: 0;
+
+      padding: 0;
     }
 
     .why-feature-list li {
@@ -760,6 +789,12 @@
     ========================= */
 
     .portfolio-note {
+      display: block;
+
+      position: relative;
+
+      width: 100%;
+
       padding: 80px 0;
 
       text-align: center;
@@ -791,6 +826,12 @@
     ========================= */
 
     .cta {
+      display: block;
+
+      position: relative;
+
+      width: 100%;
+
       text-align: center;
 
       padding: 100px 20px;
@@ -801,8 +842,6 @@
           #122544,
           #0b1220
         );
-
-      position: relative;
 
       overflow: hidden;
     }
@@ -819,12 +858,13 @@
 
       filter: blur(180px);
 
-      opacity: 0.13;
+      opacity: 0.12;
 
       left: 50%;
       top: 50%;
 
-      transform: translate(-50%, -50%);
+      transform:
+        translate(-50%, -50%);
 
       pointer-events: none;
     }
@@ -885,6 +925,8 @@
     ========================= */
 
     footer {
+      display: block;
+
       padding: 35px 0;
 
       border-top:
@@ -953,6 +995,8 @@
 
       .project {
         grid-template-columns: 1fr;
+
+        min-height: 0;
       }
 
       .project-visual {
@@ -969,6 +1013,12 @@
 
       .why-grid {
         grid-template-columns: 1fr;
+
+        gap: 20px;
+      }
+
+      .why-card {
+        min-height: auto;
       }
 
       .why-feature {
@@ -1034,7 +1084,17 @@
       }
 
       h1 {
+        font-size: 45px;
+
         letter-spacing: -2px;
+      }
+
+      .hero-content p {
+        font-size: 17px;
+      }
+
+      .portfolio-intro {
+        padding: 24px 0;
       }
 
       .project-info {
@@ -1045,20 +1105,38 @@
         height: 230px;
       }
 
+      .project-info h2 {
+        font-size: 28px;
+      }
+
+      .project-info > p {
+        font-size: 14px;
+      }
+
       .focus {
         gap: 7px;
       }
 
       .focus span {
         font-size: 11px;
+
+        padding: 6px 9px;
       }
 
       .why-section {
         padding: 75px 0;
       }
 
+      .why-header {
+        margin-bottom: 40px;
+      }
+
       .why-header h2 {
         font-size: 34px;
+      }
+
+      .why-header p {
+        font-size: 16px;
       }
 
       .why-card {
@@ -1067,6 +1145,8 @@
 
       .why-feature {
         padding: 28px;
+
+        gap: 25px;
       }
 
       .why-feature h3 {
@@ -1081,12 +1161,22 @@
         font-size: 30px;
       }
 
+      .portfolio-note p {
+        font-size: 15px;
+      }
+
       .cta {
         padding: 80px 20px;
       }
 
       .cta h2 {
-        font-size: 34px;
+        font-size: 36px;
+      }
+
+      .footer-links {
+        flex-wrap: wrap;
+
+        gap: 14px;
       }
 
     }
@@ -1154,7 +1244,6 @@
 
       <button
         class="mobile-menu-button"
-        type="button"
         onclick="toggleMenu()"
         aria-label="Open navigation menu"
         aria-expanded="false"
@@ -1194,7 +1283,7 @@
 
   <!-- =========================
        HERO
-  ========================= -->
+    ========================= -->
 
   <section class="page-hero">
 
@@ -1795,35 +1884,22 @@
       const button =
         document.getElementById("menuButton");
 
-      const isOpen =
-        menu.classList.contains("open");
+      if (menu.style.display === "block") {
 
-      if (isOpen) {
-
-        menu.classList.remove("open");
+        menu.style.display = "none";
 
         button.setAttribute(
           "aria-expanded",
           "false"
         );
 
-        button.setAttribute(
-          "aria-label",
-          "Open navigation menu"
-        );
-
       } else {
 
-        menu.classList.add("open");
+        menu.style.display = "block";
 
         button.setAttribute(
           "aria-expanded",
           "true"
-        );
-
-        button.setAttribute(
-          "aria-label",
-          "Close navigation menu"
         );
 
       }
@@ -1840,58 +1916,19 @@
           "click",
           function() {
 
-            const menu =
-              document.getElementById("mobileMenu");
+            document.getElementById(
+              "mobileMenu"
+            ).style.display = "none";
 
-            const button =
-              document.getElementById("menuButton");
-
-            menu.classList.remove("open");
-
-            button.setAttribute(
+            document.getElementById(
+              "menuButton"
+            ).setAttribute(
               "aria-expanded",
               "false"
             );
 
-            button.setAttribute(
-              "aria-label",
-              "Open navigation menu"
-            );
-
           }
         );
-
-      }
-    );
-
-
-    /* Reset mobile menu when returning to desktop */
-
-    window.addEventListener(
-      "resize",
-      function() {
-
-        if (window.innerWidth > 900) {
-
-          const menu =
-            document.getElementById("mobileMenu");
-
-          const button =
-            document.getElementById("menuButton");
-
-          menu.classList.remove("open");
-
-          button.setAttribute(
-            "aria-expanded",
-            "false"
-          );
-
-          button.setAttribute(
-            "aria-label",
-            "Open navigation menu"
-          );
-
-        }
 
       }
     );

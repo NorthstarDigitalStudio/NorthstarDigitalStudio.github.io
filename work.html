@@ -9,7 +9,7 @@
 
   <meta
     name="description"
-    content="Explore website concepts created by Northstar Digital for home services, windows and glass, and apparel businesses."
+    content="Explore website concepts created by Northstar Digital for small businesses across home services, windows and glass, and apparel."
   >
 
   <style>
@@ -67,6 +67,7 @@
       font-size: 22px;
       font-weight: 800;
       letter-spacing: 1px;
+      white-space: nowrap;
     }
 
     .logo span {
@@ -125,7 +126,7 @@
     }
 
     .hero-content {
-      max-width: 800px;
+      max-width: 820px;
       position: relative;
       z-index: 2;
     }
@@ -158,12 +159,56 @@
 
 
     /* =========================
+       PORTFOLIO INTRO
+    ========================= */
+
+    .portfolio-intro {
+      background: #0b1424;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 28px 0;
+    }
+
+    .portfolio-intro-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .portfolio-intro strong {
+      display: block;
+      color: #ffffff;
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+
+    .portfolio-intro p {
+      color: #8f9bad;
+      font-size: 13px;
+      max-width: 760px;
+    }
+
+    .concept-label {
+      flex-shrink: 0;
+      border: 1px solid #344258;
+      color: #65a9ff;
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      white-space: nowrap;
+    }
+
+
+    /* =========================
        PROJECTS
     ========================= */
 
     .work-section {
       background: #0f1828;
-      padding: 100px 0;
+      padding: 80px 0 100px;
     }
 
     .project {
@@ -175,6 +220,11 @@
       border-radius: 15px;
       overflow: hidden;
       background: #111c2d;
+      transition: 0.3s;
+    }
+
+    .project:hover {
+      border-color: #3d506a;
     }
 
     .project:last-child {
@@ -194,12 +244,32 @@
       background: #111c2d;
     }
 
+    .project-visual::after {
+      content: "CONCEPT PROJECT";
+      position: absolute;
+      top: 18px;
+      left: 18px;
+      background: rgba(7, 16, 31, 0.86);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      color: #ffffff;
+      padding: 7px 10px;
+      border-radius: 5px;
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 1.4px;
+    }
+
     .project-visual img {
       width: 100%;
       height: 100%;
       display: block;
       object-fit: cover;
       object-position: center;
+      transition: transform 0.5s ease;
+    }
+
+    .project:hover .project-visual img {
+      transform: scale(1.025);
     }
 
 
@@ -225,6 +295,7 @@
 
     .project-info h2 {
       font-size: 36px;
+      line-height: 1.1;
       margin-bottom: 15px;
     }
 
@@ -232,6 +303,7 @@
       color: #aeb9c9;
       margin-bottom: 25px;
       max-width: 550px;
+      font-size: 15px;
     }
 
     .focus {
@@ -270,19 +342,22 @@
     ========================= */
 
     .portfolio-note {
-      padding: 70px 0;
+      padding: 80px 0;
       text-align: center;
+      background: #0a1120;
     }
 
     .portfolio-note h2 {
       font-size: 38px;
+      line-height: 1.1;
       margin-bottom: 15px;
     }
 
     .portfolio-note p {
       color: #9eabba;
-      max-width: 650px;
+      max-width: 700px;
       margin: auto;
+      font-size: 16px;
     }
 
 
@@ -360,6 +435,11 @@
         display: none;
       }
 
+      .portfolio-intro-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
       .project {
         grid-template-columns: 1fr;
       }
@@ -376,12 +456,49 @@
         font-size: 30px;
       }
 
+      .portfolio-note h2 {
+        font-size: 32px;
+      }
+
       .cta h2 {
         font-size: 38px;
       }
 
       .footer-inner {
         flex-direction: column;
+      }
+
+    }
+
+
+    /* =========================
+       SMALL PHONES
+    ========================= */
+
+    @media (max-width: 500px) {
+
+      .page-hero {
+        padding: 90px 0 70px;
+      }
+
+      h1 {
+        letter-spacing: -2px;
+      }
+
+      .project-info {
+        padding: 28px 24px;
+      }
+
+      .project-visual {
+        height: 230px;
+      }
+
+      .focus {
+        gap: 7px;
+      }
+
+      .focus span {
+        font-size: 11px;
       }
 
     }
@@ -442,7 +559,7 @@
       <div class="hero-content">
 
         <div class="eyebrow">
-          Selected Work
+          Website Concepts
         </div>
 
         <h1>
@@ -451,8 +568,9 @@
         </h1>
 
         <p>
-          Explore examples of how Northstar Digital approaches
-          different industries, audiences and business goals.
+          Explore demonstration websites created by Northstar Digital
+          to showcase different design approaches, customer journeys
+          and business-focused website strategies.
         </p>
 
       </div>
@@ -463,8 +581,43 @@
 
 
   <!-- =========================
-       PROJECTS
+       PORTFOLIO INTRO
   ========================= -->
+
+  <section class="portfolio-intro">
+
+    <div class="container">
+
+      <div class="portfolio-intro-inner">
+
+        <div>
+
+          <strong>
+            A look at what Northstar Digital can create.
+          </strong>
+
+          <p>
+            These projects are demonstration websites created by
+            Northstar Digital to showcase our design approach.
+            They are not live client websites.
+          </p>
+
+        </div>
+
+        <div class="concept-label">
+          DEMONSTRATION PROJECTS
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       PROJECTS
+    ========================= -->
 
   <section class="work-section">
 
@@ -481,7 +634,7 @@
 
           <img
             src="plumbing/images/clearflow-hero.jpg"
-            alt="ClearFlow Plumbing website"
+            alt="ClearFlow Plumbing website concept"
           >
 
         </div>
@@ -490,7 +643,7 @@
         <div class="project-info">
 
           <div class="project-type">
-            Home Services
+            Home Services • Website Concept
           </div>
 
           <h2>
@@ -527,7 +680,7 @@
             href="https://northstardigitalstudio.github.io/plumbing/"
             class="project-link"
           >
-            View Live Website →
+            View Website Concept →
           </a>
 
         </div>
@@ -545,7 +698,7 @@
 
           <img
             src="windows-glass/images/northline-hero.jpg"
-            alt="Northline Glass website"
+            alt="Northline Glass website concept"
           >
 
         </div>
@@ -554,7 +707,7 @@
         <div class="project-info">
 
           <div class="project-type">
-            Windows & Glass
+            Windows & Glass • Website Concept
           </div>
 
           <h2>
@@ -591,7 +744,7 @@
             href="https://northstardigitalstudio.github.io/windows-glass/"
             class="project-link"
           >
-            View Live Website →
+            View Website Concept →
           </a>
 
         </div>
@@ -609,7 +762,7 @@
 
           <img
             src="apparel/images/vanta-story.jpg.jpg"
-            alt="Vanta Apparel website"
+            alt="Vanta Apparel website concept"
           >
 
         </div>
@@ -618,7 +771,7 @@
         <div class="project-info">
 
           <div class="project-type">
-            Apparel
+            Apparel • Website Concept
           </div>
 
           <h2>
@@ -655,7 +808,7 @@
             href="https://northstardigitalstudio.github.io/apparel/"
             class="project-link"
           >
-            View Live Website →
+            View Website Concept →
           </a>
 
         </div>
@@ -685,10 +838,10 @@
       </h2>
 
       <p>
-        These examples demonstrate different approaches to
-        website structure, visual identity, customer journeys
-        and calls-to-action. Your website would be designed
-        specifically around your business.
+        These examples demonstrate different approaches to website
+        structure, visual identity, customer journeys and calls-to-action.
+        Your website would be designed specifically around your business,
+        customers and goals.
       </p>
 
     </div>
@@ -717,7 +870,10 @@
         accomplish online.
       </p>
 
-      <a href="contact.html" class="button">
+      <a
+        href="contact.html"
+        class="button"
+      >
         Request a Quote →
       </a>
 

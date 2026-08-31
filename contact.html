@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Contact | Northstar Digital</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
-  <meta name="description"
-        content="Contact Northstar Digital about website design, redesign, landing pages, maintenance, SEO and digital support.">
+  <title>
+    Contact | Northstar Digital
+  </title>
+
+  <meta
+    name="description"
+    content="Contact Northstar Digital about professional website design, redesigns, landing pages, website maintenance and basic SEO for small businesses."
+  >
 
   <style>
+
     * {
       margin: 0;
       padding: 0;
@@ -38,28 +49,42 @@
       margin: auto;
     }
 
-    /* NAVIGATION */
+
+    /* =========================
+       NAVIGATION
+    ========================= */
 
     nav {
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(10,17,32,0.96);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
+
+      background: rgba(10, 17, 32, 0.96);
+
+      border-bottom:
+        1px solid rgba(255, 255, 255, 0.08);
+
       backdrop-filter: blur(14px);
     }
 
     .nav-inner {
       min-height: 76px;
+
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
 
     .logo {
+      display: flex;
+      align-items: center;
+
       font-size: 22px;
       font-weight: 800;
+
       letter-spacing: 1px;
+
+      white-space: nowrap;
     }
 
     .logo span {
@@ -74,7 +99,9 @@
 
     .nav-links a {
       color: #b9c4d4;
+
       font-size: 14px;
+
       transition: 0.25s;
     }
 
@@ -88,51 +115,138 @@
 
     .nav-button {
       background: #65a9ff;
+
       color: #07101f !important;
+
       padding: 11px 18px;
+
       border-radius: 7px;
+
       font-weight: 700;
     }
 
-    /* HERO */
+
+    /* =========================
+       MOBILE MENU
+    ========================= */
+
+    .mobile-menu-button {
+      display: none;
+
+      background: transparent;
+
+      border:
+        1px solid #344258;
+
+      color: white;
+
+      font-size: 22px;
+
+      width: 44px;
+      height: 44px;
+
+      border-radius: 7px;
+
+      cursor: pointer;
+    }
+
+    .mobile-menu {
+      display: none;
+
+      position: absolute;
+
+      top: 75px;
+
+      left: 0;
+      right: 0;
+
+      background: #0b1220;
+
+      border-bottom:
+        1px solid rgba(255, 255, 255, 0.08);
+
+      padding: 15px 5%;
+
+      z-index: 999;
+    }
+
+    .mobile-menu a {
+      display: block;
+
+      padding: 14px 0;
+
+      color: #c8d1df;
+
+      font-size: 16px;
+
+      border-bottom:
+        1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .mobile-menu a:hover {
+      color: white;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
 
     .page-hero {
-      padding: 110px 0 70px;
+      padding: 110px 0 75px;
+
       position: relative;
+
       overflow: hidden;
     }
 
     .page-hero::before {
       content: "";
+
       position: absolute;
+
       width: 520px;
       height: 520px;
+
       background: #1d4ed8;
+
       filter: blur(190px);
+
       opacity: 0.2;
+
       right: -220px;
       top: -170px;
     }
 
     .hero-content {
-      max-width: 800px;
+      max-width: 820px;
+
       position: relative;
+
       z-index: 2;
     }
 
     .eyebrow {
       color: #65a9ff;
+
       text-transform: uppercase;
+
       letter-spacing: 3px;
+
       font-size: 12px;
+
       font-weight: 800;
+
       margin-bottom: 18px;
     }
 
     h1 {
       font-size: clamp(46px, 7vw, 76px);
+
       line-height: 1.03;
+
       letter-spacing: -3px;
+
       margin-bottom: 24px;
     }
 
@@ -142,52 +256,75 @@
 
     .hero-content p {
       color: #aeb9c9;
+
       font-size: 19px;
-      max-width: 700px;
+
+      max-width: 720px;
     }
 
-    /* CONTACT */
+
+    /* =========================
+       CONTACT SECTION
+    ========================= */
 
     .contact-section {
       background: #0f1828;
+
       padding: 80px 0 110px;
     }
 
     .contact-grid {
       display: grid;
-      grid-template-columns: 0.75fr 1.25fr;
+
+      grid-template-columns:
+        0.75fr 1.25fr;
+
       gap: 60px;
+
       align-items: start;
     }
 
+
+    /* =========================
+       CONTACT INFORMATION
+    ========================= */
+
     .contact-info h2 {
       font-size: 38px;
+
       line-height: 1.1;
+
       margin-bottom: 18px;
     }
 
     .contact-info > p {
       color: #9eabba;
+
       margin-bottom: 30px;
     }
 
     .info-card {
       padding: 24px 0;
-      border-top: 1px solid #273448;
+
+      border-top:
+        1px solid #273448;
     }
 
     .info-card:last-child {
-      border-bottom: 1px solid #273448;
+      border-bottom:
+        1px solid #273448;
     }
 
     .info-card h3 {
       font-size: 15px;
+
       margin-bottom: 5px;
     }
 
     .info-card p,
     .info-card a {
       color: #9eabba;
+
       font-size: 14px;
     }
 
@@ -195,29 +332,45 @@
       color: #65a9ff;
     }
 
-    /* FORM */
+
+    /* =========================
+       FORM
+    ========================= */
 
     .form-box {
       background: #111c2d;
-      border: 1px solid #273448;
+
+      border:
+        1px solid #273448;
+
       border-radius: 14px;
+
       padding: 38px;
+
+      box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.12);
     }
 
     .form-box h2 {
       font-size: 28px;
+
       margin-bottom: 8px;
     }
 
     .form-box > p {
       color: #9eabba;
+
       font-size: 14px;
+
       margin-bottom: 28px;
     }
 
     .form-row {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+
+      grid-template-columns:
+        1fr 1fr;
+
       gap: 18px;
     }
 
@@ -227,9 +380,13 @@
 
     label {
       display: block;
+
       color: #d6deea;
+
       font-size: 13px;
+
       font-weight: 700;
+
       margin-bottom: 7px;
     }
 
@@ -237,14 +394,24 @@
     select,
     textarea {
       width: 100%;
-      border: 1px solid #344258;
+
+      border:
+        1px solid #344258;
+
       background: #0a1120;
+
       color: #ffffff;
+
       border-radius: 7px;
+
       padding: 13px 14px;
+
       font-family: inherit;
+
       font-size: 14px;
+
       outline: none;
+
       transition: 0.25s;
     }
 
@@ -252,6 +419,9 @@
     select:focus,
     textarea:focus {
       border-color: #65a9ff;
+
+      box-shadow:
+        0 0 0 3px rgba(101, 169, 255, 0.08);
     }
 
     input::placeholder,
@@ -260,7 +430,8 @@
     }
 
     textarea {
-      min-height: 150px;
+      min-height: 160px;
+
       resize: vertical;
     }
 
@@ -270,48 +441,156 @@
 
     .submit-button {
       width: 100%;
+
       border: none;
+
       cursor: pointer;
+
       background: #65a9ff;
+
       color: #07101f;
+
       padding: 15px 24px;
+
       border-radius: 7px;
+
       font-weight: 800;
+
       font-size: 15px;
+
       transition: 0.25s;
     }
 
     .submit-button:hover {
       transform: translateY(-2px);
+
+      box-shadow:
+        0 8px 20px rgba(101, 169, 255, 0.15);
     }
 
     .form-note {
       margin-top: 14px;
+
       color: #718096;
+
       font-size: 12px;
+
       text-align: center;
     }
 
-    /* QUICK EMAIL */
+
+    /* =========================
+       WHAT HAPPENS NEXT
+    ========================= */
+
+    .next-steps {
+      padding: 90px 0;
+
+      background: #0a1120;
+    }
+
+    .next-steps-header {
+      max-width: 700px;
+
+      margin: 0 auto 50px;
+
+      text-align: center;
+    }
+
+    .next-steps-header h2 {
+      font-size: 40px;
+
+      line-height: 1.1;
+
+      margin-bottom: 15px;
+    }
+
+    .next-steps-header p {
+      color: #9eabba;
+
+      font-size: 16px;
+    }
+
+    .steps-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 20px;
+    }
+
+    .step-card {
+      padding: 30px;
+
+      background: #111c2d;
+
+      border:
+        1px solid #273448;
+
+      border-radius: 12px;
+    }
+
+    .step-number {
+      color: #65a9ff;
+
+      font-size: 13px;
+
+      font-weight: 800;
+
+      letter-spacing: 1px;
+
+      margin-bottom: 15px;
+    }
+
+    .step-card h3 {
+      font-size: 21px;
+
+      margin-bottom: 10px;
+    }
+
+    .step-card p {
+      color: #9eabba;
+
+      font-size: 14px;
+    }
+
+
+    /* =========================
+       EMAIL ALTERNATIVE
+    ========================= */
 
     .email-section {
       padding: 80px 0;
+
       text-align: center;
+
+      background: #f4f6f8;
+
+      color: #111827;
+    }
+
+    .email-section .eyebrow {
+      color: #2563eb;
     }
 
     .email-section h2 {
       font-size: 36px;
+
       margin-bottom: 12px;
     }
 
     .email-section p {
-      color: #9eabba;
+      color: #5b6470;
+
       margin-bottom: 20px;
     }
 
     .email-link {
-      color: #65a9ff;
+      color: #2563eb;
+
       font-weight: 700;
+
       font-size: 18px;
     }
 
@@ -319,23 +598,33 @@
       text-decoration: underline;
     }
 
-    /* FOOTER */
+
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer {
       padding: 35px 0;
-      border-top: 1px solid #273448;
+
+      border-top:
+        1px solid #273448;
+
       color: #788598;
+
       font-size: 14px;
     }
 
     .footer-inner {
       display: flex;
+
       justify-content: space-between;
+
       gap: 20px;
     }
 
     .footer-links {
       display: flex;
+
       gap: 20px;
     }
 
@@ -343,7 +632,10 @@
       color: #ffffff;
     }
 
-    /* MOBILE */
+
+    /* =========================
+       MOBILE
+    ========================= */
 
     @media (max-width: 850px) {
 
@@ -351,14 +643,24 @@
         display: none;
       }
 
+      .mobile-menu-button {
+        display: block;
+      }
+
       .contact-grid {
         grid-template-columns: 1fr;
+
         gap: 45px;
       }
 
       .form-row {
         grid-template-columns: 1fr;
+
         gap: 0;
+      }
+
+      .steps-grid {
+        grid-template-columns: 1fr;
       }
 
       .form-box {
@@ -369,6 +671,10 @@
         font-size: 34px;
       }
 
+      .next-steps-header h2 {
+        font-size: 34px;
+      }
+
       .email-section h2 {
         font-size: 32px;
       }
@@ -376,422 +682,629 @@
       .footer-inner {
         flex-direction: column;
       }
+
     }
+
+
+    /* =========================
+       SMALL PHONES
+    ========================= */
+
+    @media (max-width: 500px) {
+
+      .nav-inner {
+        min-height: 76px;
+      }
+
+      .mobile-menu {
+        top: 75px;
+      }
+
+      h1 {
+        letter-spacing: -2px;
+      }
+
+      .page-hero {
+        padding: 90px 0 65px;
+      }
+
+    }
+
   </style>
+
 </head>
+
 
 <body>
 
-<!-- NAVIGATION -->
 
-<nav>
-  <div class="container nav-inner">
+  <!-- =========================
+       NAVIGATION
+  ========================= -->
 
-    <a href="index.html" class="logo">
-      NORTHSTAR<span> DIGITAL</span>
-    </a>
+  <nav>
 
-    <div class="nav-links">
+    <div class="container nav-inner">
 
-      <a href="index.html">
-        Home
+      <a
+        href="index.html"
+        class="logo"
+      >
+        NORTHSTAR<span> DIGITAL</span>
       </a>
 
-      <a href="services.html">
-        Services
-      </a>
 
-      <a href="work.html">
-        Our Work
-      </a>
+      <div class="nav-links">
 
-      <a href="contact.html" class="nav-button active">
-        Let's Talk
-      </a>
+        <a href="index.html">
+          Home
+        </a>
 
-    </div>
+        <a href="services.html">
+          Services
+        </a>
 
-  </div>
-</nav>
+        <a href="work.html">
+          Our Work
+        </a>
 
+        <a
+          href="contact.html"
+          class="nav-button active"
+        >
+          Let's Talk
+        </a>
 
-<!-- HERO -->
-
-<section class="page-hero">
-
-  <div class="container">
-
-    <div class="hero-content">
-
-      <div class="eyebrow">
-        Let's Work Together
       </div>
 
-      <h1>
-        Tell us about your
-        <span>project.</span>
-      </h1>
 
-      <p>
-        Whether you need a new website, a redesign or ongoing
-        digital support, tell us what you're looking for and
-        we'll start the conversation.
-      </p>
+      <button
+        class="mobile-menu-button"
+        onclick="toggleMenu()"
+        aria-label="Open navigation menu"
+      >
+        ☰
+      </button>
+
+
+      <div
+        class="mobile-menu"
+        id="mobileMenu"
+      >
+
+        <a href="index.html">
+          Home
+        </a>
+
+        <a href="services.html">
+          Services
+        </a>
+
+        <a href="work.html">
+          Our Work
+        </a>
+
+        <a href="contact.html">
+          Let's Talk
+        </a>
+
+      </div>
 
     </div>
 
-  </div>
-
-</section>
+  </nav>
 
 
-<!-- CONTACT -->
+  <!-- =========================
+       HERO
+  ========================= -->
 
-<section class="contact-section">
+  <section class="page-hero">
 
-  <div class="container">
+    <div class="container">
 
-    <div class="contact-grid">
-
-
-      <!-- CONTACT INFORMATION -->
-
-      <div class="contact-info">
+      <div class="hero-content">
 
         <div class="eyebrow">
-          Get In Touch
+          Let's Work Together
+        </div>
+
+        <h1>
+          Tell us about your
+          <span>project.</span>
+        </h1>
+
+        <p>
+          Whether you need a new website, a redesign or ongoing
+          website support, tell us what you're looking for and
+          we'll start the conversation.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       CONTACT
+  ========================= -->
+
+  <section class="contact-section">
+
+    <div class="container">
+
+      <div class="contact-grid">
+
+
+        <!-- CONTACT INFORMATION -->
+
+        <div class="contact-info">
+
+          <div class="eyebrow">
+            Get In Touch
+          </div>
+
+          <h2>
+            Let's figure out what your business needs.
+          </h2>
+
+          <p>
+            You don't need to have everything figured out before
+            reaching out. Give us a little information about your
+            business and we'll take it from there.
+          </p>
+
+
+          <div class="info-card">
+
+            <h3>
+              Email
+            </h3>
+
+            <a href="mailto:digitalnorthstarstudio@gmail.com">
+              digitalnorthstarstudio@gmail.com
+            </a>
+
+          </div>
+
+
+          <div class="info-card">
+
+            <h3>
+              Services
+            </h3>
+
+            <p>
+              Website Design • Website Redesign • Landing Pages •
+              Website Maintenance • Basic SEO
+            </p>
+
+          </div>
+
+
+          <div class="info-card">
+
+            <h3>
+              What Happens Next
+            </h3>
+
+            <p>
+              Send us your project details and we'll review your
+              inquiry and follow up by email.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- FORM -->
+
+        <div class="form-box">
+
+          <h2>
+            Request a Quote
+          </h2>
+
+          <p>
+            Tell us a little about your project. There is no
+            obligation or commitment required.
+          </p>
+
+
+          <form
+            action="https://formspree.io/f/maewrrnk"
+            method="POST"
+          >
+
+
+            <div class="form-row">
+
+              <div class="form-group">
+
+                <label for="name">
+                  Full Name *
+                </label>
+
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Your name"
+                  required
+                >
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="business">
+                  Business Name
+                </label>
+
+                <input
+                  type="text"
+                  id="business"
+                  name="business"
+                  placeholder="Your business"
+                >
+
+              </div>
+
+            </div>
+
+
+            <div class="form-row">
+
+              <div class="form-group">
+
+                <label for="email">
+                  Email *
+                </label>
+
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="you@example.com"
+                  required
+                >
+
+              </div>
+
+
+              <div class="form-group">
+
+                <label for="phone">
+                  Phone
+                </label>
+
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="Optional"
+                >
+
+              </div>
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="service">
+                What do you need help with? *
+              </label>
+
+              <select
+                id="service"
+                name="service"
+                required
+              >
+
+                <option value="">
+                  Select a service
+                </option>
+
+                <option value="Website Design">
+                  Website Design
+                </option>
+
+                <option value="Website Redesign">
+                  Website Redesign
+                </option>
+
+                <option value="Landing Page">
+                  Landing Page
+                </option>
+
+                <option value="Website Maintenance">
+                  Website Maintenance
+                </option>
+
+                <option value="Basic SEO">
+                  Basic SEO
+                </option>
+
+                <option value="Other">
+                  Other
+                </option>
+
+              </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="budget">
+                Estimated Budget
+              </label>
+
+              <select
+                id="budget"
+                name="budget"
+              >
+
+                <option value="">
+                  Select an option
+                </option>
+
+                <option value="Under $500">
+                  Under $500
+                </option>
+
+                <option value="$500 - $1,000">
+                  $500 – $1,000
+                </option>
+
+                <option value="$1,000 - $2,000">
+                  $1,000 – $2,000
+                </option>
+
+                <option value="$2,000+">
+                  $2,000+
+                </option>
+
+                <option value="Not sure yet">
+                  Not sure yet
+                </option>
+
+              </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="message">
+                Tell us about your project *
+              </label>
+
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Tell us about your business, what you'd like to build, or what you'd like to improve..."
+                required
+              ></textarea>
+
+            </div>
+
+
+            <button
+              type="submit"
+              class="submit-button"
+            >
+              Send Project Inquiry →
+            </button>
+
+
+            <div class="form-note">
+              Your information is used only to respond to your inquiry.
+            </div>
+
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       WHAT HAPPENS NEXT
+  ========================= -->
+
+  <section class="next-steps">
+
+    <div class="container">
+
+      <div class="next-steps-header">
+
+        <div class="eyebrow">
+          Simple Process
         </div>
 
         <h2>
-          Let's figure out what your business needs.
+          What happens after you reach out?
         </h2>
 
         <p>
-          You don't need to have everything figured out before
-          reaching out. Give us a little information about your
-          business and we'll take it from there.
+          No complicated sales process. Just a straightforward
+          conversation about your business and what you need.
         </p>
 
-
-        <div class="info-card">
-
-          <h3>
-            Email
-          </h3>
-
-          <a href="mailto:digitalnorthstarstudio@gmail.com">
-            digitalnorthstarstudio@gmail.com
-          </a>
-
-        </div>
+      </div>
 
 
-        <div class="info-card">
+      <div class="steps-grid">
+
+
+        <div class="step-card">
+
+          <div class="step-number">
+            01 — INQUIRY
+          </div>
 
           <h3>
-            Services
+            Tell Us What You Need
           </h3>
 
           <p>
-            Website Design • Redesign • Landing Pages •
-            Maintenance • Basic SEO • Digital Support
+            Send us a few details about your business, your
+            project and what you'd like your website to accomplish.
           </p>
 
         </div>
 
 
-        <div class="info-card">
+        <div class="step-card">
+
+          <div class="step-number">
+            02 — DISCUSSION
+          </div>
 
           <h3>
-            Response
+            We Review Your Project
           </h3>
 
           <p>
-            Send us your project details and we'll follow up
-            with you by email.
+            We'll review your information and follow up by email
+            to discuss your goals, scope and potential next steps.
+          </p>
+
+        </div>
+
+
+        <div class="step-card">
+
+          <div class="step-number">
+            03 — PROJECT
+          </div>
+
+          <h3>
+            We Build the Right Solution
+          </h3>
+
+          <p>
+            Once the project is agreed upon, we'll move forward
+            with a clear scope and a website built around your
+            business.
           </p>
 
         </div>
 
       </div>
 
+    </div>
 
-      <!-- FORM -->
+  </section>
 
-      <div class="form-box">
 
-        <h2>
-          Request a Quote
-        </h2>
+  <!-- =========================
+       EMAIL ALTERNATIVE
+  ========================= -->
 
-        <p>
-          Tell us a little about your project. There is no
-          obligation and no commitment required.
-        </p>
+  <section class="email-section">
 
+    <div class="container">
 
-        <form
-          action="https://formspree.io/f/maewrrnk"
-          method="POST">
+      <div class="eyebrow">
+        Prefer Email?
+      </div>
 
+      <h2>
+        You can reach us directly.
+      </h2>
 
-          <div class="form-row">
+      <p>
+        If you'd rather send an email, contact Northstar Digital at:
+      </p>
 
-            <div class="form-group">
+      <a
+        href="mailto:digitalnorthstarstudio@gmail.com"
+        class="email-link"
+      >
+        digitalnorthstarstudio@gmail.com
+      </a>
 
-              <label for="name">
-                Full Name *
-              </label>
+    </div>
 
-              <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Your name"
-                required>
+  </section>
 
-            </div>
 
+  <!-- =========================
+       FOOTER
+  ========================= -->
 
-            <div class="form-group">
+  <footer>
 
-              <label for="business">
-                Business Name
-              </label>
+    <div class="container footer-inner">
 
-              <input
-                type="text"
-                id="business"
-                name="business"
-                placeholder="Your business">
+      <div>
+        © 2026 Northstar Digital
+      </div>
 
-            </div>
 
-          </div>
+      <div class="footer-links">
 
+        <a href="index.html">
+          Home
+        </a>
 
-          <div class="form-row">
+        <a href="services.html">
+          Services
+        </a>
 
-            <div class="form-group">
+        <a href="work.html">
+          Our Work
+        </a>
 
-              <label for="email">
-                Email *
-              </label>
-
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="you@example.com"
-                required>
-
-            </div>
-
-
-            <div class="form-group">
-
-              <label for="phone">
-                Phone
-              </label>
-
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                placeholder="Optional">
-
-            </div>
-
-          </div>
-
-
-          <div class="form-group">
-
-            <label for="service">
-              What do you need help with? *
-            </label>
-
-            <select
-              id="service"
-              name="service"
-              required>
-
-              <option value="">
-                Select a service
-              </option>
-
-              <option value="Website Design">
-                Website Design
-              </option>
-
-              <option value="Website Redesign">
-                Website Redesign
-              </option>
-
-              <option value="Landing Page">
-                Landing Page
-              </option>
-
-              <option value="Website Maintenance">
-                Website Maintenance
-              </option>
-
-              <option value="Basic SEO">
-                Basic SEO
-              </option>
-
-              <option value="Digital Support">
-                Digital Support
-              </option>
-
-              <option value="Other">
-                Other
-              </option>
-
-            </select>
-
-          </div>
-
-
-          <div class="form-group">
-
-            <label for="budget">
-              Estimated Budget
-            </label>
-
-            <select
-              id="budget"
-              name="budget">
-
-              <option value="">
-                Select an option
-              </option>
-
-              <option value="Under $500">
-                Under $500
-              </option>
-
-              <option value="$500 - $1,000">
-                $500 – $1,000
-              </option>
-
-              <option value="$1,000 - $2,000">
-                $1,000 – $2,000
-              </option>
-
-              <option value="$2,000+">
-                $2,000+
-              </option>
-
-              <option value="Not sure yet">
-                Not sure yet
-              </option>
-
-            </select>
-
-          </div>
-
-
-          <div class="form-group">
-
-            <label for="message">
-              Tell us about your project *
-            </label>
-
-            <textarea
-              id="message"
-              name="message"
-              placeholder="Tell us about your business, what you'd like to build, or what you'd like to improve..."
-              required></textarea>
-
-          </div>
-
-
-          <button
-            type="submit"
-            class="submit-button">
-            Send Project Inquiry →
-          </button>
-
-
-          <div class="form-note">
-            Your information is used only to respond to your inquiry.
-          </div>
-
-
-        </form>
+        <a href="contact.html">
+          Contact
+        </a>
 
       </div>
 
     </div>
 
-  </div>
-
-</section>
+  </footer>
 
 
-<!-- EMAIL ALTERNATIVE -->
+  <!-- =========================
+       MOBILE MENU SCRIPT
+  ========================= -->
 
-<section class="email-section">
+  <script>
 
-  <div class="container">
+    function toggleMenu() {
 
-    <div class="eyebrow">
-      Prefer Email?
-    </div>
+      const menu =
+        document.getElementById("mobileMenu");
 
-    <h2>
-      You can reach us directly.
-    </h2>
+      if (menu.style.display === "block") {
 
-    <p>
-      If you'd rather send an email, contact Northstar Digital at:
-    </p>
+        menu.style.display = "none";
 
-    <a
-      href="mailto:digitalnorthstarstudio@gmail.com"
-      class="email-link">
-      digitalnorthstarstudio@gmail.com
-    </a>
+      } else {
 
-  </div>
+        menu.style.display = "block";
 
-</section>
+      }
 
+    }
 
-<!-- FOOTER -->
+  </script>
 
-<footer>
-
-  <div class="container footer-inner">
-
-    <div>
-      © 2026 Northstar Digital
-    </div>
-
-    <div class="footer-links">
-
-      <a href="index.html">
-        Home
-      </a>
-
-      <a href="services.html">
-        Services
-      </a>
-
-      <a href="work.html">
-        Our Work
-      </a>
-
-      <a href="contact.html">
-        Contact
-      </a>
-
-    </div>
-
-  </div>
-
-</footer>
 
 </body>
+
 </html>

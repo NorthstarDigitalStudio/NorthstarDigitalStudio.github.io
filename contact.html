@@ -46,14 +46,17 @@
       color: inherit;
     }
 
-    button {
+    button,
+    input,
+    select,
+    textarea {
       font-family: inherit;
     }
 
     .container {
       width: 90%;
       max-width: 1180px;
-      margin: auto;
+      margin: 0 auto;
     }
 
 
@@ -68,8 +71,7 @@
 
       background: rgba(10, 17, 32, 0.94);
 
-      border-bottom:
-        1px solid rgba(255, 255, 255, 0.08);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
@@ -117,7 +119,9 @@
     }
 
 
-    /* NAV LINKS */
+    /* =========================
+       DESKTOP NAV LINKS
+    ========================= */
 
     .nav-links {
       display: flex;
@@ -138,6 +142,10 @@
 
     .nav-links a:hover {
       color: #ffffff;
+    }
+
+    .nav-links .active {
+      color: #65a9ff;
     }
 
     .nav-button {
@@ -166,10 +174,9 @@
 
       background: transparent;
 
-      border:
-        1px solid #344258;
+      border: 1px solid #344258;
 
-      color: white;
+      color: #ffffff;
 
       font-size: 22px;
 
@@ -193,8 +200,7 @@
 
       background: #0b1220;
 
-      border-bottom:
-        1px solid rgba(255, 255, 255, 0.08);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 
       padding: 15px 5%;
 
@@ -210,8 +216,7 @@
 
       font-size: 16px;
 
-      border-bottom:
-        1px solid rgba(255, 255, 255, 0.06);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
     }
 
     .mobile-menu a:last-child {
@@ -219,7 +224,7 @@
     }
 
     .mobile-menu a:hover {
-      color: white;
+      color: #ffffff;
     }
 
 
@@ -313,8 +318,7 @@
     .contact-grid {
       display: grid;
 
-      grid-template-columns:
-        0.75fr 1.25fr;
+      grid-template-columns: 0.75fr 1.25fr;
 
       gap: 60px;
 
@@ -343,13 +347,11 @@
     .info-card {
       padding: 24px 0;
 
-      border-top:
-        1px solid #273448;
+      border-top: 1px solid #273448;
     }
 
     .info-card:last-child {
-      border-bottom:
-        1px solid #273448;
+      border-bottom: 1px solid #273448;
     }
 
     .info-card h3 {
@@ -377,15 +379,13 @@
     .form-box {
       background: #111c2d;
 
-      border:
-        1px solid #273448;
+      border: 1px solid #273448;
 
       border-radius: 14px;
 
       padding: 38px;
 
-      box-shadow:
-        0 20px 50px rgba(0, 0, 0, 0.12);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
     }
 
     .form-box h2 {
@@ -405,8 +405,7 @@
     .form-row {
       display: grid;
 
-      grid-template-columns:
-        1fr 1fr;
+      grid-template-columns: 1fr 1fr;
 
       gap: 18px;
     }
@@ -432,8 +431,7 @@
     textarea {
       width: 100%;
 
-      border:
-        1px solid #344258;
+      border: 1px solid #344258;
 
       background: #0a1120;
 
@@ -443,13 +441,13 @@
 
       padding: 13px 14px;
 
-      font-family: inherit;
-
       font-size: 14px;
 
       outline: none;
 
-      transition: 0.25s;
+      transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
     }
 
     input:focus,
@@ -457,8 +455,7 @@
     textarea:focus {
       border-color: #65a9ff;
 
-      box-shadow:
-        0 0 0 3px rgba(101, 169, 255, 0.08);
+      box-shadow: 0 0 0 3px rgba(101, 169, 255, 0.08);
     }
 
     input::placeholder,
@@ -495,14 +492,15 @@
 
       font-size: 15px;
 
-      transition: 0.25s;
+      transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
     }
 
     .submit-button:hover {
       transform: translateY(-2px);
 
-      box-shadow:
-        0 8px 20px rgba(101, 169, 255, 0.15);
+      box-shadow: 0 8px 20px rgba(101, 169, 255, 0.15);
     }
 
     .form-note {
@@ -551,8 +549,7 @@
     .steps-grid {
       display: grid;
 
-      grid-template-columns:
-        repeat(3, 1fr);
+      grid-template-columns: repeat(3, 1fr);
 
       gap: 20px;
     }
@@ -562,10 +559,19 @@
 
       background: #111c2d;
 
-      border:
-        1px solid #273448;
+      border: 1px solid #273448;
 
       border-radius: 12px;
+
+      transition:
+        transform 0.25s ease,
+        border-color 0.25s ease;
+    }
+
+    .step-card:hover {
+      transform: translateY(-4px);
+
+      border-color: #65a9ff;
     }
 
     .step-number {
@@ -643,8 +649,7 @@
     footer {
       padding: 35px 0;
 
-      border-top:
-        1px solid #273448;
+      border-top: 1px solid #273448;
 
       color: #788598;
 
@@ -675,7 +680,7 @@
 
 
     /* =========================
-       TABLET / MOBILE
+       TABLET
     ========================= */
 
     @media (max-width: 900px) {
@@ -785,6 +790,18 @@
         letter-spacing: -2px;
       }
 
+      .contact-section {
+        padding: 65px 0 80px;
+      }
+
+      .next-steps {
+        padding: 70px 0;
+      }
+
+      .email-section {
+        padding: 65px 0;
+      }
+
       .footer-links {
         flex-wrap: wrap;
 
@@ -847,7 +864,7 @@
 
         <a
           href="contact.html"
-          class="nav-button"
+          class="nav-button active"
         >
           Let's Talk
         </a>
@@ -902,7 +919,7 @@
        HERO
   ========================= -->
 
-  <section class="page-hero">
+  <header class="page-hero">
 
     <div class="container">
 
@@ -927,11 +944,11 @@
 
     </div>
 
-  </section>
+  </header>
 
 
   <!-- =========================
-       CONTACT
+       CONTACT SECTION
   ========================= -->
 
   <section class="contact-section">
@@ -941,7 +958,9 @@
       <div class="contact-grid">
 
 
-        <!-- CONTACT INFORMATION -->
+        <!-- =====================
+             CONTACT INFORMATION
+        ====================== -->
 
         <div class="contact-info">
 
@@ -1003,7 +1022,9 @@
         </div>
 
 
-        <!-- FORM -->
+        <!-- =====================
+             CONTACT FORM
+        ====================== -->
 
         <div class="form-box">
 
@@ -1022,6 +1043,9 @@
             method="POST"
           >
 
+
+            <!-- NAME + BUSINESS -->
+
             <div class="form-row">
 
               <div class="form-group">
@@ -1035,6 +1059,7 @@
                   id="name"
                   name="name"
                   placeholder="Your name"
+                  autocomplete="name"
                   required
                 >
 
@@ -1052,12 +1077,15 @@
                   id="business"
                   name="business"
                   placeholder="Your business"
+                  autocomplete="organization"
                 >
 
               </div>
 
             </div>
 
+
+            <!-- EMAIL + PHONE -->
 
             <div class="form-row">
 
@@ -1072,6 +1100,7 @@
                   id="email"
                   name="email"
                   placeholder="you@example.com"
+                  autocomplete="email"
                   required
                 >
 
@@ -1089,12 +1118,15 @@
                   id="phone"
                   name="phone"
                   placeholder="Optional"
+                  autocomplete="tel"
                 >
 
               </div>
 
             </div>
 
+
+            <!-- SERVICE -->
 
             <div class="form-group">
 
@@ -1141,6 +1173,8 @@
             </div>
 
 
+            <!-- BUDGET -->
+
             <div class="form-group">
 
               <label for="budget">
@@ -1181,6 +1215,8 @@
             </div>
 
 
+            <!-- MESSAGE -->
+
             <div class="form-group">
 
               <label for="message">
@@ -1197,6 +1233,8 @@
             </div>
 
 
+            <!-- SUBMIT -->
+
             <button
               type="submit"
               class="submit-button"
@@ -1208,7 +1246,6 @@
             <div class="form-note">
               Your information is used only to respond to your inquiry.
             </div>
-
 
           </form>
 
@@ -1250,6 +1287,8 @@
       <div class="steps-grid">
 
 
+        <!-- STEP 01 -->
+
         <div class="step-card">
 
           <div class="step-number">
@@ -1268,6 +1307,8 @@
         </div>
 
 
+        <!-- STEP 02 -->
+
         <div class="step-card">
 
           <div class="step-number">
@@ -1285,6 +1326,8 @@
 
         </div>
 
+
+        <!-- STEP 03 -->
 
         <div class="step-card">
 
@@ -1393,13 +1436,14 @@
 
     function toggleMenu() {
 
-      const menu =
-        document.getElementById("mobileMenu");
+      const menu = document.getElementById("mobileMenu");
 
-      const button =
-        document.getElementById("menuButton");
+      const button = document.getElementById("menuButton");
 
-      if (menu.style.display === "block") {
+      const isOpen = menu.style.display === "block";
+
+
+      if (isOpen) {
 
         menu.style.display = "none";
 
@@ -1422,7 +1466,9 @@
     }
 
 
-    /* Close mobile menu after clicking a link */
+    /* =========================
+       CLOSE MENU AFTER CLICK
+    ========================= */
 
     document.querySelectorAll(".mobile-menu a").forEach(
       function(link) {

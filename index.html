@@ -16,7 +16,12 @@
 
   <meta
     name="description"
-    content="Northstar Digital creates professional websites for small businesses, including website design, redesigns, landing pages, basic SEO and ongoing maintenance."
+    content="Northstar Digital creates professional, conversion-focused websites for small businesses. Website design, redesigns, landing pages and ongoing support."
+  >
+
+  <meta
+    name="theme-color"
+    content="#0a1120"
   >
 
   <style>
@@ -52,10 +57,24 @@
       font-family: inherit;
     }
 
+    img {
+      max-width: 100%;
+    }
+
     .container {
       width: 90%;
       max-width: 1180px;
       margin: auto;
+    }
+
+
+    /* =========================
+       ACCESSIBILITY
+    ========================= */
+
+    :focus-visible {
+      outline: 2px solid #65a9ff;
+      outline-offset: 4px;
     }
 
 
@@ -152,10 +171,15 @@
       border-radius: 7px;
 
       font-weight: 800 !important;
+
+      box-shadow:
+        0 6px 18px rgba(101, 169, 255, 0.12);
     }
 
     .nav-button:hover {
       transform: translateY(-2px);
+
+      background: #7db8ff;
     }
 
 
@@ -220,7 +244,7 @@
       position: relative;
       z-index: 2;
 
-      max-width: 850px;
+      max-width: 880px;
     }
 
     .eyebrow {
@@ -245,6 +269,8 @@
       margin-bottom: 26px;
 
       letter-spacing: -3.5px;
+
+      max-width: 900px;
     }
 
     .hero h1 span {
@@ -259,6 +285,14 @@
       max-width: 720px;
 
       margin-bottom: 36px;
+    }
+
+    .hero-note {
+      margin-top: 18px;
+
+      color: #7f8da1;
+
+      font-size: 13px;
     }
 
     .buttons {
@@ -284,19 +318,26 @@
       transition:
         transform 0.25s ease,
         background 0.25s ease,
-        border-color 0.25s ease;
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
     }
 
     .primary {
       background: #65a9ff;
 
       color: #07101f;
+
+      box-shadow:
+        0 8px 22px rgba(101, 169, 255, 0.10);
     }
 
     .primary:hover {
       transform: translateY(-3px);
 
       background: #7db8ff;
+
+      box-shadow:
+        0 12px 28px rgba(101, 169, 255, 0.16);
     }
 
     .secondary {
@@ -317,7 +358,7 @@
 
 
     /* =========================
-       STATS / VALUE STRIP
+       VALUE STRIP
     ========================= */
 
     .stats {
@@ -608,6 +649,9 @@
       font-weight: 800;
 
       font-size: 14px;
+
+      transition:
+        color 0.2s ease;
     }
 
     .project-link:hover {
@@ -715,6 +759,17 @@
       border-radius: 12px;
 
       position: relative;
+
+      transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+    }
+
+    .price-card:hover {
+      transform: translateY(-4px);
+
+      border-color: #40516a;
     }
 
     .price-card.featured {
@@ -722,6 +777,12 @@
 
       box-shadow:
         0 0 35px rgba(101, 169, 255, 0.08);
+    }
+
+    .price-card.featured:hover {
+      box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.20),
+        0 0 35px rgba(101, 169, 255, 0.10);
     }
 
     .featured-label {
@@ -790,6 +851,16 @@
 
     .price-card li:last-child {
       border-bottom: none;
+    }
+
+    .pricing-upgrade {
+      margin-top: 18px;
+
+      color: #65a9ff;
+
+      font-size: 12px;
+
+      font-weight: 700;
     }
 
     .pricing-note {
@@ -1054,6 +1125,11 @@
       flex-wrap: wrap;
     }
 
+    .footer-links a {
+      transition:
+        color 0.2s ease;
+    }
+
     .footer-links a:hover {
       color: #ffffff;
     }
@@ -1081,6 +1157,16 @@
       border-radius: 7px;
 
       cursor: pointer;
+
+      transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+    }
+
+    .mobile-menu-button:hover {
+      background: rgba(255, 255, 255, 0.05);
+
+      border-color: #65a9ff;
     }
 
     .mobile-menu {
@@ -1297,6 +1383,10 @@
         gap: 14px;
       }
 
+      .hero-note {
+        font-size: 12px;
+      }
+
     }
 
   </style>
@@ -1311,7 +1401,7 @@
        NAVIGATION
   ========================= -->
 
-  <nav>
+  <nav aria-label="Main navigation">
 
     <div class="container nav-inner">
 
@@ -1366,7 +1456,9 @@
         onclick="toggleMenu()"
         aria-label="Open navigation menu"
         aria-expanded="false"
+        aria-controls="mobileMenu"
         id="menuButton"
+        type="button"
       >
         ☰
       </button>
@@ -1375,6 +1467,7 @@
       <div
         class="mobile-menu"
         id="mobileMenu"
+        aria-label="Mobile navigation"
       >
 
         <a href="index.html">
@@ -1422,17 +1515,16 @@
         </div>
 
         <h1>
-          Professional websites for
+          A better website for
           <span>
-            small businesses.
+            your business.
           </span>
         </h1>
 
         <p>
           Northstar Digital builds modern, professional websites
-          designed to help small businesses look credible, explain
-          what they offer and make it easier for customers to take
-          the next step.
+          that help small businesses look credible, explain what
+          they offer and make it easier for customers to get in touch.
         </p>
 
 
@@ -1452,6 +1544,10 @@
             View Our Work
           </a>
 
+        </div>
+
+        <div class="hero-note">
+          Professional websites starting at $199.
         </div>
 
       </div>
@@ -1478,7 +1574,7 @@
           </h3>
 
           <p>
-            Practical websites without unnecessary agency complexity.
+            Professional websites without unnecessary agency complexity.
           </p>
 
         </div>
@@ -1491,7 +1587,7 @@
           </h3>
 
           <p>
-            Designed to provide a clear experience across devices.
+            A clear, responsive experience across phones, tablets and desktops.
           </p>
 
         </div>
@@ -1504,7 +1600,7 @@
           </h3>
 
           <p>
-            Keep your website current as your business changes.
+            Keep your website current as your business changes and grows.
           </p>
 
         </div>
@@ -1518,7 +1614,7 @@
 
   <!-- =========================
        SERVICES
-    ========================= -->
+  ========================= -->
 
   <section
     class="services"
@@ -1534,13 +1630,13 @@
         </div>
 
         <h2>
-          Everything you need for a stronger online presence.
+          The website services your business actually needs.
         </h2>
 
         <p>
-          Northstar Digital focuses on the essential website
-          services small businesses need — from building a new
-          site to improving and maintaining an existing one.
+          From launching a new website to improving an existing one,
+          Northstar focuses on the essentials that help small businesses
+          build a stronger online presence.
         </p>
 
       </div>
@@ -1579,7 +1675,7 @@
 
           <p>
             Modernize an outdated website with cleaner design,
-            clearer messaging and a better user experience.
+            clearer messaging and a better customer experience.
           </p>
 
         </div>
@@ -1596,7 +1692,7 @@
           </h3>
 
           <p>
-            Focused pages created around a specific service,
+            Focused pages built around a specific service,
             promotion, campaign or customer action.
           </p>
 
@@ -1615,7 +1711,7 @@
 
           <p>
             Keep your website current with content updates,
-            new pages, images, promotions and improvements.
+            new pages, promotions and ongoing improvements.
           </p>
 
         </div>
@@ -1632,9 +1728,9 @@
           </h3>
 
           <p>
-            Improve your website's structure and content to make
-            it easier for search engines and potential customers
-            to understand your business.
+            Improve your website's structure and content so
+            search engines and customers can better understand
+            your business.
           </p>
 
         </div>
@@ -1643,6 +1739,7 @@
 
 
       <div
+        class="section-action"
         style="
           text-align: center;
           margin-top: 35px;
@@ -1674,7 +1771,7 @@
       <div class="section-title">
 
         <div class="eyebrow">
-          Website Concepts
+          Our Work
         </div>
 
         <h2>
@@ -1683,8 +1780,8 @@
 
         <p>
           Explore demonstration websites created by Northstar
-          Digital to showcase different design approaches,
-          industries and customer experiences.
+          Digital to showcase different industries, design
+          approaches and customer experiences.
         </p>
 
       </div>
@@ -1858,7 +1955,7 @@
 
         <p>
           A straightforward process designed to keep your project
-          clear, organized and focused on your business.
+          clear, organized and focused on what your business needs.
         </p>
 
       </div>
@@ -1956,7 +2053,7 @@
       <div class="section-title">
 
         <div class="eyebrow">
-          Introductory Pricing
+          Straightforward Pricing
         </div>
 
         <h2>
@@ -1964,9 +2061,9 @@
         </h2>
 
         <p>
-          Straightforward starting prices for small-business
-          websites. Every project can be adjusted based on the
-          pages, content and functionality you actually need.
+          Start with what your business needs today and add more
+          as your website grows. Every project is scoped around
+          the pages, content and functionality you actually need.
         </p>
 
       </div>
@@ -1988,14 +2085,14 @@
           </div>
 
           <p>
-            A simple professional web presence for businesses
-            that need the essentials.
+            A simple, professional one-page website for businesses
+            that need to establish an online presence.
           </p>
 
           <ul>
 
             <li>
-              ✓ Simple business website
+              ✓ One-page website
             </li>
 
             <li>
@@ -2007,10 +2104,18 @@
             </li>
 
             <li>
-              ✓ Contact call-to-action
+              ✓ Primary call-to-action
+            </li>
+
+            <li>
+              ✓ Standard contact method
             </li>
 
           </ul>
+
+          <div class="pricing-upgrade">
+            Need more pages or functionality? Upgrade or add to your project.
+          </div>
 
         </div>
 
@@ -2020,7 +2125,7 @@
         <div class="price-card featured">
 
           <div class="featured-label">
-            Popular
+            Most Popular
           </div>
 
           <h3>
@@ -2033,7 +2138,7 @@
 
           <p>
             A complete business website designed to showcase
-            your services and generate customer inquiries.
+            your services and make it easier for customers to inquire.
           </p>
 
           <ul>
@@ -2043,7 +2148,7 @@
             </li>
 
             <li>
-              ✓ Service sections/pages
+              ✓ Service pages or sections
             </li>
 
             <li>
@@ -2055,10 +2160,14 @@
             </li>
 
             <li>
-              ✓ Basic SEO setup
+              ✓ Basic on-page SEO
             </li>
 
           </ul>
+
+          <div class="pricing-upgrade">
+            A strong starting point for an established small business.
+          </div>
 
         </div>
 
@@ -2077,7 +2186,7 @@
 
           <p>
             A larger, more customized website for businesses
-            that need additional content and functionality.
+            that need additional content, pages and functionality.
           </p>
 
           <ul>
@@ -2087,7 +2196,7 @@
             </li>
 
             <li>
-              ✓ Additional pages/sections
+              ✓ Additional pages and sections
             </li>
 
             <li>
@@ -2095,14 +2204,18 @@
             </li>
 
             <li>
-              ✓ Conversion strategy
+              ✓ Conversion-focused structure
             </li>
 
             <li>
-              ✓ Basic SEO
+              ✓ Basic SEO setup
             </li>
 
           </ul>
+
+          <div class="pricing-upgrade">
+            Additional functionality and custom features can be quoted separately.
+          </div>
 
         </div>
 
@@ -2111,10 +2224,12 @@
 
       <p class="pricing-note">
 
-        Final pricing depends on project scope, number of pages,
-        content requirements and functionality. Domain registration,
-        hosting and ongoing maintenance can be handled separately
-        based on your preferences.
+        <strong>Good to know:</strong>
+        Pricing is based on project scope. Additional pages,
+        content creation, advanced functionality, integrations,
+        branding and other custom work can be added separately.
+        Domain registration, hosting and ongoing maintenance are
+        also available separately based on your needs.
 
       </p>
 
@@ -2435,13 +2550,21 @@
       const button =
         document.getElementById("menuButton");
 
-      if (menu.style.display === "block") {
+      const isOpen =
+        menu.style.display === "block";
+
+      if (isOpen) {
 
         menu.style.display = "none";
 
         button.setAttribute(
           "aria-expanded",
           "false"
+        );
+
+        button.setAttribute(
+          "aria-label",
+          "Open navigation menu"
         );
 
       } else {
@@ -2451,6 +2574,11 @@
         button.setAttribute(
           "aria-expanded",
           "true"
+        );
+
+        button.setAttribute(
+          "aria-label",
+          "Close navigation menu"
         );
 
       }
@@ -2478,8 +2606,47 @@
               "false"
             );
 
+            document.getElementById(
+              "menuButton"
+            ).setAttribute(
+              "aria-label",
+              "Open navigation menu"
+            );
+
           }
         );
+
+      }
+    );
+
+
+    /* Close mobile menu with Escape */
+
+    document.addEventListener(
+      "keydown",
+      function(event) {
+
+        if (event.key === "Escape") {
+
+          const menu =
+            document.getElementById("mobileMenu");
+
+          const button =
+            document.getElementById("menuButton");
+
+          menu.style.display = "none";
+
+          button.setAttribute(
+            "aria-expanded",
+            "false"
+          );
+
+          button.setAttribute(
+            "aria-label",
+            "Open navigation menu"
+          );
+
+        }
 
       }
     );

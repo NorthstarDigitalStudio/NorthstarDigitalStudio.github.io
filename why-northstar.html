@@ -1,8 +1,8 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
   <meta charset="UTF-8">
 
   <meta
@@ -14,13 +14,13 @@
 
   <meta
     name="description"
-    content="Learn why small businesses choose Northstar Digital for professional websites, redesigns, landing pages, SEO and ongoing website support."
+    content="Learn why Northstar Digital helps small businesses build professional, modern websites without unnecessary agency complexity."
   >
 
   <style>
 
     /* =========================
-       GLOBAL
+       RESET & GLOBAL
     ========================= */
 
     * {
@@ -42,8 +42,8 @@
     }
 
     a {
-      text-decoration: none;
       color: inherit;
+      text-decoration: none;
     }
 
     button {
@@ -53,7 +53,7 @@
     .container {
       width: 90%;
       max-width: 1180px;
-      margin: auto;
+      margin: 0 auto;
     }
 
 
@@ -68,8 +68,7 @@
 
       background: rgba(10, 17, 32, 0.94);
 
-      border-bottom:
-        1px solid rgba(255, 255, 255, 0.08);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
@@ -86,12 +85,10 @@
     .logo {
       display: flex;
       align-items: center;
-
       gap: 13px;
 
       font-size: 27px;
       font-weight: 900;
-
       letter-spacing: 2px;
 
       white-space: nowrap;
@@ -101,9 +98,8 @@
       width: 58px;
       height: 58px;
 
-      object-fit: contain;
-
       display: block;
+      object-fit: contain;
 
       border-radius: 8px;
     }
@@ -115,9 +111,6 @@
     .logo span::first-letter {
       color: #65a9ff;
     }
-
-
-    /* NAV LINKS */
 
     .nav-links {
       display: flex;
@@ -140,7 +133,7 @@
       color: #ffffff;
     }
 
-    .nav-links .active {
+    .nav-links a.active {
       color: #65a9ff;
     }
 
@@ -162,6 +155,85 @@
 
 
     /* =========================
+       MOBILE NAVIGATION
+    ========================= */
+
+    .mobile-menu-button {
+      display: none;
+
+      width: 44px;
+      height: 44px;
+
+      background: transparent;
+
+      border: 1px solid #344258;
+
+      border-radius: 7px;
+
+      color: #ffffff;
+
+      font-size: 22px;
+
+      cursor: pointer;
+    }
+
+    .mobile-menu {
+      display: none;
+
+      position: absolute;
+
+      top: 86px;
+      left: 0;
+      right: 0;
+
+      background: #0b1220;
+
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+      padding: 15px 5%;
+    }
+
+    .mobile-menu a {
+      display: block;
+
+      padding: 14px 0;
+
+      color: #c8d1df;
+
+      font-size: 16px;
+
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .mobile-menu a:last-child {
+      border-bottom: none;
+    }
+
+    .mobile-menu a:hover {
+      color: #ffffff;
+    }
+
+
+    /* =========================
+       SHARED EYEBROW
+    ========================= */
+
+    .eyebrow {
+      margin-bottom: 18px;
+
+      color: #65a9ff;
+
+      text-transform: uppercase;
+
+      letter-spacing: 3px;
+
+      font-size: 11px;
+
+      font-weight: 800;
+    }
+
+
+    /* =========================
        HERO
     ========================= */
 
@@ -173,9 +245,9 @@
 
       position: relative;
 
-      overflow: hidden;
-
       padding: 110px 0 100px;
+
+      overflow: hidden;
     }
 
     .page-hero::before {
@@ -186,14 +258,14 @@
       width: 650px;
       height: 650px;
 
+      right: -280px;
+      top: -220px;
+
       background: #1d4ed8;
 
       filter: blur(190px);
 
       opacity: 0.20;
-
-      right: -280px;
-      top: -220px;
 
       pointer-events: none;
     }
@@ -206,45 +278,32 @@
       width: 300px;
       height: 300px;
 
+      left: -180px;
+      bottom: -120px;
+
       background: #65a9ff;
 
       filter: blur(170px);
 
       opacity: 0.06;
 
-      left: -180px;
-      bottom: -120px;
-
       pointer-events: none;
     }
 
     .hero-content {
       position: relative;
+
       z-index: 2;
 
       max-width: 850px;
     }
 
-    .eyebrow {
-      color: #65a9ff;
-
-      text-transform: uppercase;
-
-      letter-spacing: 3px;
-
-      font-size: 11px;
-
-      font-weight: 800;
-
-      margin-bottom: 20px;
-    }
-
     .page-hero h1 {
+      margin-bottom: 26px;
+
       font-size: clamp(48px, 7vw, 82px);
 
       line-height: 1.02;
-
-      margin-bottom: 26px;
 
       letter-spacing: -3.5px;
     }
@@ -254,22 +313,22 @@
     }
 
     .page-hero p {
-      font-size: 19px;
+      max-width: 720px;
 
       color: #aeb9c9;
 
-      max-width: 720px;
+      font-size: 19px;
     }
 
 
     /* =========================
-       WHY NORTHSTAR INTRO
+       INTRO
     ========================= */
 
     .intro-section {
-      background: #0f1828;
-
       padding: 100px 0;
+
+      background: #0f1828;
     }
 
     .intro-grid {
@@ -283,26 +342,32 @@
     }
 
     .intro-content h2 {
+      margin-bottom: 20px;
+
       font-size: 45px;
 
       line-height: 1.1;
-
-      margin-bottom: 20px;
 
       letter-spacing: -1.5px;
     }
 
     .intro-content p {
-      color: #9eabba;
-
-      font-size: 16px;
+      max-width: 590px;
 
       margin-bottom: 18px;
 
-      max-width: 590px;
+      color: #9eabba;
+
+      font-size: 16px;
+    }
+
+    .intro-content p:last-child {
+      margin-bottom: 0;
     }
 
     .intro-box {
+      padding: 38px;
+
       background:
         linear-gradient(
           145deg,
@@ -313,14 +378,12 @@
       border: 1px solid #273448;
 
       border-radius: 14px;
-
-      padding: 38px;
     }
 
     .intro-box h3 {
-      font-size: 22px;
-
       margin-bottom: 15px;
+
+      font-size: 22px;
     }
 
     .intro-box p {
@@ -331,14 +394,8 @@
 
 
     /* =========================
-       DIFFERENCE
+       SECTION HEADERS
     ========================= */
-
-    .difference-section {
-      background: #0a1120;
-
-      padding: 100px 0;
-    }
 
     .section-title {
       max-width: 740px;
@@ -347,11 +404,11 @@
     }
 
     .section-title h2 {
+      margin-bottom: 15px;
+
       font-size: 45px;
 
       line-height: 1.1;
-
-      margin-bottom: 15px;
 
       letter-spacing: -1.5px;
     }
@@ -362,11 +419,22 @@
       font-size: 17px;
     }
 
+
+    /* =========================
+       DIFFERENCE
+    ========================= */
+
+    .difference-section {
+      padding: 100px 0;
+
+      background: #0a1120;
+    }
+
     .difference-grid {
       display: grid;
 
       grid-template-columns:
-        repeat(3, 1fr);
+        repeat(3, minmax(0, 1fr));
 
       gap: 20px;
     }
@@ -374,14 +442,14 @@
     .difference-card {
       padding: 32px;
 
-      border: 1px solid #273448;
-
       background:
         linear-gradient(
           145deg,
           #111c2d,
           #0e1929
         );
+
+      border: 1px solid #273448;
 
       border-radius: 12px;
 
@@ -401,21 +469,21 @@
     }
 
     .difference-number {
-      color: #65a9ff;
+      margin-bottom: 18px;
 
-      font-weight: 800;
+      color: #65a9ff;
 
       font-size: 13px;
 
-      letter-spacing: 1px;
+      font-weight: 800;
 
-      margin-bottom: 18px;
+      letter-spacing: 1px;
     }
 
     .difference-card h3 {
-      font-size: 21px;
-
       margin-bottom: 10px;
+
+      font-size: 21px;
     }
 
     .difference-card p {
@@ -430,9 +498,9 @@
     ========================= */
 
     .comparison-section {
-      background: #0f1828;
-
       padding: 100px 0;
+
+      background: #0f1828;
     }
 
     .comparison-grid {
@@ -446,11 +514,11 @@
     .comparison-card {
       padding: 35px;
 
-      border-radius: 12px;
+      background: #111c2d;
 
       border: 1px solid #273448;
 
-      background: #111c2d;
+      border-radius: 12px;
     }
 
     .comparison-card.highlight {
@@ -461,9 +529,9 @@
     }
 
     .comparison-card h3 {
-      font-size: 23px;
-
       margin-bottom: 20px;
+
+      font-size: 23px;
     }
 
     .comparison-card ul {
@@ -473,20 +541,16 @@
     .comparison-card li {
       padding: 11px 0;
 
-      border-bottom:
-        1px solid rgba(255, 255, 255, 0.05);
-
       color: #b9c4d4;
 
       font-size: 14px;
+
+      border-bottom:
+        1px solid rgba(255, 255, 255, 0.05);
     }
 
     .comparison-card li:last-child {
       border-bottom: none;
-    }
-
-    .comparison-card.highlight li::first-letter {
-      color: #65a9ff;
     }
 
 
@@ -495,11 +559,11 @@
     ========================= */
 
     .faq-section {
+      padding: 100px 0;
+
       background: #ffffff;
 
       color: #111827;
-
-      padding: 100px 0;
     }
 
     .faq-header {
@@ -513,11 +577,11 @@
     }
 
     .faq-header h2 {
+      margin-bottom: 15px;
+
       font-size: 45px;
 
       line-height: 1.1;
-
-      margin-bottom: 15px;
 
       letter-spacing: -1.5px;
     }
@@ -531,7 +595,7 @@
     .faq-list {
       max-width: 900px;
 
-      margin: auto;
+      margin: 0 auto;
 
       border-top: 1px solid #dfe3e8;
     }
@@ -541,19 +605,19 @@
     }
 
     .faq-item summary {
-      list-style: none;
-
-      cursor: pointer;
+      position: relative;
 
       padding: 23px 45px 23px 0;
 
-      position: relative;
+      color: #111827;
 
       font-size: 17px;
 
       font-weight: 800;
 
-      color: #111827;
+      cursor: pointer;
+
+      list-style: none;
     }
 
     .faq-item summary::-webkit-details-marker {
@@ -568,13 +632,11 @@
       right: 5px;
       top: 18px;
 
+      color: #2563eb;
+
       font-size: 25px;
 
       font-weight: 400;
-
-      color: #2563eb;
-
-      transition: transform 0.25s ease;
     }
 
     .faq-item[open] summary::after {
@@ -582,13 +644,13 @@
     }
 
     .faq-answer {
+      max-width: 800px;
+
       padding: 0 45px 24px 0;
 
       color: #5b6470;
 
       font-size: 15px;
-
-      max-width: 800px;
     }
 
 
@@ -597,6 +659,10 @@
     ========================= */
 
     .cta-section {
+      position: relative;
+
+      padding: 100px 0;
+
       text-align: center;
 
       background:
@@ -606,11 +672,7 @@
           #0b1220
         );
 
-      position: relative;
-
       overflow: hidden;
-
-      padding: 100px 0;
     }
 
     .cta-section::before {
@@ -621,16 +683,16 @@
       width: 400px;
       height: 400px;
 
+      left: 50%;
+      top: 50%;
+
+      transform: translate(-50%, -50%);
+
       background: #1d4ed8;
 
       filter: blur(180px);
 
       opacity: 0.13;
-
-      left: 50%;
-      top: 50%;
-
-      transform: translate(-50%, -50%);
 
       pointer-events: none;
     }
@@ -642,11 +704,11 @@
     }
 
     .cta-section h2 {
+      margin-bottom: 18px;
+
       font-size: 53px;
 
       line-height: 1.1;
-
-      margin-bottom: 18px;
 
       letter-spacing: -2px;
     }
@@ -667,23 +729,20 @@
 
       padding: 14px 23px;
 
+      background: #65a9ff;
+
+      color: #07101f;
+
       border-radius: 7px;
 
       font-weight: 800;
 
       transition:
         transform 0.25s ease,
-        background 0.25s ease,
-        border-color 0.25s ease;
+        background 0.25s ease;
     }
 
-    .primary {
-      background: #65a9ff;
-
-      color: #07101f;
-    }
-
-    .primary:hover {
+    .button:hover {
       transform: translateY(-3px);
 
       background: #7db8ff;
@@ -697,21 +756,19 @@
     footer {
       padding: 35px 0;
 
-      border-top:
-        1px solid #273448;
+      background: #0a1120;
+
+      border-top: 1px solid #273448;
 
       color: #788598;
 
       font-size: 14px;
-
-      background: #0a1120;
     }
 
     .footer-inner {
       display: flex;
 
       align-items: center;
-
       justify-content: space-between;
 
       gap: 20px;
@@ -729,73 +786,7 @@
 
 
     /* =========================
-       MOBILE MENU BUTTON
-    ========================= */
-
-    .mobile-menu-button {
-      display: none;
-
-      background: transparent;
-
-      border:
-        1px solid #344258;
-
-      color: white;
-
-      font-size: 22px;
-
-      width: 44px;
-      height: 44px;
-
-      border-radius: 7px;
-
-      cursor: pointer;
-    }
-
-    .mobile-menu {
-      display: none;
-
-      position: absolute;
-
-      top: 86px;
-
-      left: 0;
-      right: 0;
-
-      background: #0b1220;
-
-      border-bottom:
-        1px solid rgba(255, 255, 255, 0.08);
-
-      padding: 15px 5%;
-
-      z-index: 999;
-    }
-
-    .mobile-menu a {
-      display: block;
-
-      padding: 14px 0;
-
-      color: #c8d1df;
-
-      font-size: 16px;
-
-      border-bottom:
-        1px solid rgba(255, 255, 255, 0.06);
-    }
-
-    .mobile-menu a:last-child {
-      border-bottom: none;
-    }
-
-    .mobile-menu a:hover {
-      color: white;
-    }
-
-
-    /* =========================
-       TABLET / MOBILE
+       TABLET
     ========================= */
 
     @media (max-width: 900px) {
@@ -828,8 +819,8 @@
       }
 
       .intro-grid,
-      .comparison-grid,
-      .difference-grid {
+      .difference-grid,
+      .comparison-grid {
         grid-template-columns: 1fr;
       }
 
@@ -848,7 +839,6 @@
 
         align-items: flex-start;
       }
-
     }
 
 
@@ -911,6 +901,11 @@
         font-size: 34px;
       }
 
+      .section-title p,
+      .faq-header p {
+        font-size: 16px;
+      }
+
       .cta-section h2 {
         font-size: 36px;
       }
@@ -925,6 +920,15 @@
         font-size: 16px;
       }
 
+      .faq-answer {
+        font-size: 14px;
+      }
+
+      .footer-links {
+        flex-wrap: wrap;
+
+        gap: 14px;
+      }
     }
 
   </style>
@@ -954,9 +958,7 @@
           alt="Northstar Digital logo"
         >
 
-        <span>
-          NORTHSTAR DIGITAL
-        </span>
+        <span>NORTHSTAR DIGITAL</span>
 
       </a>
 
@@ -978,6 +980,7 @@
         <a
           href="why-northstar.html"
           class="active"
+          aria-current="page"
         >
           Why Northstar
         </a>
@@ -994,10 +997,12 @@
 
       <button
         class="mobile-menu-button"
+        id="menuButton"
+        type="button"
         onclick="toggleMenu()"
         aria-label="Open navigation menu"
         aria-expanded="false"
-        id="menuButton"
+        aria-controls="mobileMenu"
       >
         ☰
       </button>
@@ -1020,7 +1025,10 @@
           Our Work
         </a>
 
-        <a href="why-northstar.html">
+        <a
+          href="why-northstar.html"
+          aria-current="page"
+        >
           Why Northstar
         </a>
 
@@ -1082,7 +1090,6 @@
 
       <div class="intro-grid">
 
-
         <div class="intro-content">
 
           <div class="eyebrow">
@@ -1115,7 +1122,7 @@
         <div class="intro-box">
 
           <h3>
-            Our philosophy
+            Our Philosophy
           </h3>
 
           <p>
@@ -1134,7 +1141,7 @@
 
 
   <!-- =========================
-       DIFFERENCE
+       NORTHSTAR DIFFERENCE
   ========================= -->
 
   <section class="difference-section">
@@ -1162,7 +1169,7 @@
       <div class="difference-grid">
 
 
-        <div class="difference-card">
+        <article class="difference-card">
 
           <div class="difference-number">
             01
@@ -1174,14 +1181,14 @@
 
           <p>
             Our websites are designed around the realities of
-            small businesses — limited time, practical budgets
+            small businesses — practical budgets, limited time
             and the need to turn website visitors into customers.
           </p>
 
-        </div>
+        </article>
 
 
-        <div class="difference-card">
+        <article class="difference-card">
 
           <div class="difference-number">
             02
@@ -1197,10 +1204,10 @@
             website.
           </p>
 
-        </div>
+        </article>
 
 
-        <div class="difference-card">
+        <article class="difference-card">
 
           <div class="difference-number">
             03
@@ -1216,10 +1223,10 @@
             trust and guide customers toward action.
           </p>
 
-        </div>
+        </article>
 
 
-        <div class="difference-card">
+        <article class="difference-card">
 
           <div class="difference-number">
             04
@@ -1235,10 +1242,10 @@
             packages and add-ons.
           </p>
 
-        </div>
+        </article>
 
 
-        <div class="difference-card">
+        <article class="difference-card">
 
           <div class="difference-number">
             05
@@ -1254,10 +1261,10 @@
             regardless of the device.
           </p>
 
-        </div>
+        </article>
 
 
-        <div class="difference-card">
+        <article class="difference-card">
 
           <div class="difference-number">
             06
@@ -1273,7 +1280,7 @@
             promotions and improvements.
           </p>
 
-        </div>
+        </article>
 
       </div>
 
@@ -1312,7 +1319,7 @@
       <div class="comparison-grid">
 
 
-        <div class="comparison-card">
+        <article class="comparison-card">
 
           <h3>
             Traditional Agency
@@ -1342,10 +1349,10 @@
 
           </ul>
 
-        </div>
+        </article>
 
 
-        <div class="comparison-card highlight">
+        <article class="comparison-card highlight">
 
           <h3>
             Northstar Digital
@@ -1375,7 +1382,7 @@
 
           </ul>
 
-        </div>
+        </article>
 
       </div>
 
@@ -1589,7 +1596,7 @@
 
       <a
         href="contact.html"
-        class="button primary"
+        class="button"
       >
         Start Your Project →
       </a>
@@ -1611,7 +1618,6 @@
         © 2026 Northstar Digital
       </div>
 
-
       <div class="footer-links">
 
         <a href="index.html">
@@ -1624,6 +1630,13 @@
 
         <a href="work.html">
           Our Work
+        </a>
+
+        <a
+          href="why-northstar.html"
+          aria-current="page"
+        >
+          Why Northstar
         </a>
 
         <a href="contact.html">
@@ -1651,33 +1664,25 @@
       const button =
         document.getElementById("menuButton");
 
-      if (menu.style.display === "block") {
+      const isOpen =
+        menu.style.display === "block";
 
-        menu.style.display = "none";
+      menu.style.display =
+        isOpen ? "none" : "block";
 
-        button.setAttribute(
-          "aria-expanded",
-          "false"
-        );
-
-      } else {
-
-        menu.style.display = "block";
-
-        button.setAttribute(
-          "aria-expanded",
-          "true"
-        );
-
-      }
+      button.setAttribute(
+        "aria-expanded",
+        String(!isOpen)
+      );
 
     }
 
 
-    /* Close mobile menu after clicking a link */
+    /* Close mobile menu after navigation */
 
-    document.querySelectorAll(".mobile-menu a").forEach(
-      function(link) {
+    document
+      .querySelectorAll(".mobile-menu a")
+      .forEach(function(link) {
 
         link.addEventListener(
           "click",
@@ -1697,8 +1702,7 @@
           }
         );
 
-      }
-    );
+      });
 
   </script>
 
@@ -1707,4 +1711,3 @@
 
 </html>
 ```
-
